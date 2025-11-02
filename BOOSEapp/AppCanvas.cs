@@ -10,39 +10,47 @@ namespace BOOSEapp
     
     internal class AppCanvas : ICanvas
     {
-     
+        Bitmap CanvasBitmap;
+        Graphics g;
+        private int xPos, yPos;
+        Pen Pen;
         public AppCanvas(int xsize, int ysize) {
 
-    
+            CanvasBitmap = new Bitmap(xsize, ysize);
+            g = Graphics.FromImage(CanvasBitmap);
+            xPos = 100;
+            yPos = 100;
+            Pen = new Pen(Color.Black);
         }
 
-        public int Xpos { get => throw new NotImplementedException(); set => throw new NotImplementedException(); }
-        public int Ypos { get => throw new NotImplementedException(); set => throw new NotImplementedException(); }
+        public int Xpos { get => xPos; set => xPos = value; }
+        public int Ypos { get => yPos; set => yPos = value; }
         public object PenColour { get => throw new NotImplementedException(); set => throw new NotImplementedException(); }
 
         public void Circle(int radius, bool filled)
         {
-            throw new NotImplementedException();
+            g.DrawEllipse(Pen, Xpos, Ypos, radius * 2, radius * 2);
         }
 
         public void Clear()
         {
-            throw new NotImplementedException();
+            //throw new NotImplementedException();
         }
 
         public void DrawTo(int x, int y)
         {
-            throw new NotImplementedException();
+            //throw new NotImplementedException();
         }
 
         public object getBitmap()
         {
-            throw new NotImplementedException();
+            return CanvasBitmap;
         }
 
         public void MoveTo(int x, int y)
         {
-            throw new NotImplementedException();
+            Xpos = x;
+            Ypos = y;
         }
 
         public void Rect(int width, int height, bool filled)
@@ -52,7 +60,8 @@ namespace BOOSEapp
 
         public void Reset()
         {
-            throw new NotImplementedException();
+            xPos = 100;
+            yPos = 100;
         }
 
         public void Set(int width, int height)
