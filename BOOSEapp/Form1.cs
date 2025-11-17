@@ -16,7 +16,7 @@ namespace BOOSEapp
             canvas = new AppCanvas(800, 450);
             canvas.Circle(50, false);
 
-            Factory = new CommandFactory();
+            Factory = new AppCommandFactory();
             Program = new StoredProgram(canvas);
             Parser = new Parser(Factory, Program);
             
