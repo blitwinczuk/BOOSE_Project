@@ -18,14 +18,28 @@ namespace BOOSEapp
 
             CanvasBitmap = new Bitmap(xsize, ysize);
             g = Graphics.FromImage(CanvasBitmap);
-            xPos = 100;
-            yPos = 100;
+            xPos = 0;
+            yPos = 0;
             Pen = new Pen(Color.Black);
         }
 
         public int Xpos { get => xPos; set => xPos = value; }
         public int Ypos { get => yPos; set => yPos = value; }
-        public object PenColour { get => throw new NotImplementedException(); set => throw new NotImplementedException(); }
+        public object PenColour
+        {
+            get => Pen.Color;
+                set
+            {
+                if (value is Color c)
+                {
+                    Pen.Color = c;
+                }
+                else if (value is int argb)
+                {
+                    Pen.Color = Color.FromArgb(argb);
+                }
+            }
+        }
 
         public void Circle(int radius, bool filled)
         {
@@ -34,7 +48,7 @@ namespace BOOSEapp
 
         public void Clear()
         {
-            //throw new NotImplementedException();
+            g.Clear(Color.White);
         }
 
         public void DrawTo(int x, int y)
@@ -55,7 +69,13 @@ namespace BOOSEapp
 
         public void Rect(int width, int height, bool filled)
         {
-            throw new NotImplementedException();
+            if (filled)
+            {
+                using (var brush = new SolidBrush(Pen.Color))
+                {
+                    g.FillRectangle(brush, Xpos, Ypos, width, height);
+                }
+            }
         }
 
         public void Reset()
@@ -71,7 +91,7 @@ namespace BOOSEapp
 
         public void SetColour(int red, int green, int blue)
         {
-            throw new NotImplementedException();
+            Pen.Color = Color.FromArgb(red, green, blue);
         }
 
         public void Tri(int width, int height)
