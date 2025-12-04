@@ -20,5 +20,14 @@ namespace BOOSEapp
             else
                 return base.MakeCommand(commandType);
         }
+
+        ICanvas canvas;
+
+        public AppCommandFactory(ICanvas canvas)
+        {
+            this.canvas = canvas;
+        }
+
+        
     }
 }

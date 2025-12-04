@@ -1,4 +1,7 @@
-﻿namespace BOOSEapp
+﻿using System.Drawing;
+using System.Windows.Forms;
+
+namespace BOOSEapp
 {
     partial class Form1
     {
@@ -41,11 +44,12 @@
             textBox1.Name = "textBox1";
             textBox1.Size = new Size(282, 365);
             textBox1.TabIndex = 0;
+            textBox1.TextChanged += textBox1_TextChanged;
             // 
-            // button2
+            // button1
             // 
             button1.Location = new Point(128, 472);
-            button1.Name = "button2";
+            button1.Name = "button1";
             button1.Size = new Size(112, 34);
             button1.TabIndex = 1;
             button1.Text = "Run";
@@ -59,6 +63,8 @@
             pictureBox1.Size = new Size(523, 506);
             pictureBox1.TabIndex = 2;
             pictureBox1.TabStop = false;
+            pictureBox1.Paint += pictureBox1_Paint;
+            pictureBox1.Click += pictureBox1_Click;
             // 
             // Form1
             // 
@@ -71,6 +77,7 @@
             Margin = new Padding(4);
             Name = "Form1";
             Text = "Form1";
+            Load += Form1_Load;
             ((System.ComponentModel.ISupportInitialize)pictureBox1).EndInit();
             ResumeLayout(false);
             PerformLayout();
@@ -78,7 +85,6 @@
 
         #endregion
 
-        
         private PictureBox pictureBox1;
         private TextBox textBox1;
         private Button button1;

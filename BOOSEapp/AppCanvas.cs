@@ -86,7 +86,30 @@ namespace BOOSEapp
 
         public void Set(int width, int height)
         {
-            throw new NotImplementedException();
+            if (width <= 0 || height <= 0) throw new ArgumentOutOfRangeException("width/height must be > 0");
+
+            // Dispose existing graphics and bitmap to avoid leaks
+            if (g != null)
+            {
+                g.Dispose();
+                g = null;
+            }
+            if (CanvasBitmap != null)
+            {
+                CanvasBitmap.Dispose();
+                CanvasBitmap = null;
+            }
+
+            // Create new backing bitmap and graphics
+            CanvasBitmap = new Bitmap(width, height);
+            g = Graphics.FromImage(CanvasBitmap);
+
+            // Optional: initialize drawing surface
+            g.Clear(Color.White);
+
+            // Optionally reset cursor/position to a safe location
+            xPos = 0;
+            yPos = 0;
         }
 
         public void SetColour(int red, int green, int blue)
