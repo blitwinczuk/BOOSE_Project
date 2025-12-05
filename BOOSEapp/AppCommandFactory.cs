@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 
 namespace BOOSEapp
 {
-    internal class AppCommandFactory : CommandFactory
+    public class AppCommandFactory : CommandFactory
     {
         public override ICommand MakeCommand(string commandType)
         {

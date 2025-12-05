@@ -8,7 +8,7 @@ using System.Threading.Tasks;
 namespace BOOSEapp
 {
     
-    internal class AppCanvas : ICanvas
+    public class AppCanvas : ICanvas
     {
         Bitmap CanvasBitmap;
         Graphics g;
@@ -53,8 +53,14 @@ namespace BOOSEapp
 
         public void DrawTo(int x, int y)
         {
-            //throw new NotImplementedException();
+            
+            g.DrawLine(Pen, Xpos, Ypos, x, y);
+
+            
+            Xpos = x;
+            Ypos = y;
         }
+
 
         public object getBitmap()
         {
@@ -76,7 +82,12 @@ namespace BOOSEapp
                     g.FillRectangle(brush, Xpos, Ypos, width, height);
                 }
             }
+            else
+            {
+                g.DrawRectangle(Pen, Xpos, Ypos, width, height);
+            }
         }
+
 
         public void Reset()
         {
