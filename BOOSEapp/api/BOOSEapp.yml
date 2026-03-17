@@ -1,0 +1,37 @@
+### YamlMime:ManagedReference
+items:
+- uid: BOOSEapp
+  commentId: N:BOOSEapp
+  id: BOOSEapp
+  children:
+  - BOOSEapp.AppCanvas
+  - BOOSEapp.AppCommandFactory
+  - BOOSEapp.Form1
+  langs:
+  - csharp
+  - vb
+  name: BOOSEapp
+  nameWithType: BOOSEapp
+  fullName: BOOSEapp
+  type: Namespace
+  assemblies:
+  - BOOSEapp
+references:
+- uid: BOOSEapp.AppCanvas
+  commentId: T:BOOSEapp.AppCanvas
+  href: BOOSEapp.AppCanvas.html
+  name: AppCanvas
+  nameWithType: AppCanvas
+  fullName: BOOSEapp.AppCanvas
+- uid: BOOSEapp.AppCommandFactory
+  commentId: T:BOOSEapp.AppCommandFactory
+  href: BOOSEapp.AppCommandFactory.html
+  name: AppCommandFactory
+  nameWithType: AppCommandFactory
+  fullName: BOOSEapp.AppCommandFactory
+- uid: BOOSEapp.Form1
+  commentId: T:BOOSEapp.Form1
+  href: BOOSEapp.Form1.html
+  name: Form1
+  nameWithType: Form1
+  fullName: BOOSEapp.Form1

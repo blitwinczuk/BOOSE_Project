@@ -1,21 +1,27 @@
 ﻿using BOOSE;
 using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+using System.Drawing;
 
 namespace BOOSEapp
 {
-    
+    /// <summary>
+    /// Custom canvas implementation used by the BOOSE interpreter.
+    /// Responsible for drawing shapes and managing the drawing cursor.
+    /// </summary>
     public class AppCanvas : ICanvas
     {
-        Bitmap CanvasBitmap;
-        Graphics g;
+        private Bitmap CanvasBitmap;
+        private Graphics g;
         private int xPos, yPos;
-        Pen Pen;
-        public AppCanvas(int xsize, int ysize) {
+        private Pen Pen;
 
+        /// <summary>
+        /// Initializes a new drawing canvas with the specified size.
+        /// </summary>
+        /// <param name="xsize">Width of the canvas.</param>
+        /// <param name="ysize">Height of the canvas.</param>
+        public AppCanvas(int xsize, int ysize)
+        {
             CanvasBitmap = new Bitmap(xsize, ysize);
             g = Graphics.FromImage(CanvasBitmap);
             xPos = 0;
@@ -23,12 +29,31 @@ namespace BOOSEapp
             Pen = new Pen(Color.Black);
         }
 
-        public int Xpos { get => xPos; set => xPos = value; }
-        public int Ypos { get => yPos; set => yPos = value; }
+        /// <summary>
+        /// Gets or sets the current X position of the drawing cursor.
+        /// </summary>
+        public int Xpos
+        {
+            get => xPos;
+            set => xPos = value;
+        }
+
+        /// <summary>
+        /// Gets or sets the current Y position of the drawing cursor.
+        /// </summary>
+        public int Ypos
+        {
+            get => yPos;
+            set => yPos = value;
+        }
+
+        /// <summary>
+        /// Gets or sets the current pen colour.
+        /// </summary>
         public object PenColour
         {
             get => Pen.Color;
-                set
+            set
             {
                 if (value is Color c)
                 {
@@ -41,38 +66,72 @@ namespace BOOSEapp
             }
         }
 
+        /// <summary>
+        /// Draws a circle from the current cursor position.
+        /// </summary>
+        /// <param name="radius">Radius of the circle.</param>
+        /// <param name="filled">Determines whether the circle is filled.</param>
         public void Circle(int radius, bool filled)
         {
-            g.DrawEllipse(Pen, Xpos, Ypos, radius * 2, radius * 2);
+            if (filled)
+            {
+                using (var brush = new SolidBrush(Pen.Color))
+                {
+                    g.FillEllipse(brush, Xpos, Ypos, radius * 2, radius * 2);
+                }
+            }
+            else
+            {
+                g.DrawEllipse(Pen, Xpos, Ypos, radius * 2, radius * 2);
+            }
         }
 
+        /// <summary>
+        /// Clears the canvas to white.
+        /// </summary>
         public void Clear()
         {
             g.Clear(Color.White);
         }
 
+        /// <summary>
+        /// Draws a line from the current cursor position to the given coordinates.
+        /// </summary>
+        /// <param name="x">Target X coordinate.</param>
+        /// <param name="y">Target Y coordinate.</param>
         public void DrawTo(int x, int y)
         {
-            
             g.DrawLine(Pen, Xpos, Ypos, x, y);
-
-            
             Xpos = x;
             Ypos = y;
         }
 
-
+        /// <summary>
+        /// Returns the bitmap representing the canvas.
+        /// </summary>
+        /// <returns>Bitmap object.</returns>
         public object getBitmap()
         {
             return CanvasBitmap;
         }
 
+        /// <summary>
+        /// Moves the cursor to a new position without drawing.
+        /// </summary>
+        /// <param name="x">New X coordinate.</param>
+        /// <param name="y">New Y coordinate.</param>
         public void MoveTo(int x, int y)
         {
             Xpos = x;
             Ypos = y;
         }
 
+        /// <summary>
+        /// Draws a rectangle from the current cursor position.
+        /// </summary>
+        /// <param name="width">Width of the rectangle.</param>
+        /// <param name="height">Height of the rectangle.</param>
+        /// <param name="filled">Determines whether the rectangle is filled.</param>
         public void Rect(int width, int height, bool filled)
         {
             if (filled)
@@ -88,51 +147,58 @@ namespace BOOSEapp
             }
         }
 
-
+        /// <summary>
+        /// Resets the cursor to default position.
+        /// </summary>
         public void Reset()
         {
             xPos = 100;
             yPos = 100;
         }
 
+        /// <summary>
+        /// Resizes the canvas.
+        /// </summary>
+        /// <param name="width">New width.</param>
+        /// <param name="height">New height.</param>
         public void Set(int width, int height)
         {
-            if (width <= 0 || height <= 0) throw new ArgumentOutOfRangeException("width/height must be > 0");
+            if (width <= 0 || height <= 0)
+                throw new ArgumentOutOfRangeException("width/height must be > 0");
 
-            // Dispose existing graphics and bitmap to avoid leaks
-            if (g != null)
-            {
-                g.Dispose();
-                g = null;
-            }
-            if (CanvasBitmap != null)
-            {
-                CanvasBitmap.Dispose();
-                CanvasBitmap = null;
-            }
+            g?.Dispose();
+            CanvasBitmap?.Dispose();
 
-            // Create new backing bitmap and graphics
             CanvasBitmap = new Bitmap(width, height);
             g = Graphics.FromImage(CanvasBitmap);
-
-            // Optional: initialize drawing surface
             g.Clear(Color.White);
 
-            // Optionally reset cursor/position to a safe location
             xPos = 0;
             yPos = 0;
         }
 
+        /// <summary>
+        /// Sets the drawing colour using RGB values.
+        /// </summary>
+        /// <param name="red">Red component.</param>
+        /// <param name="green">Green component.</param>
+        /// <param name="blue">Blue component.</param>
         public void SetColour(int red, int green, int blue)
         {
             Pen.Color = Color.FromArgb(red, green, blue);
         }
 
+        /// <summary>
+        /// Draws a triangle .
+        /// </summary>
         public void Tri(int width, int height)
         {
             throw new NotImplementedException();
         }
 
+        /// <summary>
+        /// Writes text to the canvas.
+        /// </summary>
         public void WriteText(string text)
         {
             throw new NotImplementedException();

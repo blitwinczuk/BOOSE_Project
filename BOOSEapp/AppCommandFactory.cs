@@ -1,14 +1,30 @@
 ﻿using BOOSE;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace BOOSEapp
 {
+    /// <summary>
+    /// Custom command factory used to create BOOSE commands.
+    /// It extends the default command factory and returns
+    /// application-specific command implementations.
+    /// </summary>
     public class AppCommandFactory : CommandFactory
     {
+        private ICanvas canvas;
+
+        /// <summary>
+        /// Initializes a new instance of the AppCommandFactory class.
+        /// </summary>
+        /// <param name="canvas">Canvas used by commands created by the factory.</param>
+        public AppCommandFactory(ICanvas canvas)
+        {
+            this.canvas = canvas;
+        }
+
+        /// <summary>
+        /// Creates a command object based on the command name.
+        /// </summary>
+        /// <param name="commandType">The name of the BOOSE command.</param>
+        /// <returns>An <see cref="ICommand"/> implementation for the requested command.</returns>
         public override ICommand MakeCommand(string commandType)
         {
             if (commandType == "circle")
@@ -20,14 +36,5 @@ namespace BOOSEapp
             else
                 return base.MakeCommand(commandType);
         }
-
-        ICanvas canvas;
-
-        public AppCommandFactory(ICanvas canvas)
-        {
-            this.canvas = canvas;
-        }
-
-        
     }
 }

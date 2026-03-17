@@ -1,3 +1,4 @@
+using System.ComponentModel;
 using BOOSE;
 using System;
 using System.Diagnostics;
@@ -6,6 +7,11 @@ using System.Windows.Forms;
 
 namespace BOOSEapp
 {
+    /// <summary>
+    /// Main user interface for the BOOSE interpreter.
+    /// Allows the user to input BOOSE programs, execute them,
+    /// and display graphical output on the canvas.
+    /// </summary>
     public partial class Form1 : Form
     {
         private AppCanvas canvas;
@@ -13,6 +19,9 @@ namespace BOOSEapp
         private StoredProgram Program;
         private IParser Parser;
 
+        /// <summary>
+        /// Initializes the main form and sets up BOOSE components.
+        /// </summary>
         public Form1()
         {
             InitializeComponent();
@@ -20,7 +29,6 @@ namespace BOOSEapp
             Debug.WriteLine("BOOSE Application Started");
             Debug.WriteLine(AboutBOOSE.about());
 
-            // Set up canvas, factory, stored program and parser
             canvas = new AppCanvas(1200, 750);
             Factory = new AppCommandFactory(canvas);
             Program = new StoredProgram(canvas);
@@ -29,30 +37,27 @@ namespace BOOSEapp
 
         private void Form1_Load(object sender, EventArgs e)
         {
-            // Make the canvas match the picture box size
             canvas.Set(pictureBox1.Width, pictureBox1.Height);
         }
 
         /// <summary>
-        /// Gets or sets the BOOSE program text entered by the user.
+        /// Gets or sets the BOOSE program entered by the user.
         /// </summary>
+        [Browsable(false)]
+        [DesignerSerializationVisibility(DesignerSerializationVisibility.Hidden)]
         public string UserInput
         {
             get => textBox1.Text;
             set => textBox1.Text = value;
         }
 
-        /// <summary>
-        /// Run button click handler: parses and runs the BOOSE program,
-        /// then redraws the canvas.
-        /// </summary>
         public void button1_Click(object sender, EventArgs e)
         {
             try
             {
                 Parser.ParseProgram(UserInput);
                 Program.Run();
-                pictureBox1.Invalidate(); // triggers Paint ? draws canvas
+                pictureBox1.Invalidate();
             }
             catch (Exception ex)
             {
@@ -72,22 +77,18 @@ namespace BOOSEapp
 
         private void pictureBox1_Click(object sender, EventArgs e)
         {
-            // optional: add interactions if you want later
         }
 
         private void textBox1_TextChanged(object sender, EventArgs e)
         {
-            // optional: e.g. live validation
         }
 
         private void textBox2_TextChanged(object sender, EventArgs e)
         {
-            // optional – only if you add textBox2 in the designer
         }
 
         private void panel1_Paint(object sender, PaintEventArgs e)
         {
-            // optional – only if you add panel1 in the designer
         }
     }
 }

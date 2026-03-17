@@ -1,0 +1,144 @@
+{
+  "source_base_path": "C:/Users/litwi/source/repos/ase-boose-assignment-blitwinczuk/BOOSEapp",
+  "xrefmap": "xrefmap.yml",
+  "files": [
+    {
+      "type": "Resource",
+      "output": {
+        "resource": {
+          "relative_path": "index.json"
+        }
+      }
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/BOOSEapp.AppCanvas.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/BOOSEapp.AppCanvas.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "BOOSEapp.AppCanvas",
+      "Summary": "<p sourcefile=\"api/BOOSEapp.AppCanvas.yml\" sourcestartlinenumber=\"1\">Custom canvas implementation used by the BOOSE interpreter.\nResponsible for drawing shapes and managing the drawing cursor.</p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/BOOSEapp.AppCommandFactory.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/BOOSEapp.AppCommandFactory.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "BOOSEapp.AppCommandFactory",
+      "Summary": "<p sourcefile=\"api/BOOSEapp.AppCommandFactory.yml\" sourcestartlinenumber=\"1\">Custom command factory used to create BOOSE commands.\nIt extends the default command factory and returns\napplication-specific command implementations.</p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/BOOSEapp.Form1.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/BOOSEapp.Form1.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "BOOSEapp.Form1",
+      "Summary": "<p sourcefile=\"api/BOOSEapp.Form1.yml\" sourcestartlinenumber=\"1\">Main user interface for the BOOSE interpreter.\nAllows the user to input BOOSE programs, execute them,\nand display graphical output on the canvas.</p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/BOOSEapp.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/BOOSEapp.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "BOOSEapp",
+      "Summary": null
+    },
+    {
+      "type": "Toc",
+      "source_relative_path": "api/toc.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/toc.html"
+        },
+        ".json": {
+          "relative_path": "api/toc.json"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "docs/getting-started.md",
+      "output": {
+        ".html": {
+          "relative_path": "docs/getting-started.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "docs/introduction.md",
+      "output": {
+        ".html": {
+          "relative_path": "docs/introduction.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Toc",
+      "source_relative_path": "docs/toc.yml",
+      "output": {
+        ".html": {
+          "relative_path": "docs/toc.html"
+        },
+        ".json": {
+          "relative_path": "docs/toc.json"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "index.md",
+      "output": {
+        ".html": {
+          "relative_path": "index.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Toc",
+      "source_relative_path": "toc.yml",
+      "output": {
+        ".html": {
+          "relative_path": "toc.html"
+        },
+        ".json": {
+          "relative_path": "toc.json"
+        }
+      },
+      "version": ""
+    }
+  ],
+  "groups": [
+    {
+      "xrefmap": "xrefmap.yml"
+    }
+  ]
+}
