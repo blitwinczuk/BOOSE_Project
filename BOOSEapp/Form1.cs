@@ -29,7 +29,7 @@ namespace BOOSEapp
             Debug.WriteLine("BOOSE Application Started");
             Debug.WriteLine(AboutBOOSE.about());
 
-            canvas = new AppCanvas(1200, 750);
+            canvas = new AppCanvas(2500, 1500);
             Factory = new AppCommandFactory(canvas);
             Program = new StoredProgram(canvas);
             Parser = new Parser(Factory, Program);

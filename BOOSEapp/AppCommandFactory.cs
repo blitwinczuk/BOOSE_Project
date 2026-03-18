@@ -29,7 +29,7 @@ namespace BOOSEapp
         {
             if (commandType == "circle")
                 return new Circle();
-            else if (commandType == "rectangle")
+            else if (commandType == "rect")
                 return new Rectangle();
             else if (commandType == "moveto")
                 return new MoveTo();

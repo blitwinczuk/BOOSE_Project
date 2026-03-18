@@ -77,12 +77,12 @@ namespace BOOSEapp
             {
                 using (var brush = new SolidBrush(Pen.Color))
                 {
-                    g.FillEllipse(brush, Xpos, Ypos, radius * 2, radius * 2);
+                    g.FillEllipse(brush, Xpos - radius, Ypos - radius, radius * 2, radius * 2);
                 }
             }
             else
             {
-                g.DrawEllipse(Pen, Xpos, Ypos, radius * 2, radius * 2);
+                g.DrawEllipse(Pen, Xpos - radius, Ypos - radius, radius * 2, radius * 2);
             }
         }
 
