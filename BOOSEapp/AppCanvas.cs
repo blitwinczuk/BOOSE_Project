@@ -201,7 +201,11 @@ namespace BOOSEapp
         /// </summary>
         public void WriteText(string text)
         {
-            throw new NotImplementedException();
+            using (Font font = new Font("Arial", 12))
+            using (Brush brush = new SolidBrush(Pen.Color))
+            {
+                g.DrawString(text, font, brush, Xpos, Ypos);
+            }
         }
     }
 }

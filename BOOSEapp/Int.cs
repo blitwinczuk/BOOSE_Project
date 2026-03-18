@@ -11,6 +11,7 @@ namespace BOOSEapp
     {
         private AppCanvas canvas;
         private Dictionary<string, int> vars = new Dictionary<string, int>();
+        private Maths maths;
 
         /// <summary>
         /// Initializes the interpreter with a drawing canvas.
@@ -19,6 +20,7 @@ namespace BOOSEapp
         public Int(AppCanvas canvas)
         {
             this.canvas = canvas;
+            maths = new Maths(vars, null);
         }
 
         /// <summary>
@@ -42,11 +44,7 @@ namespace BOOSEapp
                     if (line.Contains("="))
                     {
                         string valueStr = line.Split('=')[1].Trim();
-
-                        int value = vars.ContainsKey(valueStr)
-                            ? vars[valueStr]
-                            : int.Parse(valueStr);
-
+                        int value = maths.EvaluateInt(valueStr);
                         vars[name] = value;
                     }
                     else
@@ -55,7 +53,7 @@ namespace BOOSEapp
                     }
                 }
 
-                
+
                 else if (line.Contains("="))
                 {
                     string[] p = line.Split('=');
@@ -63,9 +61,7 @@ namespace BOOSEapp
                     string name = p[0].Trim();
                     string valueStr = p[1].Trim();
 
-                    int value = vars.ContainsKey(valueStr)
-                        ? vars[valueStr]
-                        : int.Parse(valueStr);
+                    int value = maths.EvaluateInt(valueStr);
 
                     vars[name] = value;
                 }
@@ -74,11 +70,7 @@ namespace BOOSEapp
                 else if (line.StartsWith("circle"))
                 {
                     string val = line.Substring(7).Trim();
-
-                    int r = vars.ContainsKey(val)
-                        ? vars[val]
-                        : int.Parse(val);
-
+                    int r = maths.EvaluateInt(val);
                     canvas.Circle(r, false);
                 }
 
@@ -90,11 +82,10 @@ namespace BOOSEapp
                     string xStr = p[0].Trim();
                     string yStr = p[1].Trim();
 
-                    int x = vars.ContainsKey(xStr) ? vars[xStr] : int.Parse(xStr);
-                    int y = vars.ContainsKey(yStr) ? vars[yStr] : int.Parse(yStr);
+                    int x = maths.EvaluateInt(xStr);
+                    int y = maths.EvaluateInt(yStr);
 
                     canvas.MoveTo(x, y);
-
                 }
                 // rectangle
                 else if (line.StartsWith("rect"))
@@ -104,8 +95,8 @@ namespace BOOSEapp
                     string wStr = p[0].Trim();
                     string hStr = p[1].Trim();
 
-                    int w = vars.ContainsKey(wStr) ? vars[wStr] : int.Parse(wStr);
-                    int h = vars.ContainsKey(hStr) ? vars[hStr] : int.Parse(hStr);
+                    int w = maths.EvaluateInt(wStr);
+                    int h = maths.EvaluateInt(hStr);
 
                     canvas.Rect(w, h, false);
                 }
@@ -115,9 +106,13 @@ namespace BOOSEapp
                 {
                     string[] p = line.Substring(4).Split(',');
 
-                    int r = vars.ContainsKey(p[0].Trim()) ? vars[p[0].Trim()] : int.Parse(p[0]);
-                    int g = vars.ContainsKey(p[1].Trim()) ? vars[p[1].Trim()] : int.Parse(p[1]);
-                    int b = vars.ContainsKey(p[2].Trim()) ? vars[p[2].Trim()] : int.Parse(p[2]);
+                    string rStr = p[0].Trim();
+                    string gStr = p[1].Trim();
+                    string bStr = p[2].Trim();
+
+                    int r = maths.EvaluateInt(rStr);
+                    int g = maths.EvaluateInt(gStr);
+                    int b = maths.EvaluateInt(bStr);
 
                     canvas.SetColour(r, g, b);
                 }
