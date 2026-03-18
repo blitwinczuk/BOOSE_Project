@@ -116,6 +116,13 @@ namespace BOOSEapp
 
                     canvas.SetColour(r, g, b);
                 }
+                //write
+                else if (line.StartsWith("write"))
+                {
+                    string expr = line.Substring(6).Trim();
+                    double result = maths.EvaluateReal(expr);
+                    canvas.WriteText(result.ToString());
+                }
             }
         }
     }

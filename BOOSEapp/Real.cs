@@ -1,29 +1,30 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Globalization;
 
 namespace BOOSEapp
 {
     /// <summary>
-    /// Real variable support for the BOOSE interpreter.
-    /// Allows declaration, assignment and usage of real variables in BOOSE commands.
+    /// Real variable support for BOOSE interpreter.
+    /// Allows declaration, assignment and usage of variables in BOOSE commands.
     /// </summary>
     public class Real
     {
         private AppCanvas canvas;
         private Dictionary<string, double> vars = new Dictionary<string, double>();
+        private Maths maths;
 
         /// <summary>
-        /// Initialises the interpreter with a canvas.
+        /// Initializes the interpreter with a drawing canvas.
         /// </summary>
         /// <param name="canvas">Canvas used for drawing operations.</param>
         public Real(AppCanvas canvas)
         {
             this.canvas = canvas;
+            maths = new Maths(null, vars);
         }
 
         /// <summary>
-        /// Executes a BOOSE program with real var support
+        /// Executes a BOOSE program with real variable support.
         /// </summary>
         /// <param name="program">Program text entered by the user.</param>
         public void Run(string program)
@@ -43,11 +44,7 @@ namespace BOOSEapp
                     if (line.Contains("="))
                     {
                         string valueStr = line.Split('=')[1].Trim();
-
-                        double value = vars.ContainsKey(valueStr)
-                            ? vars[valueStr]
-                            : double.Parse(valueStr, CultureInfo.InvariantCulture);
-
+                        double value = maths.EvaluateReal(valueStr);
                         vars[name] = value;
                     }
                     else
@@ -64,10 +61,7 @@ namespace BOOSEapp
                     string name = p[0].Trim();
                     string valueStr = p[1].Trim();
 
-                    double value = vars.ContainsKey(valueStr)
-                        ? vars[valueStr]
-                        : double.Parse(valueStr, CultureInfo.InvariantCulture);
-
+                    double value = maths.EvaluateReal(valueStr);
                     vars[name] = value;
                 }
 
@@ -75,11 +69,7 @@ namespace BOOSEapp
                 else if (line.StartsWith("circle"))
                 {
                     string val = line.Substring(7).Trim();
-
-                    int r = vars.ContainsKey(val)
-                        ? (int)vars[val]
-                        : (int)double.Parse(val, CultureInfo.InvariantCulture);
-
+                    int r = (int)maths.EvaluateReal(val);
                     canvas.Circle(r, false);
                 }
 
@@ -91,18 +81,13 @@ namespace BOOSEapp
                     string xStr = p[0].Trim();
                     string yStr = p[1].Trim();
 
-                    int x = vars.ContainsKey(xStr)
-                        ? (int)vars[xStr]
-                        : (int)double.Parse(xStr, CultureInfo.InvariantCulture);
-
-                    int y = vars.ContainsKey(yStr)
-                        ? (int)vars[yStr]
-                        : (int)double.Parse(yStr, CultureInfo.InvariantCulture);
+                    int x = (int)maths.EvaluateReal(xStr);
+                    int y = (int)maths.EvaluateReal(yStr);
 
                     canvas.MoveTo(x, y);
                 }
 
-                // rectangle
+                // rect
                 else if (line.StartsWith("rect"))
                 {
                     string[] p = line.Substring(5).Split(',');
@@ -110,13 +95,8 @@ namespace BOOSEapp
                     string wStr = p[0].Trim();
                     string hStr = p[1].Trim();
 
-                    int w = vars.ContainsKey(wStr)
-                        ? (int)vars[wStr]
-                        : (int)double.Parse(wStr, CultureInfo.InvariantCulture);
-
-                    int h = vars.ContainsKey(hStr)
-                        ? (int)vars[hStr]
-                        : (int)double.Parse(hStr, CultureInfo.InvariantCulture);
+                    int w = (int)maths.EvaluateReal(wStr);
+                    int h = (int)maths.EvaluateReal(hStr);
 
                     canvas.Rect(w, h, false);
                 }
@@ -130,19 +110,19 @@ namespace BOOSEapp
                     string gStr = p[1].Trim();
                     string bStr = p[2].Trim();
 
-                    int r = vars.ContainsKey(rStr)
-                        ? (int)vars[rStr]
-                        : (int)double.Parse(rStr, CultureInfo.InvariantCulture);
-
-                    int g = vars.ContainsKey(gStr)
-                        ? (int)vars[gStr]
-                        : (int)double.Parse(gStr, CultureInfo.InvariantCulture);
-
-                    int b = vars.ContainsKey(bStr)
-                        ? (int)vars[bStr]
-                        : (int)double.Parse(bStr, CultureInfo.InvariantCulture);
+                    int r = (int)maths.EvaluateReal(rStr);
+                    int g = (int)maths.EvaluateReal(gStr);
+                    int b = (int)maths.EvaluateReal(bStr);
 
                     canvas.SetColour(r, g, b);
+                }
+
+                // write
+                else if (line.StartsWith("write"))
+                {
+                    string expr = line.Substring(6).Trim();
+                    double result = maths.EvaluateReal(expr);
+                    canvas.WriteText(result.ToString());
                 }
             }
         }
