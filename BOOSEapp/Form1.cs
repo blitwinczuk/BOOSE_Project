@@ -55,8 +55,17 @@ namespace BOOSEapp
         {
             try
             {
-                Parser.ParseProgram(UserInput);
-                Program.Run();
+                if (UserInput.ToLower().Contains("int"))
+                {
+                    Int app = new Int(canvas);
+                    app.Run(UserInput);
+                }
+                else
+                {
+                    Parser.ParseProgram(UserInput);
+                    Program.Run();
+                }
+
                 pictureBox1.Invalidate();
             }
             catch (Exception ex)
