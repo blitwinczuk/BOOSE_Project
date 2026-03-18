@@ -40,6 +40,34 @@
     },
     {
       "type": "ManagedReference",
+      "source_relative_path": "api/BOOSEapp.ApplicationConfiguration.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/BOOSEapp.ApplicationConfiguration.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "BOOSEapp.ApplicationConfiguration",
+      "Summary": "<p sourcefile=\"api/BOOSEapp.ApplicationConfiguration.yml\" sourcestartlinenumber=\"1\">Bootstrap the application configuration.</p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/BOOSEapp.Circle.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/BOOSEapp.Circle.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "BOOSEapp.Circle",
+      "Summary": "<p sourcefile=\"api/BOOSEapp.Circle.yml\" sourcestartlinenumber=\"1\">BOOSE command that draws a circle on the canvas.</p>\n"
+    },
+    {
+      "type": "ManagedReference",
       "source_relative_path": "api/BOOSEapp.Form1.yml",
       "output": {
         ".html": {
@@ -54,6 +82,48 @@
     },
     {
       "type": "ManagedReference",
+      "source_relative_path": "api/BOOSEapp.MoveTo.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/BOOSEapp.MoveTo.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "BOOSEapp.MoveTo",
+      "Summary": "<p sourcefile=\"api/BOOSEapp.MoveTo.yml\" sourcestartlinenumber=\"1\">BOOSE command that moves the drawing cursor\nto a specified position on the canvas.</p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/BOOSEapp.Program.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/BOOSEapp.Program.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "BOOSEapp.Program",
+      "Summary": null
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/BOOSEapp.Rectangle.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/BOOSEapp.Rectangle.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "BOOSEapp.Rectangle",
+      "Summary": "<p sourcefile=\"api/BOOSEapp.Rectangle.yml\" sourcestartlinenumber=\"1\">BOOSE command that draws a rectangle on the canvas.</p>\n"
+    },
+    {
+      "type": "ManagedReference",
       "source_relative_path": "api/BOOSEapp.yml",
       "output": {
         ".html": {
@@ -64,6 +134,34 @@
       "Uid": null,
       "IsMRef": true,
       "Title": "BOOSEapp",
+      "Summary": null
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/BOOSEappTests.CanvasCommandTests.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/BOOSEappTests.CanvasCommandTests.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "BOOSEappTests.CanvasCommandTests",
+      "Summary": "<p sourcefile=\"api/BOOSEappTests.CanvasCommandTests.yml\" sourcestartlinenumber=\"1\">Unit tests for BOOSE canvas commands and interpreter execution.</p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/BOOSEappTests.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/BOOSEappTests.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "BOOSEappTests",
       "Summary": null
     },
     {

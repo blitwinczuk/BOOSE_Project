@@ -4,13 +4,16 @@
     {
       "src": [
         {
-          "src": "../BOOSEapp",
+          "src": "..",
           "files": [
-            "**/*.csproj"
+            "BOOSEapp/**/*.csproj",
+            "BOOSEappTests/**/*.csproj"
           ]
         }
       ],
-      "dest": "api"
+      "dest": "api",
+      "includePrivateMembers": true,
+      "disableDefaultFilter": true
     }
   ],
   "build": {

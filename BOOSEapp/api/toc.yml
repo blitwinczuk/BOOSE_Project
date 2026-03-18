@@ -10,7 +10,29 @@ items:
   - uid: BOOSEapp.AppCommandFactory
     name: AppCommandFactory
     type: Class
+  - uid: BOOSEapp.ApplicationConfiguration
+    name: ApplicationConfiguration
+    type: Class
+  - uid: BOOSEapp.Circle
+    name: Circle
+    type: Class
   - uid: BOOSEapp.Form1
     name: Form1
+    type: Class
+  - uid: BOOSEapp.MoveTo
+    name: MoveTo
+    type: Class
+  - uid: BOOSEapp.Program
+    name: Program
+    type: Class
+  - uid: BOOSEapp.Rectangle
+    name: Rectangle
+    type: Class
+- uid: BOOSEappTests
+  name: BOOSEappTests
+  type: Namespace
+  items:
+  - uid: BOOSEappTests.CanvasCommandTests
+    name: CanvasCommandTests
     type: Class
 memberLayout: SamePage

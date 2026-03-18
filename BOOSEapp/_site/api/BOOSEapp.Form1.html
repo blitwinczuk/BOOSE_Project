@@ -104,7 +104,7 @@ and display graphical output on the canvas.</p>
   <div class="markdown conceptual"></div>
 
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public class Form1 : Form, IDropTarget, ISynchronizeInvoke, IWin32Window, IBindableComponent, IComponent, IDisposable, IContainerControl</code></pre>
+    <pre><code class="lang-csharp hljs">public class Form1 : Form, IOleControl.Interface, IOleObject.Interface, IOleInPlaceObject.Interface, IOleInPlaceActiveObject.Interface, IOleWindow.Interface, IViewObject2.Interface, IViewObject.Interface, IPersistStreamInit.Interface, IPersistPropertyBag.Interface, IPersistStorage.Interface, IPersist.Interface, IQuickActivate.Interface, ISupportOleDropSource, IDropTarget, ISynchronizeInvoke, IWin32Window, IBindableComponent, IKeyboardToolTip, IHandle&lt;HWND&gt;, IArrangedElement, IComponent, IDisposable, IContainerControl</code></pre>
   </div>
 
 
@@ -127,10 +127,26 @@ and display graphical output on the canvas.</p>
   <dl class="typelist implements">
     <dt>Implements</dt>
     <dd>
+      <div><a class="xref" href="https://learn.microsoft.com/dotnet/api/windows.win32.system.ole.iolecontrol">IOleControl</a>.<a class="xref" href="https://learn.microsoft.com/dotnet/api/windows.win32.system.ole.iolecontrol.interface">Interface</a></div>
+      <div><a class="xref" href="https://learn.microsoft.com/dotnet/api/windows.win32.system.ole.ioleobject">IOleObject</a>.<a class="xref" href="https://learn.microsoft.com/dotnet/api/windows.win32.system.ole.ioleobject.interface">Interface</a></div>
+      <div><a class="xref" href="https://learn.microsoft.com/dotnet/api/windows.win32.system.ole.ioleinplaceobject">IOleInPlaceObject</a>.<a class="xref" href="https://learn.microsoft.com/dotnet/api/windows.win32.system.ole.ioleinplaceobject.interface">Interface</a></div>
+      <div><a class="xref" href="https://learn.microsoft.com/dotnet/api/windows.win32.system.ole.ioleinplaceactiveobject">IOleInPlaceActiveObject</a>.<a class="xref" href="https://learn.microsoft.com/dotnet/api/windows.win32.system.ole.ioleinplaceactiveobject.interface">Interface</a></div>
+      <div><a class="xref" href="https://learn.microsoft.com/dotnet/api/windows.win32.system.ole.iolewindow">IOleWindow</a>.<a class="xref" href="https://learn.microsoft.com/dotnet/api/windows.win32.system.ole.iolewindow.interface">Interface</a></div>
+      <div><a class="xref" href="https://learn.microsoft.com/dotnet/api/windows.win32.system.ole.iviewobject2">IViewObject2</a>.<a class="xref" href="https://learn.microsoft.com/dotnet/api/windows.win32.system.ole.iviewobject2.interface">Interface</a></div>
+      <div><a class="xref" href="https://learn.microsoft.com/dotnet/api/windows.win32.system.ole.iviewobject">IViewObject</a>.<a class="xref" href="https://learn.microsoft.com/dotnet/api/windows.win32.system.ole.iviewobject.interface">Interface</a></div>
+      <div><a class="xref" href="https://learn.microsoft.com/dotnet/api/windows.win32.system.com.ipersiststreaminit">IPersistStreamInit</a>.<a class="xref" href="https://learn.microsoft.com/dotnet/api/windows.win32.system.com.ipersiststreaminit.interface">Interface</a></div>
+      <div><a class="xref" href="https://learn.microsoft.com/dotnet/api/windows.win32.system.ole.ipersistpropertybag">IPersistPropertyBag</a>.<a class="xref" href="https://learn.microsoft.com/dotnet/api/windows.win32.system.ole.ipersistpropertybag.interface">Interface</a></div>
+      <div><a class="xref" href="https://learn.microsoft.com/dotnet/api/windows.win32.system.com.structuredstorage.ipersiststorage">IPersistStorage</a>.<a class="xref" href="https://learn.microsoft.com/dotnet/api/windows.win32.system.com.structuredstorage.ipersiststorage.interface">Interface</a></div>
+      <div><a class="xref" href="https://learn.microsoft.com/dotnet/api/windows.win32.system.com.ipersist">IPersist</a>.<a class="xref" href="https://learn.microsoft.com/dotnet/api/windows.win32.system.com.ipersist.interface">Interface</a></div>
+      <div><a class="xref" href="https://learn.microsoft.com/dotnet/api/windows.win32.system.ole.iquickactivate">IQuickActivate</a>.<a class="xref" href="https://learn.microsoft.com/dotnet/api/windows.win32.system.ole.iquickactivate.interface">Interface</a></div>
+      <div><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.windows.forms.isupportoledropsource">ISupportOleDropSource</a></div>
       <div><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.windows.forms.idroptarget">IDropTarget</a></div>
       <div><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.componentmodel.isynchronizeinvoke">ISynchronizeInvoke</a></div>
       <div><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.windows.forms.iwin32window">IWin32Window</a></div>
       <div><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.windows.forms.ibindablecomponent">IBindableComponent</a></div>
+      <div><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.windows.forms.ikeyboardtooltip">IKeyboardToolTip</a></div>
+      <div><span class="xref">IHandle</span>&lt;<span class="xref">HWND</span>&gt;</div>
+      <div><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.windows.forms.layout.iarrangedelement">IArrangedElement</a></div>
       <div><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.componentmodel.icomponent">IComponent</a></div>
       <div><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.idisposable">IDisposable</a></div>
       <div><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.windows.forms.icontainercontrol">IContainerControl</a></div>
@@ -169,6 +185,12 @@ and display graphical output on the canvas.</p>
       <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.windows.forms.form.adjustformscrollbars">Form.AdjustFormScrollbars(bool)</a>
     </div>
     <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.windows.forms.form.applyautoscaling">Form.ApplyAutoScaling()</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.windows.forms.form.assignparent">Form.AssignParent(Control)</a>
+    </div>
+    <div>
       <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.windows.forms.form.close">Form.Close()</a>
     </div>
     <div>
@@ -178,10 +200,25 @@ and display graphical output on the canvas.</p>
       <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.windows.forms.form.createcontrolsinstance">Form.CreateControlsInstance()</a>
     </div>
     <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.windows.forms.form.aftercontrolremoved">Form.AfterControlRemoved(Control, Control)</a>
+    </div>
+    <div>
       <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.windows.forms.form.createhandle">Form.CreateHandle()</a>
     </div>
     <div>
       <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.windows.forms.form.defwndproc">Form.DefWndProc(ref Message)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.windows.forms.form.focusinternal">Form.FocusInternal()</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.windows.forms.form.getautoscalesize">Form.GetAutoScaleSize(Font)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.windows.forms.form.canselectcore">Form.CanSelectCore()</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.windows.forms.form.canprocessmnemonic">Form.CanProcessMnemonic()</a>
     </div>
     <div>
       <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.windows.forms.form.processmnemonic">Form.ProcessMnemonic(char)</a>
@@ -197,6 +234,9 @@ and display graphical output on the canvas.</p>
     </div>
     <div>
       <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.windows.forms.form.onactivated">Form.OnActivated(EventArgs)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.windows.forms.form.onautoscalemodechanged">Form.OnAutoScaleModeChanged()</a>
     </div>
     <div>
       <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.windows.forms.form.onbackgroundimagechanged">Form.OnBackgroundImageChanged(EventArgs)</a>
@@ -313,10 +353,16 @@ and display graphical output on the canvas.</p>
       <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.windows.forms.form.processtabkey">Form.ProcessTabKey(bool)</a>
     </div>
     <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.windows.forms.form.recreatehandlecore">Form.RecreateHandleCore()</a>
+    </div>
+    <div>
       <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.windows.forms.form.removeownedform">Form.RemoveOwnedForm(Form)</a>
     </div>
     <div>
       <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.windows.forms.form.select">Form.Select(bool, bool)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.windows.forms.form.scalecore">Form.ScaleCore(float, float)</a>
     </div>
     <div>
       <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.windows.forms.form.scaleminmaxsize">Form.ScaleMinMaxSize(float, float, bool)</a>
@@ -346,6 +392,9 @@ and display graphical output on the canvas.</p>
       <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.windows.forms.form.showasync">Form.ShowAsync(IWin32Window)</a>
     </div>
     <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.windows.forms.form.suppressapplicationonthreadexception">Form.SuppressApplicationOnThreadException(Exception)</a>
+    </div>
+    <div>
       <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.windows.forms.form.showdialog#system-windows-forms-form-showdialog">Form.ShowDialog()</a>
     </div>
     <div>
@@ -356,6 +405,12 @@ and display graphical output on the canvas.</p>
     </div>
     <div>
       <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.windows.forms.form.showdialogasync#system-windows-forms-form-showdialogasync(system-windows-forms-iwin32window)">Form.ShowDialogAsync(IWin32Window)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.windows.forms.form.shouldserializeautoscalebasesize">Form.ShouldSerializeAutoScaleBaseSize()</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.windows.forms.form.shouldserializesize">Form.ShouldSerializeSize()</a>
     </div>
     <div>
       <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.windows.forms.form.tostring">Form.ToString()</a>
@@ -392,6 +447,12 @@ and display graphical output on the canvas.</p>
     </div>
     <div>
       <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.windows.forms.form.allowtransparency">Form.AllowTransparency</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.windows.forms.form.autoscale">Form.AutoScale</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.windows.forms.form.autoscalebasesize">Form.AutoScaleBaseSize</a>
     </div>
     <div>
       <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.windows.forms.form.autoscroll">Form.AutoScroll</a>
@@ -469,6 +530,9 @@ and display graphical output on the canvas.</p>
       <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.windows.forms.form.mainmenustrip">Form.MainMenuStrip</a>
     </div>
     <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.windows.forms.form.margin">Form.Margin</a>
+    </div>
+    <div>
       <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.windows.forms.form.minimumsize">Form.MinimumSize</a>
     </div>
     <div>
@@ -505,10 +569,16 @@ and display graphical output on the canvas.</p>
       <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.windows.forms.form.righttoleftlayout">Form.RightToLeftLayout</a>
     </div>
     <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.windows.forms.form.parentinternal">Form.ParentInternal</a>
+    </div>
+    <div>
       <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.windows.forms.form.showintaskbar">Form.ShowInTaskbar</a>
     </div>
     <div>
       <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.windows.forms.form.showicon">Form.ShowIcon</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.windows.forms.form.showparams">Form.ShowParams</a>
     </div>
     <div>
       <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.windows.forms.form.showwithoutactivation">Form.ShowWithoutActivation</a>
@@ -521,6 +591,12 @@ and display graphical output on the canvas.</p>
     </div>
     <div>
       <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.windows.forms.form.startposition">Form.StartPosition</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.windows.forms.form.tabindex">Form.TabIndex</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.windows.forms.form.tabstop">Form.TabStop</a>
     </div>
     <div>
       <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.windows.forms.form.text">Form.Text</a>
@@ -550,6 +626,12 @@ and display graphical output on the canvas.</p>
       <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.windows.forms.form.windowstate">Form.WindowState</a>
     </div>
     <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.windows.forms.form.windowtext">Form.WindowText</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.windows.forms.form.supportsuiaproviders">Form.SupportsUiaProviders</a>
+    </div>
+    <div>
       <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.windows.forms.form.autosizechanged">Form.AutoSizeChanged</a>
     </div>
     <div>
@@ -565,10 +647,25 @@ and display graphical output on the canvas.</p>
       <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.windows.forms.form.maximumsizechanged">Form.MaximumSizeChanged</a>
     </div>
     <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.windows.forms.form.marginchanged">Form.MarginChanged</a>
+    </div>
+    <div>
       <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.windows.forms.form.minimumsizechanged">Form.MinimumSizeChanged</a>
     </div>
     <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.windows.forms.form.tabindexchanged">Form.TabIndexChanged</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.windows.forms.form.tabstopchanged">Form.TabStopChanged</a>
+    </div>
+    <div>
       <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.windows.forms.form.activated">Form.Activated</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.windows.forms.form.closing">Form.Closing</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.windows.forms.form.closed">Form.Closed</a>
     </div>
     <div>
       <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.windows.forms.form.deactivate">Form.Deactivate</a>
@@ -625,7 +722,25 @@ and display graphical output on the canvas.</p>
       <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.windows.forms.form.resizeend">Form.ResizeEnd</a>
     </div>
     <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.windows.forms.icontainercontrol">ContainerControl.IContainerControl.ActivateControl(Control)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.windows.forms.containercontrol.getpreferredsizecore">ContainerControl.GetPreferredSizeCore(Size)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.windows.forms.containercontrol.gettoolnativescreenrectangle">ContainerControl.GetToolNativeScreenRectangle()</a>
+    </div>
+    <div>
       <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.windows.forms.containercontrol.onautovalidatechanged">ContainerControl.OnAutoValidateChanged(EventArgs)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.windows.forms.containercontrol.onframewindowactivate">ContainerControl.OnFrameWindowActivate(bool)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.windows.forms.containercontrol.onchildlayoutresuming">ContainerControl.OnChildLayoutResuming(Control, bool)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.windows.forms.containercontrol.onlayoutresuming">ContainerControl.OnLayoutResuming(bool)</a>
     </div>
     <div>
       <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.windows.forms.containercontrol.onmove">ContainerControl.OnMove(EventArgs)</a>
@@ -637,6 +752,9 @@ and display graphical output on the canvas.</p>
       <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.windows.forms.containercontrol.performautoscale">ContainerControl.PerformAutoScale()</a>
     </div>
     <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.windows.forms.containercontrol.scale">ContainerControl.Scale(SizeF, SizeF, Control, bool)</a>
+    </div>
+    <div>
       <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.windows.forms.containercontrol.rescaleconstantsfordpi">ContainerControl.RescaleConstantsForDpi(int, int)</a>
     </div>
     <div>
@@ -644,6 +762,9 @@ and display graphical output on the canvas.</p>
     </div>
     <div>
       <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.windows.forms.containercontrol.validate#system-windows-forms-containercontrol-validate(system-boolean)">ContainerControl.Validate(bool)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.windows.forms.containercontrol.shouldserializeautovalidate">ContainerControl.ShouldSerializeAutoValidate()</a>
     </div>
     <div>
       <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.windows.forms.containercontrol.autoscaledimensions">ContainerControl.AutoScaleDimensions</a>
@@ -668,6 +789,9 @@ and display graphical output on the canvas.</p>
     </div>
     <div>
       <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.windows.forms.containercontrol.parentform">ContainerControl.ParentForm</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.windows.forms.containercontrol.innermostactivecontainercontrol">ContainerControl.InnerMostActiveContainerControl</a>
     </div>
     <div>
       <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.windows.forms.scrollablecontrol.scrollstateautoscrolling">ScrollableControl.ScrollStateAutoScrolling</a>
@@ -730,6 +854,9 @@ and display graphical output on the canvas.</p>
       <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.windows.forms.scrollablecontrol.displayrectangle">ScrollableControl.DisplayRectangle</a>
     </div>
     <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.windows.forms.layout.iarrangedelement">ScrollableControl.IArrangedElement.DisplayRectangle</a>
+    </div>
+    <div>
       <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.windows.forms.scrollablecontrol.hscroll">ScrollableControl.HScroll</a>
     </div>
     <div>
@@ -742,7 +869,235 @@ and display graphical output on the canvas.</p>
       <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.windows.forms.scrollablecontrol.verticalscroll">ScrollableControl.VerticalScroll</a>
     </div>
     <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.windows.forms.scrollablecontrol.dockpadding">ScrollableControl.DockPadding</a>
+    </div>
+    <div>
       <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.windows.forms.scrollablecontrol.scroll">ScrollableControl.Scroll</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.windows.forms.control.s_paddingchangedevent">Control.s_paddingChangedEvent</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/windows.win32.system.ole.iolecontrol.interface">Control.IOleControl.Interface.GetControlInfo(CONTROLINFO*)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/windows.win32.system.ole.iolecontrol.interface">Control.IOleControl.Interface.OnMnemonic(MSG*)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/windows.win32.system.ole.iolecontrol.interface">Control.IOleControl.Interface.OnAmbientPropertyChange(int)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/windows.win32.system.ole.iolecontrol.interface">Control.IOleControl.Interface.FreezeEvents(BOOL)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/windows.win32.system.ole.ioleinplaceactiveobject.interface">Control.IOleInPlaceActiveObject.Interface.GetWindow(HWND*)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/windows.win32.system.ole.ioleinplaceactiveobject.interface">Control.IOleInPlaceActiveObject.Interface.ContextSensitiveHelp(BOOL)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/windows.win32.system.ole.ioleinplaceactiveobject.interface">Control.IOleInPlaceActiveObject.Interface.TranslateAccelerator(MSG*)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/windows.win32.system.ole.ioleinplaceactiveobject.interface">Control.IOleInPlaceActiveObject.Interface.OnFrameWindowActivate(BOOL)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/windows.win32.system.ole.ioleinplaceactiveobject.interface">Control.IOleInPlaceActiveObject.Interface.OnDocWindowActivate(BOOL)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/windows.win32.system.ole.ioleinplaceactiveobject.interface">Control.IOleInPlaceActiveObject.Interface.ResizeBorder(RECT*, IOleInPlaceUIWindow*, BOOL)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/windows.win32.system.ole.ioleinplaceactiveobject.interface">Control.IOleInPlaceActiveObject.Interface.EnableModeless(BOOL)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/windows.win32.system.ole.ioleinplaceobject.interface">Control.IOleInPlaceObject.Interface.GetWindow(HWND*)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/windows.win32.system.ole.ioleinplaceobject.interface">Control.IOleInPlaceObject.Interface.ContextSensitiveHelp(BOOL)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/windows.win32.system.ole.ioleinplaceobject.interface">Control.IOleInPlaceObject.Interface.InPlaceDeactivate()</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/windows.win32.system.ole.ioleinplaceobject.interface">Control.IOleInPlaceObject.Interface.UIDeactivate()</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/windows.win32.system.ole.ioleinplaceobject.interface">Control.IOleInPlaceObject.Interface.SetObjectRects(RECT*, RECT*)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/windows.win32.system.ole.ioleinplaceobject.interface">Control.IOleInPlaceObject.Interface.ReactivateAndUndo()</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/windows.win32.system.ole.ioleobject.interface">Control.IOleObject.Interface.SetClientSite(IOleClientSite*)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/windows.win32.system.ole.ioleobject.interface">Control.IOleObject.Interface.GetClientSite(IOleClientSite**)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/windows.win32.system.ole.ioleobject.interface">Control.IOleObject.Interface.SetHostNames(PCWSTR, PCWSTR)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/windows.win32.system.ole.ioleobject.interface">Control.IOleObject.Interface.Close(uint)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/windows.win32.system.ole.ioleobject.interface">Control.IOleObject.Interface.SetMoniker(uint, IMoniker*)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/windows.win32.system.ole.ioleobject.interface">Control.IOleObject.Interface.GetMoniker(uint, uint, IMoniker**)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/windows.win32.system.ole.ioleobject.interface">Control.IOleObject.Interface.InitFromData(IDataObject*, BOOL, uint)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/windows.win32.system.ole.ioleobject.interface">Control.IOleObject.Interface.GetClipboardData(uint, IDataObject**)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/windows.win32.system.ole.ioleobject.interface">Control.IOleObject.Interface.DoVerb(int, MSG*, IOleClientSite*, int, HWND, RECT*)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/windows.win32.system.ole.ioleobject.interface">Control.IOleObject.Interface.EnumVerbs(IEnumOLEVERB**)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/windows.win32.system.ole.ioleobject.interface">Control.IOleObject.Interface.Update()</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/windows.win32.system.ole.ioleobject.interface">Control.IOleObject.Interface.IsUpToDate()</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/windows.win32.system.ole.ioleobject.interface">Control.IOleObject.Interface.GetUserClassID(Guid*)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/windows.win32.system.ole.ioleobject.interface">Control.IOleObject.Interface.GetUserType(uint, PWSTR*)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/windows.win32.system.ole.ioleobject.interface">Control.IOleObject.Interface.SetExtent(DVASPECT, SIZE*)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/windows.win32.system.ole.ioleobject.interface">Control.IOleObject.Interface.GetExtent(DVASPECT, SIZE*)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/windows.win32.system.ole.ioleobject.interface">Control.IOleObject.Interface.Advise(IAdviseSink*, uint*)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/windows.win32.system.ole.ioleobject.interface">Control.IOleObject.Interface.Unadvise(uint)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/windows.win32.system.ole.ioleobject.interface">Control.IOleObject.Interface.EnumAdvise(IEnumSTATDATA**)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/windows.win32.system.ole.ioleobject.interface">Control.IOleObject.Interface.GetMiscStatus(DVASPECT, OLEMISC*)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/windows.win32.system.ole.ioleobject.interface">Control.IOleObject.Interface.SetColorScheme(LOGPALETTE*)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/windows.win32.system.ole.iolewindow.interface">Control.IOleWindow.Interface.GetWindow(HWND*)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/windows.win32.system.ole.iolewindow.interface">Control.IOleWindow.Interface.ContextSensitiveHelp(BOOL)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/windows.win32.system.com.ipersist.interface">Control.IPersist.Interface.GetClassID(Guid*)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/windows.win32.system.ole.ipersistpropertybag.interface">Control.IPersistPropertyBag.Interface.InitNew()</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/windows.win32.system.ole.ipersistpropertybag.interface">Control.IPersistPropertyBag.Interface.GetClassID(Guid*)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/windows.win32.system.ole.ipersistpropertybag.interface">Control.IPersistPropertyBag.Interface.Load(IPropertyBag*, IErrorLog*)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/windows.win32.system.ole.ipersistpropertybag.interface">Control.IPersistPropertyBag.Interface.Save(IPropertyBag*, BOOL, BOOL)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/windows.win32.system.com.structuredstorage.ipersiststorage.interface">Control.IPersistStorage.Interface.GetClassID(Guid*)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/windows.win32.system.com.structuredstorage.ipersiststorage.interface">Control.IPersistStorage.Interface.IsDirty()</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/windows.win32.system.com.structuredstorage.ipersiststorage.interface">Control.IPersistStorage.Interface.InitNew(IStorage*)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/windows.win32.system.com.structuredstorage.ipersiststorage.interface">Control.IPersistStorage.Interface.Load(IStorage*)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/windows.win32.system.com.structuredstorage.ipersiststorage.interface">Control.IPersistStorage.Interface.Save(IStorage*, BOOL)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/windows.win32.system.com.structuredstorage.ipersiststorage.interface">Control.IPersistStorage.Interface.SaveCompleted(IStorage*)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/windows.win32.system.com.structuredstorage.ipersiststorage.interface">Control.IPersistStorage.Interface.HandsOffStorage()</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/windows.win32.system.com.ipersiststreaminit.interface">Control.IPersistStreamInit.Interface.GetClassID(Guid*)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/windows.win32.system.com.ipersiststreaminit.interface">Control.IPersistStreamInit.Interface.IsDirty()</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/windows.win32.system.com.ipersiststreaminit.interface">Control.IPersistStreamInit.Interface.Load(IStream*)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/windows.win32.system.com.ipersiststreaminit.interface">Control.IPersistStreamInit.Interface.Save(IStream*, BOOL)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/windows.win32.system.com.ipersiststreaminit.interface">Control.IPersistStreamInit.Interface.GetSizeMax(ulong*)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/windows.win32.system.com.ipersiststreaminit.interface">Control.IPersistStreamInit.Interface.InitNew()</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/windows.win32.system.ole.iquickactivate.interface">Control.IQuickActivate.Interface.QuickActivate(QACONTAINER*, QACONTROL*)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/windows.win32.system.ole.iquickactivate.interface">Control.IQuickActivate.Interface.SetContentExtent(SIZE*)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/windows.win32.system.ole.iquickactivate.interface">Control.IQuickActivate.Interface.GetContentExtent(SIZE*)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/windows.win32.system.ole.iviewobject.interface">Control.IViewObject.Interface.Draw(DVASPECT, int, void*, DVTARGETDEVICE*, HDC, HDC, RECTL*, RECTL*, nint, nuint)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/windows.win32.system.ole.iviewobject.interface">Control.IViewObject.Interface.GetColorSet(DVASPECT, int, void*, DVTARGETDEVICE*, HDC, LOGPALETTE**)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/windows.win32.system.ole.iviewobject.interface">Control.IViewObject.Interface.Freeze(DVASPECT, int, void*, uint*)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/windows.win32.system.ole.iviewobject.interface">Control.IViewObject.Interface.Unfreeze(uint)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/windows.win32.system.ole.iviewobject.interface">Control.IViewObject.Interface.SetAdvise(DVASPECT, uint, IAdviseSink*)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/windows.win32.system.ole.iviewobject.interface">Control.IViewObject.Interface.GetAdvise(uint*, uint*, IAdviseSink**)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/windows.win32.system.ole.iviewobject2.interface">Control.IViewObject2.Interface.Draw(DVASPECT, int, void*, DVTARGETDEVICE*, HDC, HDC, RECTL*, RECTL*, nint, nuint)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/windows.win32.system.ole.iviewobject2.interface">Control.IViewObject2.Interface.GetColorSet(DVASPECT, int, void*, DVTARGETDEVICE*, HDC, LOGPALETTE**)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/windows.win32.system.ole.iviewobject2.interface">Control.IViewObject2.Interface.Freeze(DVASPECT, int, void*, uint*)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/windows.win32.system.ole.iviewobject2.interface">Control.IViewObject2.Interface.Unfreeze(uint)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/windows.win32.system.ole.iviewobject2.interface">Control.IViewObject2.Interface.SetAdvise(DVASPECT, uint, IAdviseSink*)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/windows.win32.system.ole.iviewobject2.interface">Control.IViewObject2.Interface.GetAdvise(uint*, uint*, IAdviseSink**)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/windows.win32.system.ole.iviewobject2.interface">Control.IViewObject2.Interface.GetExtent(DVASPECT, int, DVTARGETDEVICE*, SIZE*)</a>
     </div>
     <div>
       <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.windows.forms.control.getaccessibilityobjectbyid">Control.GetAccessibilityObjectById(int)</a>
@@ -754,7 +1109,22 @@ and display graphical output on the canvas.</p>
       <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.windows.forms.control.getautosizemode">Control.GetAutoSizeMode()</a>
     </div>
     <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.windows.forms.control.resetbindings">Control.ResetBindings()</a>
+    </div>
+    <div>
       <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.windows.forms.control.getpreferredsize">Control.GetPreferredSize(Size)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.windows.forms.control.ishoveredwithmouse">Control.IsHoveredWithMouse()</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.windows.forms.control.addreflectchild">Control.AddReflectChild()</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.windows.forms.control.removereflectchild">Control.RemoveReflectChild()</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.windows.forms.control.removetooltip">Control.RemoveToolTip(ToolTip)</a>
     </div>
     <div>
       <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.windows.forms.control.accessibilitynotifyclients#system-windows-forms-control-accessibilitynotifyclients(system-windows-forms-accessibleevents-system-int32)">Control.AccessibilityNotifyClients(AccessibleEvents, int)</a>
@@ -785,6 +1155,9 @@ and display graphical output on the canvas.</p>
     </div>
     <div>
       <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.windows.forms.control.destroyhandle">Control.DestroyHandle()</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.windows.forms.control.disposeaxcontrols">Control.DisposeAxControls()</a>
     </div>
     <div>
       <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.windows.forms.control.dodragdrop#system-windows-forms-control-dodragdrop(system-object-system-windows-forms-dragdropeffects)">Control.DoDragDrop(object, DragDropEffects)</a>
@@ -820,7 +1193,13 @@ and display graphical output on the canvas.</p>
       <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.windows.forms.control.fromhandle">Control.FromHandle(nint)</a>
     </div>
     <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.windows.forms.control.applyboundsconstraints">Control.ApplyBoundsConstraints(int, int, int, int)</a>
+    </div>
+    <div>
       <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.windows.forms.control.getchildatpoint#system-windows-forms-control-getchildatpoint(system-drawing-point-system-windows-forms-getchildatpointskip)">Control.GetChildAtPoint(Point, GetChildAtPointSkip)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.windows.forms.control.getcaptionfortool">Control.GetCaptionForTool(ToolTip)</a>
     </div>
     <div>
       <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.windows.forms.control.getchildatpoint#system-windows-forms-control-getchildatpoint(system-drawing-point)">Control.GetChildAtPoint(Point)</a>
@@ -829,7 +1208,19 @@ and display graphical output on the canvas.</p>
       <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.windows.forms.control.getcontainercontrol">Control.GetContainerControl()</a>
     </div>
     <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.windows.forms.control.getfirstchildcontrolintaborder">Control.GetFirstChildControlInTabOrder(bool)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.windows.forms.control.getneighboringtoolsrectangles">Control.GetNeighboringToolsRectangles()</a>
+    </div>
+    <div>
       <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.windows.forms.control.getnextcontrol">Control.GetNextControl(Control, bool)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.windows.forms.control.getstate">Control.GetState(Control.States)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.windows.forms.control.getextendedstate">Control.GetExtendedState(Control.ExtendedStates)</a>
     </div>
     <div>
       <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.windows.forms.control.getstyle">Control.GetStyle(ControlStyles)</a>
@@ -839,6 +1230,9 @@ and display graphical output on the canvas.</p>
     </div>
     <div>
       <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.windows.forms.control.initlayout">Control.InitLayout()</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.windows.forms.control.initializedcforwmctlcolor">Control.InitializeDCForWmCtlColor(HDC, MessageId)</a>
     </div>
     <div>
       <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.windows.forms.control.invalidate#system-windows-forms-control-invalidate(system-drawing-region)">Control.Invalidate(Region)</a>
@@ -898,6 +1292,9 @@ and display graphical output on the canvas.</p>
       <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.windows.forms.control.scalebitmaplogicaltodevice">Control.ScaleBitmapLogicalToDevice(ref Bitmap)</a>
     </div>
     <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.windows.forms.control.adjustwindowrectexforcontroldpi">Control.AdjustWindowRectExForControlDpi(ref RECT, WINDOW_STYLE, bool, WINDOW_EX_STYLE)</a>
+    </div>
+    <div>
       <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.windows.forms.control.notifyinvalidate">Control.NotifyInvalidate(Rectangle)</a>
     </div>
     <div>
@@ -955,6 +1352,12 @@ and display graphical output on the canvas.</p>
       <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.windows.forms.control.onparentfontchanged">Control.OnParentFontChanged(EventArgs)</a>
     </div>
     <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.windows.forms.control.onparenthandlerecreated">Control.OnParentHandleRecreated()</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.windows.forms.control.onparenthandlerecreating">Control.OnParentHandleRecreating()</a>
+    </div>
+    <div>
       <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.windows.forms.control.onparentforecolorchanged">Control.OnParentForeColorChanged(EventArgs)</a>
     </div>
     <div>
@@ -964,6 +1367,9 @@ and display graphical output on the canvas.</p>
       <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.windows.forms.control.onparentvisiblechanged">Control.OnParentVisibleChanged(EventArgs)</a>
     </div>
     <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.windows.forms.control.onparentbecameinvisible">Control.OnParentBecameInvisible()</a>
+    </div>
+    <div>
       <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.windows.forms.control.onprint">Control.OnPrint(PaintEventArgs)</a>
     </div>
     <div>
@@ -971,6 +1377,9 @@ and display graphical output on the canvas.</p>
     </div>
     <div>
       <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.windows.forms.control.ontabstopchanged">Control.OnTabStopChanged(EventArgs)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.windows.forms.control.ontopmostactivexparentchanged">Control.OnTopMostActiveXParentChanged(EventArgs)</a>
     </div>
     <div>
       <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.windows.forms.control.onclick">Control.OnClick(EventArgs)</a>
@@ -983,6 +1392,9 @@ and display graphical output on the canvas.</p>
     </div>
     <div>
       <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.windows.forms.control.oncontrolremoved">Control.OnControlRemoved(ControlEventArgs)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.windows.forms.control.oninvokedsetscrollposition">Control.OnInvokedSetScrollPosition(object, EventArgs)</a>
     </div>
     <div>
       <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.windows.forms.control.onlocationchanged">Control.OnLocationChanged(EventArgs)</a>
@@ -1022,6 +1434,9 @@ and display graphical output on the canvas.</p>
     </div>
     <div>
       <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.windows.forms.control.onkeyup">Control.OnKeyUp(KeyEventArgs)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.windows.forms.control.onlayoutsuspended">Control.OnLayoutSuspended()</a>
     </div>
     <div>
       <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.windows.forms.control.onleave">Control.OnLeave(EventArgs)</a>
@@ -1093,6 +1508,9 @@ and display graphical output on the canvas.</p>
       <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.windows.forms.control.onvalidated">Control.OnValidated(EventArgs)</a>
     </div>
     <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.windows.forms.control.initializeconstantsforinitialdpi">Control.InitializeConstantsForInitialDpi(int)</a>
+    </div>
+    <div>
       <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.windows.forms.control.performlayout#system-windows-forms-control-performlayout">Control.PerformLayout()</a>
     </div>
     <div>
@@ -1111,6 +1529,9 @@ and display graphical output on the canvas.</p>
       <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.windows.forms.control.preprocesscontrolmessage">Control.PreProcessControlMessage(ref Message)</a>
     </div>
     <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.windows.forms.control.printtometafilerecursive">Control.PrintToMetaFileRecursive(HDC, nint, Rectangle)</a>
+    </div>
+    <div>
       <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.windows.forms.control.processkeyeventargs">Control.ProcessKeyEventArgs(ref Message)</a>
     </div>
     <div>
@@ -1121,6 +1542,21 @@ and display graphical output on the canvas.</p>
     </div>
     <div>
       <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.windows.forms.control.raisepaintevent">Control.RaisePaintEvent(object, PaintEventArgs)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.windows.forms.control.resetbackcolor">Control.ResetBackColor()</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.windows.forms.control.resetcursor">Control.ResetCursor()</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.windows.forms.control.resetfont">Control.ResetFont()</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.windows.forms.control.resetforecolor">Control.ResetForeColor()</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.windows.forms.control.resetrighttoleft">Control.ResetRightToLeft()</a>
     </div>
     <div>
       <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.windows.forms.control.recreatehandle">Control.RecreateHandle()</a>
@@ -1138,6 +1574,12 @@ and display graphical output on the canvas.</p>
       <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.windows.forms.control.refresh">Control.Refresh()</a>
     </div>
     <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.windows.forms.control.releaseuiaprovider">Control.ReleaseUiaProvider(HWND)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.windows.forms.control.trygetaccessibilityobject">Control.TryGetAccessibilityObject(out AccessibleObject)</a>
+    </div>
+    <div>
       <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.windows.forms.control.resetmouseeventargs">Control.ResetMouseEventArgs()</a>
     </div>
     <div>
@@ -1148,6 +1590,12 @@ and display graphical output on the canvas.</p>
     </div>
     <div>
       <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.windows.forms.control.resumelayout#system-windows-forms-control-resumelayout(system-boolean)">Control.ResumeLayout(bool)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.windows.forms.control.scale#system-windows-forms-control-scale(system-single)">Control.Scale(float)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.windows.forms.control.scale#system-windows-forms-control-scale(system-single-system-single)">Control.Scale(float, float)</a>
     </div>
     <div>
       <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.windows.forms.control.scale#system-windows-forms-control-scale(system-drawing-sizef)">Control.Scale(SizeF)</a>
@@ -1171,10 +1619,40 @@ and display graphical output on the canvas.</p>
       <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.windows.forms.control.sizefromclientsize">Control.SizeFromClientSize(Size)</a>
     </div>
     <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.windows.forms.control.setstate">Control.SetState(Control.States, bool)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.windows.forms.control.setextendedstate">Control.SetExtendedState(Control.ExtendedStates, bool)</a>
+    </div>
+    <div>
       <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.windows.forms.control.setstyle">Control.SetStyle(ControlStyles, bool)</a>
     </div>
     <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.windows.forms.control.settooltip">Control.SetToolTip(ToolTip)</a>
+    </div>
+    <div>
       <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.windows.forms.control.settoplevel">Control.SetTopLevel(bool)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.windows.forms.control.settoplevelinternal">Control.SetTopLevelInternal(bool)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.windows.forms.control.shouldperformcontainervalidation">Control.ShouldPerformContainerValidation()</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.windows.forms.control.shouldserializebackcolor">Control.ShouldSerializeBackColor()</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.windows.forms.control.shouldserializecursor">Control.ShouldSerializeCursor()</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.windows.forms.control.shouldserializeforecolor">Control.ShouldSerializeForeColor()</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.windows.forms.control.shouldserializefont">Control.ShouldSerializeFont()</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.windows.forms.control.shouldserializerighttoleft">Control.ShouldSerializeRightToLeft()</a>
     </div>
     <div>
       <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.windows.forms.control.rtltranslatealignment#system-windows-forms-control-rtltranslatealignment(system-windows-forms-horizontalalignment)">Control.RtlTranslateAlignment(HorizontalAlignment)</a>
@@ -1198,7 +1676,22 @@ and display graphical output on the canvas.</p>
       <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.windows.forms.control.show">Control.Show()</a>
     </div>
     <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.windows.forms.control.shouldserializemaximumsize">Control.ShouldSerializeMaximumSize()</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.windows.forms.control.shouldserializeminimumsize">Control.ShouldSerializeMinimumSize()</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.windows.forms.control.shouldserializetext">Control.ShouldSerializeText()</a>
+    </div>
+    <div>
       <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.windows.forms.control.suspendlayout">Control.SuspendLayout()</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.windows.forms.control.trygetexplicitlysetfont">Control.TryGetExplicitlySetFont(out Font)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.windows.forms.control.setscaledfont">Control.SetScaledFont(Font, bool)</a>
     </div>
     <div>
       <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.windows.forms.control.update">Control.Update()</a>
@@ -1219,7 +1712,103 @@ and display graphical output on the canvas.</p>
       <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.windows.forms.control.updatestyles">Control.UpdateStyles()</a>
     </div>
     <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.windows.forms.control.updatestylescore">Control.UpdateStylesCore()</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.windows.forms.control.onboundsupdate">Control.OnBoundsUpdate(int, int, int, int)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.windows.forms.control.wmcontextmenu">Control.WmContextMenu(ref Message)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.windows.forms.layout.iarrangedelement">Control.IArrangedElement.PerformLayout(IArrangedElement, string)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.windows.forms.layout.iarrangedelement">Control.IArrangedElement.SetBounds(Rectangle, BoundsSpecified)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.windows.forms.idroptarget">Control.IDropTarget.OnDragEnter(DragEventArgs)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.windows.forms.idroptarget">Control.IDropTarget.OnDragOver(DragEventArgs)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.windows.forms.idroptarget">Control.IDropTarget.OnDragLeave(EventArgs)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.windows.forms.idroptarget">Control.IDropTarget.OnDragDrop(DragEventArgs)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.windows.forms.isupportoledropsource">Control.ISupportOleDropSource.OnGiveFeedback(GiveFeedbackEventArgs)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.windows.forms.isupportoledropsource">Control.ISupportOleDropSource.OnQueryContinueDrag(QueryContinueDragEventArgs)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.windows.forms.ikeyboardtooltip">Control.IKeyboardToolTip.CanShowToolTipsNow()</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.windows.forms.ikeyboardtooltip">Control.IKeyboardToolTip.GetNativeScreenRectangle()</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.windows.forms.ikeyboardtooltip">Control.IKeyboardToolTip.GetNeighboringToolsRectangles()</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.windows.forms.ikeyboardtooltip">Control.IKeyboardToolTip.IsHoveredWithMouse()</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.windows.forms.ikeyboardtooltip">Control.IKeyboardToolTip.HasRtlModeEnabled()</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.windows.forms.ikeyboardtooltip">Control.IKeyboardToolTip.AllowsToolTip()</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.windows.forms.ikeyboardtooltip">Control.IKeyboardToolTip.GetOwnerWindow()</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.windows.forms.ikeyboardtooltip">Control.IKeyboardToolTip.OnHooked(ToolTip)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.windows.forms.ikeyboardtooltip">Control.IKeyboardToolTip.OnUnhooked(ToolTip)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.windows.forms.ikeyboardtooltip">Control.IKeyboardToolTip.GetCaptionForTool(ToolTip)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.windows.forms.ikeyboardtooltip">Control.IKeyboardToolTip.ShowsOwnToolTip()</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.windows.forms.ikeyboardtooltip">Control.IKeyboardToolTip.IsBeingTabbedTo()</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.windows.forms.ikeyboardtooltip">Control.IKeyboardToolTip.AllowsChildrenToShowToolTips()</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.windows.forms.control.showsownkeyboardtooltip">Control.ShowsOwnKeyboardToolTip()</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.windows.forms.control.onkeyboardtooltiphook">Control.OnKeyboardToolTipHook(ToolTip)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.windows.forms.control.onkeyboardtooltipunhook">Control.OnKeyboardToolTipUnhook(ToolTip)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.windows.forms.control.allowskeyboardtooltip">Control.AllowsKeyboardToolTip()</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.windows.forms.control.gettoolinfowrapper">Control.GetToolInfoWrapper(TOOLTIP_FLAGS, string, ToolTip)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.windows.forms.control.allowschildrentoshowtooltips">Control.AllowsChildrenToShowToolTips()</a>
+    </div>
+    <div>
       <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.windows.forms.control.onimemodechanged">Control.OnImeModeChanged(EventArgs)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.windows.forms.control.resetimemode">Control.ResetImeMode()</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.windows.forms.control.shouldserializeimemode">Control.ShouldSerializeImeMode()</a>
     </div>
     <div>
       <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.windows.forms.control.invokeasync#system-windows-forms-control-invokeasync(system-action-system-threading-cancellationtoken)">Control.InvokeAsync(Action, CancellationToken)</a>
@@ -1274,6 +1863,9 @@ and display graphical output on the canvas.</p>
     </div>
     <div>
       <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.windows.forms.control.bounds">Control.Bounds</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.windows.forms.control.canaccessproperties">Control.CanAccessProperties</a>
     </div>
     <div>
       <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.windows.forms.control.canfocus">Control.CanFocus</a>
@@ -1393,13 +1985,19 @@ and display graphical output on the canvas.</p>
       <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.windows.forms.control.isancestorsiteindesignmode">Control.IsAncestorSiteInDesignMode</a>
     </div>
     <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.windows.forms.control.iscontainercontrol">Control.IsContainerControl</a>
+    </div>
+    <div>
       <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.windows.forms.control.ismirrored">Control.IsMirrored</a>
     </div>
     <div>
-      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.windows.forms.control.left">Control.Left</a>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.windows.forms.control.ismnemonicslisteneraxsourced">Control.IsMnemonicsListenerAxSourced</a>
     </div>
     <div>
-      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.windows.forms.control.margin">Control.Margin</a>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.windows.forms.control.lastkeydata">Control.LastKeyData</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.windows.forms.control.left">Control.Left</a>
     </div>
     <div>
       <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.windows.forms.control.modifierkeys">Control.ModifierKeys</a>
@@ -1432,6 +2030,9 @@ and display graphical output on the canvas.</p>
       <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.windows.forms.control.renderrighttoleft">Control.RenderRightToLeft</a>
     </div>
     <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.windows.forms.control.rendertransparencywithvisualstyles">Control.RenderTransparencyWithVisualStyles</a>
+    </div>
+    <div>
       <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.windows.forms.control.resizeredraw">Control.ResizeRedraw</a>
     </div>
     <div>
@@ -1445,12 +2046,6 @@ and display graphical output on the canvas.</p>
     </div>
     <div>
       <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.windows.forms.control.site">Control.Site</a>
-    </div>
-    <div>
-      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.windows.forms.control.tabindex">Control.TabIndex</a>
-    </div>
-    <div>
-      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.windows.forms.control.tabstop">Control.TabStop</a>
     </div>
     <div>
       <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.windows.forms.control.tag">Control.Tag</a>
@@ -1471,16 +2066,40 @@ and display graphical output on the canvas.</p>
       <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.windows.forms.control.usewaitcursor">Control.UseWaitCursor</a>
     </div>
     <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.windows.forms.control.supportsusecompatibletextrendering">Control.SupportsUseCompatibleTextRendering</a>
+    </div>
+    <div>
       <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.windows.forms.control.visible">Control.Visible</a>
     </div>
     <div>
       <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.windows.forms.control.width">Control.Width</a>
     </div>
     <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.windows.forms.control.extendedwindowstyle">Control.ExtendedWindowStyle</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.windows.forms.control.windowtarget">Control.WindowTarget</a>
+    </div>
+    <div>
       <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.windows.forms.control.preferredsize">Control.PreferredSize</a>
     </div>
     <div>
       <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.windows.forms.control.padding">Control.Padding</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.windows.forms.layout.iarrangedelement">Control.IArrangedElement.Children</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.windows.forms.layout.iarrangedelement">Control.IArrangedElement.Container</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.windows.forms.layout.iarrangedelement">Control.IArrangedElement.ParticipatesInLayout</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.windows.forms.layout.iarrangedelement">Control.IArrangedElement.Properties</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.windows.forms.control.windows-win32-foundation-ihandle-windows-win32-foundation-hwnd--handle">Control.IHandle&lt;HWND&gt;.Handle</a>
     </div>
     <div>
       <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.windows.forms.control.imemode">Control.ImeMode</a>
@@ -1531,9 +2150,6 @@ and display graphical output on the canvas.</p>
       <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.windows.forms.control.locationchanged">Control.LocationChanged</a>
     </div>
     <div>
-      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.windows.forms.control.marginchanged">Control.MarginChanged</a>
-    </div>
-    <div>
       <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.windows.forms.control.regionchanged">Control.RegionChanged</a>
     </div>
     <div>
@@ -1541,12 +2157,6 @@ and display graphical output on the canvas.</p>
     </div>
     <div>
       <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.windows.forms.control.sizechanged">Control.SizeChanged</a>
-    </div>
-    <div>
-      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.windows.forms.control.tabindexchanged">Control.TabIndexChanged</a>
-    </div>
-    <div>
-      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.windows.forms.control.tabstopchanged">Control.TabStopChanged</a>
     </div>
     <div>
       <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.windows.forms.control.textchanged">Control.TextChanged</a>
@@ -1781,6 +2391,251 @@ and display graphical output on the canvas.</p>
 
 
 
+  <h2 class="section" id="fields">Fields
+</h2>
+
+
+
+  <h3 id="BOOSEapp_Form1_Factory" data-uid="BOOSEapp.Form1.Factory">
+  Factory
+  <a class="header-action link-secondary" title="View source" href="https://github.com/ASE2025repos/ase-boose-assignment-blitwinczuk/blob/main/BOOSEapp/Form1.cs/#L18"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">private CommandFactory Factory</code></pre>
+  </div>
+
+
+
+
+  <h4 class="section">Field Value</h4>
+  <dl class="parameters">
+    <dt><span class="xref">CommandFactory</span></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+  <h3 id="BOOSEapp_Form1_Parser" data-uid="BOOSEapp.Form1.Parser">
+  Parser
+  <a class="header-action link-secondary" title="View source" href="https://github.com/ASE2025repos/ase-boose-assignment-blitwinczuk/blob/main/BOOSEapp/Form1.cs/#L20"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">private IParser Parser</code></pre>
+  </div>
+
+
+
+
+  <h4 class="section">Field Value</h4>
+  <dl class="parameters">
+    <dt><span class="xref">IParser</span></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+  <h3 id="BOOSEapp_Form1_Program" data-uid="BOOSEapp.Form1.Program">
+  Program
+  <a class="header-action link-secondary" title="View source" href="https://github.com/ASE2025repos/ase-boose-assignment-blitwinczuk/blob/main/BOOSEapp/Form1.cs/#L19"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">private StoredProgram Program</code></pre>
+  </div>
+
+
+
+
+  <h4 class="section">Field Value</h4>
+  <dl class="parameters">
+    <dt><span class="xref">StoredProgram</span></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+  <h3 id="BOOSEapp_Form1_button1" data-uid="BOOSEapp.Form1.button1">
+  button1
+  <a class="header-action link-secondary" title="View source" href="https://github.com/ASE2025repos/ase-boose-assignment-blitwinczuk/blob/main/BOOSEapp/Form1.Designer.cs/#L90"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">private Button button1</code></pre>
+  </div>
+
+
+
+
+  <h4 class="section">Field Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.windows.forms.button">Button</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+  <h3 id="BOOSEapp_Form1_canvas" data-uid="BOOSEapp.Form1.canvas">
+  canvas
+  <a class="header-action link-secondary" title="View source" href="https://github.com/ASE2025repos/ase-boose-assignment-blitwinczuk/blob/main/BOOSEapp/Form1.cs/#L17"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">private AppCanvas canvas</code></pre>
+  </div>
+
+
+
+
+  <h4 class="section">Field Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="BOOSEapp.AppCanvas.html">AppCanvas</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+  <h3 id="BOOSEapp_Form1_components" data-uid="BOOSEapp.Form1.components">
+  components
+  <a class="header-action link-secondary" title="View source" href="https://github.com/ASE2025repos/ase-boose-assignment-blitwinczuk/blob/main/BOOSEapp/Form1.Designer.cs/#L11"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Required designer variable.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">private IContainer components</code></pre>
+  </div>
+
+
+
+
+  <h4 class="section">Field Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.componentmodel.icontainer">IContainer</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+  <h3 id="BOOSEapp_Form1_pictureBox1" data-uid="BOOSEapp.Form1.pictureBox1">
+  pictureBox1
+  <a class="header-action link-secondary" title="View source" href="https://github.com/ASE2025repos/ase-boose-assignment-blitwinczuk/blob/main/BOOSEapp/Form1.Designer.cs/#L88"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">private PictureBox pictureBox1</code></pre>
+  </div>
+
+
+
+
+  <h4 class="section">Field Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.windows.forms.picturebox">PictureBox</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+  <h3 id="BOOSEapp_Form1_textBox1" data-uid="BOOSEapp.Form1.textBox1">
+  textBox1
+  <a class="header-action link-secondary" title="View source" href="https://github.com/ASE2025repos/ase-boose-assignment-blitwinczuk/blob/main/BOOSEapp/Form1.Designer.cs/#L89"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">private TextBox textBox1</code></pre>
+  </div>
+
+
+
+
+  <h4 class="section">Field Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.windows.forms.textbox">TextBox</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
   <h2 class="section" id="properties">Properties
 </h2>
 
@@ -1798,6 +2653,7 @@ and display graphical output on the canvas.</p>
 
   <div class="codewrapper">
     <pre><code class="lang-csharp hljs">[Browsable(false)]
+[DesignerSerializationVisibility(DesignerSerializationVisibility.Hidden)]
 public string UserInput { get; set; }</code></pre>
   </div>
 
@@ -1855,6 +2711,67 @@ public string UserInput { get; set; }</code></pre>
 
 
 
+  <a id="BOOSEapp_Form1_Form1_Load_" data-uid="BOOSEapp.Form1.Form1_Load*"></a>
+
+  <h3 id="BOOSEapp_Form1_Form1_Load_System_Object_System_EventArgs_" data-uid="BOOSEapp.Form1.Form1_Load(System.Object,System.EventArgs)">
+  Form1_Load(object, EventArgs)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/ASE2025repos/ase-boose-assignment-blitwinczuk/blob/main/BOOSEapp/Form1.cs/#L38"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">private void Form1_Load(object sender, EventArgs e)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>sender</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object">object</a></dt>
+    <dd></dd>
+    <dt><code>e</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.eventargs">EventArgs</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+
+  <a id="BOOSEapp_Form1_InitializeComponent_" data-uid="BOOSEapp.Form1.InitializeComponent*"></a>
+
+  <h3 id="BOOSEapp_Form1_InitializeComponent" data-uid="BOOSEapp.Form1.InitializeComponent">
+  InitializeComponent()
+  <a class="header-action link-secondary" title="View source" href="https://github.com/ASE2025repos/ase-boose-assignment-blitwinczuk/blob/main/BOOSEapp/Form1.Designer.cs/#L32"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Required method for Designer support - do not modify
+the contents of this method with the code editor.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">private void InitializeComponent()</code></pre>
+  </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
   <a id="BOOSEapp_Form1_button1_Click_" data-uid="BOOSEapp.Form1.button1_Click*"></a>
 
   <h3 id="BOOSEapp_Form1_button1_Click_System_Object_System_EventArgs_" data-uid="BOOSEapp.Form1.button1_Click(System.Object,System.EventArgs)">
@@ -1867,6 +2784,171 @@ public string UserInput { get; set; }</code></pre>
 
   <div class="codewrapper">
     <pre><code class="lang-csharp hljs">public void button1_Click(object sender, EventArgs e)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>sender</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object">object</a></dt>
+    <dd></dd>
+    <dt><code>e</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.eventargs">EventArgs</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+
+  <a id="BOOSEapp_Form1_panel1_Paint_" data-uid="BOOSEapp.Form1.panel1_Paint*"></a>
+
+  <h3 id="BOOSEapp_Form1_panel1_Paint_System_Object_System_Windows_Forms_PaintEventArgs_" data-uid="BOOSEapp.Form1.panel1_Paint(System.Object,System.Windows.Forms.PaintEventArgs)">
+  panel1_Paint(object, PaintEventArgs)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/ASE2025repos/ase-boose-assignment-blitwinczuk/blob/main/BOOSEapp/Form1.cs/#L90"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">private void panel1_Paint(object sender, PaintEventArgs e)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>sender</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object">object</a></dt>
+    <dd></dd>
+    <dt><code>e</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.windows.forms.painteventargs">PaintEventArgs</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+
+  <a id="BOOSEapp_Form1_pictureBox1_Click_" data-uid="BOOSEapp.Form1.pictureBox1_Click*"></a>
+
+  <h3 id="BOOSEapp_Form1_pictureBox1_Click_System_Object_System_EventArgs_" data-uid="BOOSEapp.Form1.pictureBox1_Click(System.Object,System.EventArgs)">
+  pictureBox1_Click(object, EventArgs)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/ASE2025repos/ase-boose-assignment-blitwinczuk/blob/main/BOOSEapp/Form1.cs/#L78"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">private void pictureBox1_Click(object sender, EventArgs e)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>sender</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object">object</a></dt>
+    <dd></dd>
+    <dt><code>e</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.eventargs">EventArgs</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+
+  <a id="BOOSEapp_Form1_pictureBox1_Paint_" data-uid="BOOSEapp.Form1.pictureBox1_Paint*"></a>
+
+  <h3 id="BOOSEapp_Form1_pictureBox1_Paint_System_Object_System_Windows_Forms_PaintEventArgs_" data-uid="BOOSEapp.Form1.pictureBox1_Paint(System.Object,System.Windows.Forms.PaintEventArgs)">
+  pictureBox1_Paint(object, PaintEventArgs)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/ASE2025repos/ase-boose-assignment-blitwinczuk/blob/main/BOOSEapp/Form1.cs/#L69"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">private void pictureBox1_Paint(object sender, PaintEventArgs e)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>sender</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object">object</a></dt>
+    <dd></dd>
+    <dt><code>e</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.windows.forms.painteventargs">PaintEventArgs</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+
+  <a id="BOOSEapp_Form1_textBox1_TextChanged_" data-uid="BOOSEapp.Form1.textBox1_TextChanged*"></a>
+
+  <h3 id="BOOSEapp_Form1_textBox1_TextChanged_System_Object_System_EventArgs_" data-uid="BOOSEapp.Form1.textBox1_TextChanged(System.Object,System.EventArgs)">
+  textBox1_TextChanged(object, EventArgs)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/ASE2025repos/ase-boose-assignment-blitwinczuk/blob/main/BOOSEapp/Form1.cs/#L82"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">private void textBox1_TextChanged(object sender, EventArgs e)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>sender</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object">object</a></dt>
+    <dd></dd>
+    <dt><code>e</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.eventargs">EventArgs</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+
+  <a id="BOOSEapp_Form1_textBox2_TextChanged_" data-uid="BOOSEapp.Form1.textBox2_TextChanged*"></a>
+
+  <h3 id="BOOSEapp_Form1_textBox2_TextChanged_System_Object_System_EventArgs_" data-uid="BOOSEapp.Form1.textBox2_TextChanged(System.Object,System.EventArgs)">
+  textBox2_TextChanged(object, EventArgs)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/ASE2025repos/ase-boose-assignment-blitwinczuk/blob/main/BOOSEapp/Form1.cs/#L86"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">private void textBox2_TextChanged(object sender, EventArgs e)</code></pre>
   </div>
 
   <h4 class="section">Parameters</h4>

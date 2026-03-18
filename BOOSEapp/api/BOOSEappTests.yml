@@ -1,0 +1,23 @@
+### YamlMime:ManagedReference
+items:
+- uid: BOOSEappTests
+  commentId: N:BOOSEappTests
+  id: BOOSEappTests
+  children:
+  - BOOSEappTests.CanvasCommandTests
+  langs:
+  - csharp
+  - vb
+  name: BOOSEappTests
+  nameWithType: BOOSEappTests
+  fullName: BOOSEappTests
+  type: Namespace
+  assemblies:
+  - BOOSEappTests
+references:
+- uid: BOOSEappTests.CanvasCommandTests
+  commentId: T:BOOSEappTests.CanvasCommandTests
+  href: BOOSEappTests.CanvasCommandTests.html
+  name: CanvasCommandTests
+  nameWithType: CanvasCommandTests
+  fullName: BOOSEappTests.CanvasCommandTests

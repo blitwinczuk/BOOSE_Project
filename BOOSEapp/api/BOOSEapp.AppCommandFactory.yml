@@ -7,6 +7,7 @@ items:
   children:
   - BOOSEapp.AppCommandFactory.#ctor(BOOSE.ICanvas)
   - BOOSEapp.AppCommandFactory.MakeCommand(System.String)
+  - BOOSEapp.AppCommandFactory.canvas
   langs:
   - csharp
   - vb
@@ -48,6 +49,33 @@ items:
   - System.Object.MemberwiseClone
   - System.Object.ReferenceEquals(System.Object,System.Object)
   - System.Object.ToString
+- uid: BOOSEapp.AppCommandFactory.canvas
+  commentId: F:BOOSEapp.AppCommandFactory.canvas
+  id: canvas
+  parent: BOOSEapp.AppCommandFactory
+  langs:
+  - csharp
+  - vb
+  name: canvas
+  nameWithType: AppCommandFactory.canvas
+  fullName: BOOSEapp.AppCommandFactory.canvas
+  type: Field
+  source:
+    remote:
+      path: BOOSEapp/AppCommandFactory.cs
+      branch: main
+      repo: https://github.com/ASE2025repos/ase-boose-assignment-blitwinczuk.git
+    id: canvas
+    path: AppCommandFactory.cs
+    startLine: 11
+  assemblies:
+  - BOOSEapp
+  namespace: BOOSEapp
+  syntax:
+    content: private ICanvas canvas
+    return:
+      type: BOOSE.ICanvas
+    content.vb: Private canvas As ICanvas
 - uid: BOOSEapp.AppCommandFactory.#ctor(BOOSE.ICanvas)
   commentId: M:BOOSEapp.AppCommandFactory.#ctor(BOOSE.ICanvas)
   id: '#ctor(BOOSE.ICanvas)'
@@ -386,6 +414,13 @@ references:
   name: BOOSE
   nameWithType: BOOSE
   fullName: BOOSE
+- uid: BOOSE.ICanvas
+  commentId: T:BOOSE.ICanvas
+  parent: BOOSE
+  isExternal: true
+  name: ICanvas
+  nameWithType: ICanvas
+  fullName: BOOSE.ICanvas
 - uid: BOOSEapp.AppCommandFactory.#ctor*
   commentId: Overload:BOOSEapp.AppCommandFactory.#ctor
   href: BOOSEapp.AppCommandFactory.html#BOOSEapp_AppCommandFactory__ctor_BOOSE_ICanvas_
@@ -395,13 +430,6 @@ references:
   nameWithType.vb: AppCommandFactory.New
   fullName.vb: BOOSEapp.AppCommandFactory.New
   name.vb: New
-- uid: BOOSE.ICanvas
-  commentId: T:BOOSE.ICanvas
-  parent: BOOSE
-  isExternal: true
-  name: ICanvas
-  nameWithType: ICanvas
-  fullName: BOOSE.ICanvas
 - uid: BOOSE.ICommand
   commentId: T:BOOSE.ICommand
   parent: BOOSE

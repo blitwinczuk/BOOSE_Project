@@ -6,10 +6,12 @@ items:
   parent: BOOSEapp
   children:
   - BOOSEapp.AppCanvas.#ctor(System.Int32,System.Int32)
+  - BOOSEapp.AppCanvas.CanvasBitmap
   - BOOSEapp.AppCanvas.Circle(System.Int32,System.Boolean)
   - BOOSEapp.AppCanvas.Clear
   - BOOSEapp.AppCanvas.DrawTo(System.Int32,System.Int32)
   - BOOSEapp.AppCanvas.MoveTo(System.Int32,System.Int32)
+  - BOOSEapp.AppCanvas.Pen
   - BOOSEapp.AppCanvas.PenColour
   - BOOSEapp.AppCanvas.Rect(System.Int32,System.Int32,System.Boolean)
   - BOOSEapp.AppCanvas.Reset
@@ -19,7 +21,10 @@ items:
   - BOOSEapp.AppCanvas.WriteText(System.String)
   - BOOSEapp.AppCanvas.Xpos
   - BOOSEapp.AppCanvas.Ypos
+  - BOOSEapp.AppCanvas.g
   - BOOSEapp.AppCanvas.getBitmap
+  - BOOSEapp.AppCanvas.xPos
+  - BOOSEapp.AppCanvas.yPos
   langs:
   - csharp
   - vb
@@ -58,6 +63,141 @@ items:
   - System.Object.MemberwiseClone
   - System.Object.ReferenceEquals(System.Object,System.Object)
   - System.Object.ToString
+- uid: BOOSEapp.AppCanvas.CanvasBitmap
+  commentId: F:BOOSEapp.AppCanvas.CanvasBitmap
+  id: CanvasBitmap
+  parent: BOOSEapp.AppCanvas
+  langs:
+  - csharp
+  - vb
+  name: CanvasBitmap
+  nameWithType: AppCanvas.CanvasBitmap
+  fullName: BOOSEapp.AppCanvas.CanvasBitmap
+  type: Field
+  source:
+    remote:
+      path: BOOSEapp/AppCanvas.cs
+      branch: main
+      repo: https://github.com/ASE2025repos/ase-boose-assignment-blitwinczuk.git
+    id: CanvasBitmap
+    path: AppCanvas.cs
+    startLine: 12
+  assemblies:
+  - BOOSEapp
+  namespace: BOOSEapp
+  syntax:
+    content: private Bitmap CanvasBitmap
+    return:
+      type: System.Drawing.Bitmap
+    content.vb: Private CanvasBitmap As Bitmap
+- uid: BOOSEapp.AppCanvas.g
+  commentId: F:BOOSEapp.AppCanvas.g
+  id: g
+  parent: BOOSEapp.AppCanvas
+  langs:
+  - csharp
+  - vb
+  name: g
+  nameWithType: AppCanvas.g
+  fullName: BOOSEapp.AppCanvas.g
+  type: Field
+  source:
+    remote:
+      path: BOOSEapp/AppCanvas.cs
+      branch: main
+      repo: https://github.com/ASE2025repos/ase-boose-assignment-blitwinczuk.git
+    id: g
+    path: AppCanvas.cs
+    startLine: 13
+  assemblies:
+  - BOOSEapp
+  namespace: BOOSEapp
+  syntax:
+    content: private Graphics g
+    return:
+      type: System.Drawing.Graphics
+    content.vb: Private g As Graphics
+- uid: BOOSEapp.AppCanvas.xPos
+  commentId: F:BOOSEapp.AppCanvas.xPos
+  id: xPos
+  parent: BOOSEapp.AppCanvas
+  langs:
+  - csharp
+  - vb
+  name: xPos
+  nameWithType: AppCanvas.xPos
+  fullName: BOOSEapp.AppCanvas.xPos
+  type: Field
+  source:
+    remote:
+      path: BOOSEapp/AppCanvas.cs
+      branch: main
+      repo: https://github.com/ASE2025repos/ase-boose-assignment-blitwinczuk.git
+    id: xPos
+    path: AppCanvas.cs
+    startLine: 14
+  assemblies:
+  - BOOSEapp
+  namespace: BOOSEapp
+  syntax:
+    content: private int xPos
+    return:
+      type: System.Int32
+    content.vb: Private xPos As Integer
+- uid: BOOSEapp.AppCanvas.yPos
+  commentId: F:BOOSEapp.AppCanvas.yPos
+  id: yPos
+  parent: BOOSEapp.AppCanvas
+  langs:
+  - csharp
+  - vb
+  name: yPos
+  nameWithType: AppCanvas.yPos
+  fullName: BOOSEapp.AppCanvas.yPos
+  type: Field
+  source:
+    remote:
+      path: BOOSEapp/AppCanvas.cs
+      branch: main
+      repo: https://github.com/ASE2025repos/ase-boose-assignment-blitwinczuk.git
+    id: yPos
+    path: AppCanvas.cs
+    startLine: 14
+  assemblies:
+  - BOOSEapp
+  namespace: BOOSEapp
+  syntax:
+    content: private int yPos
+    return:
+      type: System.Int32
+    content.vb: Private yPos As Integer
+- uid: BOOSEapp.AppCanvas.Pen
+  commentId: F:BOOSEapp.AppCanvas.Pen
+  id: Pen
+  parent: BOOSEapp.AppCanvas
+  langs:
+  - csharp
+  - vb
+  name: Pen
+  nameWithType: AppCanvas.Pen
+  fullName: BOOSEapp.AppCanvas.Pen
+  type: Field
+  source:
+    remote:
+      path: BOOSEapp/AppCanvas.cs
+      branch: main
+      repo: https://github.com/ASE2025repos/ase-boose-assignment-blitwinczuk.git
+    id: Pen
+    path: AppCanvas.cs
+    startLine: 15
+  assemblies:
+  - BOOSEapp
+  namespace: BOOSEapp
+  syntax:
+    content: private Pen Pen
+    return:
+      type: System.Drawing.Pen
+    content.vb: Private Pen As Pen
 - uid: BOOSEapp.AppCanvas.#ctor(System.Int32,System.Int32)
   commentId: M:BOOSEapp.AppCanvas.#ctor(System.Int32,System.Int32)
   id: '#ctor(System.Int32,System.Int32)'
@@ -865,15 +1005,49 @@ references:
   name: BOOSE
   nameWithType: BOOSE
   fullName: BOOSE
-- uid: BOOSEapp.AppCanvas.#ctor*
-  commentId: Overload:BOOSEapp.AppCanvas.#ctor
-  href: BOOSEapp.AppCanvas.html#BOOSEapp_AppCanvas__ctor_System_Int32_System_Int32_
-  name: AppCanvas
-  nameWithType: AppCanvas.AppCanvas
-  fullName: BOOSEapp.AppCanvas.AppCanvas
-  nameWithType.vb: AppCanvas.New
-  fullName.vb: BOOSEapp.AppCanvas.New
-  name.vb: New
+- uid: System.Drawing.Bitmap
+  commentId: T:System.Drawing.Bitmap
+  parent: System.Drawing
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.drawing.bitmap
+  name: Bitmap
+  nameWithType: Bitmap
+  fullName: System.Drawing.Bitmap
+- uid: System.Drawing
+  commentId: N:System.Drawing
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system
+  name: System.Drawing
+  nameWithType: System.Drawing
+  fullName: System.Drawing
+  spec.csharp:
+  - uid: System
+    name: System
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system
+  - name: .
+  - uid: System.Drawing
+    name: Drawing
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.drawing
+  spec.vb:
+  - uid: System
+    name: System
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system
+  - name: .
+  - uid: System.Drawing
+    name: Drawing
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.drawing
+- uid: System.Drawing.Graphics
+  commentId: T:System.Drawing.Graphics
+  parent: System.Drawing
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.drawing.graphics
+  name: Graphics
+  nameWithType: Graphics
+  fullName: System.Drawing.Graphics
 - uid: System.Int32
   commentId: T:System.Int32
   parent: System
@@ -885,6 +1059,23 @@ references:
   nameWithType.vb: Integer
   fullName.vb: Integer
   name.vb: Integer
+- uid: System.Drawing.Pen
+  commentId: T:System.Drawing.Pen
+  parent: System.Drawing
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.drawing.pen
+  name: Pen
+  nameWithType: Pen
+  fullName: System.Drawing.Pen
+- uid: BOOSEapp.AppCanvas.#ctor*
+  commentId: Overload:BOOSEapp.AppCanvas.#ctor
+  href: BOOSEapp.AppCanvas.html#BOOSEapp_AppCanvas__ctor_System_Int32_System_Int32_
+  name: AppCanvas
+  nameWithType: AppCanvas.AppCanvas
+  fullName: BOOSEapp.AppCanvas.AppCanvas
+  nameWithType.vb: AppCanvas.New
+  fullName.vb: BOOSEapp.AppCanvas.New
+  name.vb: New
 - uid: BOOSEapp.AppCanvas.Xpos*
   commentId: Overload:BOOSEapp.AppCanvas.Xpos
   href: BOOSEapp.AppCanvas.html#BOOSEapp_AppCanvas_Xpos

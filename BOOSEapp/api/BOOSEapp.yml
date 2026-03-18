@@ -6,7 +6,12 @@ items:
   children:
   - BOOSEapp.AppCanvas
   - BOOSEapp.AppCommandFactory
+  - BOOSEapp.ApplicationConfiguration
+  - BOOSEapp.Circle
   - BOOSEapp.Form1
+  - BOOSEapp.MoveTo
+  - BOOSEapp.Program
+  - BOOSEapp.Rectangle
   langs:
   - csharp
   - vb
@@ -19,19 +24,57 @@ items:
 references:
 - uid: BOOSEapp.AppCanvas
   commentId: T:BOOSEapp.AppCanvas
+  parent: BOOSEapp
   href: BOOSEapp.AppCanvas.html
   name: AppCanvas
   nameWithType: AppCanvas
   fullName: BOOSEapp.AppCanvas
 - uid: BOOSEapp.AppCommandFactory
   commentId: T:BOOSEapp.AppCommandFactory
+  parent: BOOSEapp
   href: BOOSEapp.AppCommandFactory.html
   name: AppCommandFactory
   nameWithType: AppCommandFactory
   fullName: BOOSEapp.AppCommandFactory
+- uid: BOOSEapp.Circle
+  commentId: T:BOOSEapp.Circle
+  href: BOOSEapp.Circle.html
+  name: Circle
+  nameWithType: Circle
+  fullName: BOOSEapp.Circle
 - uid: BOOSEapp.Form1
   commentId: T:BOOSEapp.Form1
   href: BOOSEapp.Form1.html
   name: Form1
   nameWithType: Form1
   fullName: BOOSEapp.Form1
+- uid: BOOSEapp.MoveTo
+  commentId: T:BOOSEapp.MoveTo
+  href: BOOSEapp.MoveTo.html
+  name: MoveTo
+  nameWithType: MoveTo
+  fullName: BOOSEapp.MoveTo
+- uid: BOOSEapp.Program
+  commentId: T:BOOSEapp.Program
+  href: BOOSEapp.Program.html
+  name: Program
+  nameWithType: Program
+  fullName: BOOSEapp.Program
+- uid: BOOSEapp.Rectangle
+  commentId: T:BOOSEapp.Rectangle
+  href: BOOSEapp.Rectangle.html
+  name: Rectangle
+  nameWithType: Rectangle
+  fullName: BOOSEapp.Rectangle
+- uid: BOOSEapp.ApplicationConfiguration
+  commentId: T:BOOSEapp.ApplicationConfiguration
+  href: BOOSEapp.ApplicationConfiguration.html
+  name: ApplicationConfiguration
+  nameWithType: ApplicationConfiguration
+  fullName: BOOSEapp.ApplicationConfiguration
+- uid: BOOSEapp
+  commentId: N:BOOSEapp
+  href: BOOSEapp.html
+  name: BOOSEapp
+  nameWithType: BOOSEapp
+  fullName: BOOSEapp

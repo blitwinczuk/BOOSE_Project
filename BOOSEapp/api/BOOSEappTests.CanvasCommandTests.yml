@@ -1,0 +1,638 @@
+### YamlMime:ManagedReference
+items:
+- uid: BOOSEappTests.CanvasCommandTests
+  commentId: T:BOOSEappTests.CanvasCommandTests
+  id: CanvasCommandTests
+  parent: BOOSEappTests
+  children:
+  - BOOSEappTests.CanvasCommandTests.DrawToCommand_UpdatesPenPositionVariables
+  - BOOSEappTests.CanvasCommandTests.MoveToCommand_UpdatesPenPositionVariables
+  - BOOSEappTests.CanvasCommandTests.MultilineProgram_ExecutesAndLeavesPenAtExpectedPosition
+  - BOOSEappTests.CanvasCommandTests.Setup
+  - BOOSEappTests.CanvasCommandTests._canvas
+  - BOOSEappTests.CanvasCommandTests._factory
+  - BOOSEappTests.CanvasCommandTests._parser
+  - BOOSEappTests.CanvasCommandTests._program
+  langs:
+  - csharp
+  - vb
+  name: CanvasCommandTests
+  nameWithType: CanvasCommandTests
+  fullName: BOOSEappTests.CanvasCommandTests
+  type: Class
+  source:
+    remote:
+      path: BOOSEappTests/Test1.cs
+      branch: main
+      repo: https://github.com/ASE2025repos/ase-boose-assignment-blitwinczuk.git
+    id: CanvasCommandTests
+    path: ../BOOSEappTests/Test1.cs
+    startLine: 9
+  assemblies:
+  - BOOSEappTests
+  namespace: BOOSEappTests
+  summary: Unit tests for BOOSE canvas commands and interpreter execution.
+  example: []
+  syntax:
+    content: >-
+      [TestClass]
+
+      public class CanvasCommandTests
+    content.vb: >-
+      <TestClass>
+
+      Public Class CanvasCommandTests
+  inheritance:
+  - System.Object
+  inheritedMembers:
+  - System.Object.Equals(System.Object)
+  - System.Object.Equals(System.Object,System.Object)
+  - System.Object.GetHashCode
+  - System.Object.GetType
+  - System.Object.MemberwiseClone
+  - System.Object.ReferenceEquals(System.Object,System.Object)
+  - System.Object.ToString
+  attributes:
+  - type: Microsoft.VisualStudio.TestTools.UnitTesting.TestClassAttribute
+    ctor: Microsoft.VisualStudio.TestTools.UnitTesting.TestClassAttribute.#ctor
+    arguments: []
+- uid: BOOSEappTests.CanvasCommandTests._canvas
+  commentId: F:BOOSEappTests.CanvasCommandTests._canvas
+  id: _canvas
+  parent: BOOSEappTests.CanvasCommandTests
+  langs:
+  - csharp
+  - vb
+  name: _canvas
+  nameWithType: CanvasCommandTests._canvas
+  fullName: BOOSEappTests.CanvasCommandTests._canvas
+  type: Field
+  source:
+    remote:
+      path: BOOSEappTests/Test1.cs
+      branch: main
+      repo: https://github.com/ASE2025repos/ase-boose-assignment-blitwinczuk.git
+    id: _canvas
+    path: ../BOOSEappTests/Test1.cs
+    startLine: 12
+  assemblies:
+  - BOOSEappTests
+  namespace: BOOSEappTests
+  syntax:
+    content: private AppCanvas _canvas
+    return:
+      type: BOOSEapp.AppCanvas
+    content.vb: Private _canvas As AppCanvas
+- uid: BOOSEappTests.CanvasCommandTests._factory
+  commentId: F:BOOSEappTests.CanvasCommandTests._factory
+  id: _factory
+  parent: BOOSEappTests.CanvasCommandTests
+  langs:
+  - csharp
+  - vb
+  name: _factory
+  nameWithType: CanvasCommandTests._factory
+  fullName: BOOSEappTests.CanvasCommandTests._factory
+  type: Field
+  source:
+    remote:
+      path: BOOSEappTests/Test1.cs
+      branch: main
+      repo: https://github.com/ASE2025repos/ase-boose-assignment-blitwinczuk.git
+    id: _factory
+    path: ../BOOSEappTests/Test1.cs
+    startLine: 13
+  assemblies:
+  - BOOSEappTests
+  namespace: BOOSEappTests
+  syntax:
+    content: private AppCommandFactory _factory
+    return:
+      type: BOOSEapp.AppCommandFactory
+    content.vb: Private _factory As AppCommandFactory
+- uid: BOOSEappTests.CanvasCommandTests._program
+  commentId: F:BOOSEappTests.CanvasCommandTests._program
+  id: _program
+  parent: BOOSEappTests.CanvasCommandTests
+  langs:
+  - csharp
+  - vb
+  name: _program
+  nameWithType: CanvasCommandTests._program
+  fullName: BOOSEappTests.CanvasCommandTests._program
+  type: Field
+  source:
+    remote:
+      path: BOOSEappTests/Test1.cs
+      branch: main
+      repo: https://github.com/ASE2025repos/ase-boose-assignment-blitwinczuk.git
+    id: _program
+    path: ../BOOSEappTests/Test1.cs
+    startLine: 14
+  assemblies:
+  - BOOSEappTests
+  namespace: BOOSEappTests
+  syntax:
+    content: private StoredProgram _program
+    return:
+      type: BOOSE.StoredProgram
+    content.vb: Private _program As StoredProgram
+- uid: BOOSEappTests.CanvasCommandTests._parser
+  commentId: F:BOOSEappTests.CanvasCommandTests._parser
+  id: _parser
+  parent: BOOSEappTests.CanvasCommandTests
+  langs:
+  - csharp
+  - vb
+  name: _parser
+  nameWithType: CanvasCommandTests._parser
+  fullName: BOOSEappTests.CanvasCommandTests._parser
+  type: Field
+  source:
+    remote:
+      path: BOOSEappTests/Test1.cs
+      branch: main
+      repo: https://github.com/ASE2025repos/ase-boose-assignment-blitwinczuk.git
+    id: _parser
+    path: ../BOOSEappTests/Test1.cs
+    startLine: 15
+  assemblies:
+  - BOOSEappTests
+  namespace: BOOSEappTests
+  syntax:
+    content: private IParser _parser
+    return:
+      type: BOOSE.IParser
+    content.vb: Private _parser As IParser
+- uid: BOOSEappTests.CanvasCommandTests.Setup
+  commentId: M:BOOSEappTests.CanvasCommandTests.Setup
+  id: Setup
+  parent: BOOSEappTests.CanvasCommandTests
+  langs:
+  - csharp
+  - vb
+  name: Setup()
+  nameWithType: CanvasCommandTests.Setup()
+  fullName: BOOSEappTests.CanvasCommandTests.Setup()
+  type: Method
+  source:
+    remote:
+      path: BOOSEappTests/Test1.cs
+      branch: main
+      repo: https://github.com/ASE2025repos/ase-boose-assignment-blitwinczuk.git
+    id: Setup
+    path: ../BOOSEappTests/Test1.cs
+    startLine: 21
+  assemblies:
+  - BOOSEappTests
+  namespace: BOOSEappTests
+  summary: >-
+    Initializes test environment before each test case.
+
+    Sets up canvas, factory, stored program and parser.
+  example: []
+  syntax:
+    content: >-
+      [TestInitialize]
+
+      public void Setup()
+    content.vb: >-
+      <TestInitialize>
+
+      Public Sub Setup()
+  overload: BOOSEappTests.CanvasCommandTests.Setup*
+  attributes:
+  - type: Microsoft.VisualStudio.TestTools.UnitTesting.TestInitializeAttribute
+    ctor: Microsoft.VisualStudio.TestTools.UnitTesting.TestInitializeAttribute.#ctor
+    arguments: []
+- uid: BOOSEappTests.CanvasCommandTests.MoveToCommand_UpdatesPenPositionVariables
+  commentId: M:BOOSEappTests.CanvasCommandTests.MoveToCommand_UpdatesPenPositionVariables
+  id: MoveToCommand_UpdatesPenPositionVariables
+  parent: BOOSEappTests.CanvasCommandTests
+  langs:
+  - csharp
+  - vb
+  name: MoveToCommand_UpdatesPenPositionVariables()
+  nameWithType: CanvasCommandTests.MoveToCommand_UpdatesPenPositionVariables()
+  fullName: BOOSEappTests.CanvasCommandTests.MoveToCommand_UpdatesPenPositionVariables()
+  type: Method
+  source:
+    remote:
+      path: BOOSEappTests/Test1.cs
+      branch: main
+      repo: https://github.com/ASE2025repos/ase-boose-assignment-blitwinczuk.git
+    id: MoveToCommand_UpdatesPenPositionVariables
+    path: ../BOOSEappTests/Test1.cs
+    startLine: 34
+  assemblies:
+  - BOOSEappTests
+  namespace: BOOSEappTests
+  summary: >-
+    Tests that the MoveTo command correctly updates
+
+    the pen position variables (Xpos and Ypos).
+  example: []
+  syntax:
+    content: >-
+      [TestMethod]
+
+      public void MoveToCommand_UpdatesPenPositionVariables()
+    content.vb: >-
+      <TestMethod>
+
+      Public Sub MoveToCommand_UpdatesPenPositionVariables()
+  overload: BOOSEappTests.CanvasCommandTests.MoveToCommand_UpdatesPenPositionVariables*
+  attributes:
+  - type: Microsoft.VisualStudio.TestTools.UnitTesting.TestMethodAttribute
+    ctor: Microsoft.VisualStudio.TestTools.UnitTesting.TestMethodAttribute.#ctor
+    arguments: []
+- uid: BOOSEappTests.CanvasCommandTests.DrawToCommand_UpdatesPenPositionVariables
+  commentId: M:BOOSEappTests.CanvasCommandTests.DrawToCommand_UpdatesPenPositionVariables
+  id: DrawToCommand_UpdatesPenPositionVariables
+  parent: BOOSEappTests.CanvasCommandTests
+  langs:
+  - csharp
+  - vb
+  name: DrawToCommand_UpdatesPenPositionVariables()
+  nameWithType: CanvasCommandTests.DrawToCommand_UpdatesPenPositionVariables()
+  fullName: BOOSEappTests.CanvasCommandTests.DrawToCommand_UpdatesPenPositionVariables()
+  type: Method
+  source:
+    remote:
+      path: BOOSEappTests/Test1.cs
+      branch: main
+      repo: https://github.com/ASE2025repos/ase-boose-assignment-blitwinczuk.git
+    id: DrawToCommand_UpdatesPenPositionVariables
+    path: ../BOOSEappTests/Test1.cs
+    startLine: 50
+  assemblies:
+  - BOOSEappTests
+  namespace: BOOSEappTests
+  summary: >-
+    Tests that the DrawTo command correctly updates
+
+    the pen position variables after drawing a line.
+  example: []
+  syntax:
+    content: >-
+      [TestMethod]
+
+      public void DrawToCommand_UpdatesPenPositionVariables()
+    content.vb: >-
+      <TestMethod>
+
+      Public Sub DrawToCommand_UpdatesPenPositionVariables()
+  overload: BOOSEappTests.CanvasCommandTests.DrawToCommand_UpdatesPenPositionVariables*
+  attributes:
+  - type: Microsoft.VisualStudio.TestTools.UnitTesting.TestMethodAttribute
+    ctor: Microsoft.VisualStudio.TestTools.UnitTesting.TestMethodAttribute.#ctor
+    arguments: []
+- uid: BOOSEappTests.CanvasCommandTests.MultilineProgram_ExecutesAndLeavesPenAtExpectedPosition
+  commentId: M:BOOSEappTests.CanvasCommandTests.MultilineProgram_ExecutesAndLeavesPenAtExpectedPosition
+  id: MultilineProgram_ExecutesAndLeavesPenAtExpectedPosition
+  parent: BOOSEappTests.CanvasCommandTests
+  langs:
+  - csharp
+  - vb
+  name: MultilineProgram_ExecutesAndLeavesPenAtExpectedPosition()
+  nameWithType: CanvasCommandTests.MultilineProgram_ExecutesAndLeavesPenAtExpectedPosition()
+  fullName: BOOSEappTests.CanvasCommandTests.MultilineProgram_ExecutesAndLeavesPenAtExpectedPosition()
+  type: Method
+  source:
+    remote:
+      path: BOOSEappTests/Test1.cs
+      branch: main
+      repo: https://github.com/ASE2025repos/ase-boose-assignment-blitwinczuk.git
+    id: MultilineProgram_ExecutesAndLeavesPenAtExpectedPosition
+    path: ../BOOSEappTests/Test1.cs
+    startLine: 68
+  assemblies:
+  - BOOSEappTests
+  namespace: BOOSEappTests
+  summary: >-
+    Tests execution of a multiline BOOSE program
+
+    and verifies that the final pen position is correct.
+  example: []
+  syntax:
+    content: >-
+      [TestMethod]
+
+      public void MultilineProgram_ExecutesAndLeavesPenAtExpectedPosition()
+    content.vb: >-
+      <TestMethod>
+
+      Public Sub MultilineProgram_ExecutesAndLeavesPenAtExpectedPosition()
+  overload: BOOSEappTests.CanvasCommandTests.MultilineProgram_ExecutesAndLeavesPenAtExpectedPosition*
+  attributes:
+  - type: Microsoft.VisualStudio.TestTools.UnitTesting.TestMethodAttribute
+    ctor: Microsoft.VisualStudio.TestTools.UnitTesting.TestMethodAttribute.#ctor
+    arguments: []
+references:
+- uid: BOOSEappTests
+  commentId: N:BOOSEappTests
+  href: BOOSEappTests.html
+  name: BOOSEappTests
+  nameWithType: BOOSEappTests
+  fullName: BOOSEappTests
+- uid: System.Object
+  commentId: T:System.Object
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object
+  name: object
+  nameWithType: object
+  fullName: object
+  nameWithType.vb: Object
+  fullName.vb: Object
+  name.vb: Object
+- uid: System.Object.Equals(System.Object)
+  commentId: M:System.Object.Equals(System.Object)
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)
+  name: Equals(object)
+  nameWithType: object.Equals(object)
+  fullName: object.Equals(object)
+  nameWithType.vb: Object.Equals(Object)
+  fullName.vb: Object.Equals(Object)
+  name.vb: Equals(Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System.Object.Equals(System.Object,System.Object)
+  commentId: M:System.Object.Equals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  name: Equals(object, object)
+  nameWithType: object.Equals(object, object)
+  fullName: object.Equals(object, object)
+  nameWithType.vb: Object.Equals(Object, Object)
+  fullName.vb: Object.Equals(Object, Object)
+  name.vb: Equals(Object, Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System.Object.GetHashCode
+  commentId: M:System.Object.GetHashCode
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.gethashcode
+  name: GetHashCode()
+  nameWithType: object.GetHashCode()
+  fullName: object.GetHashCode()
+  nameWithType.vb: Object.GetHashCode()
+  fullName.vb: Object.GetHashCode()
+  spec.csharp:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gethashcode
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gethashcode
+  - name: (
+  - name: )
+- uid: System.Object.GetType
+  commentId: M:System.Object.GetType
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  name: GetType()
+  nameWithType: object.GetType()
+  fullName: object.GetType()
+  nameWithType.vb: Object.GetType()
+  fullName.vb: Object.GetType()
+  spec.csharp:
+  - uid: System.Object.GetType
+    name: GetType
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.GetType
+    name: GetType
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  - name: (
+  - name: )
+- uid: System.Object.MemberwiseClone
+  commentId: M:System.Object.MemberwiseClone
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.memberwiseclone
+  name: MemberwiseClone()
+  nameWithType: object.MemberwiseClone()
+  fullName: object.MemberwiseClone()
+  nameWithType.vb: Object.MemberwiseClone()
+  fullName.vb: Object.MemberwiseClone()
+  spec.csharp:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.memberwiseclone
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.memberwiseclone
+  - name: (
+  - name: )
+- uid: System.Object.ReferenceEquals(System.Object,System.Object)
+  commentId: M:System.Object.ReferenceEquals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  name: ReferenceEquals(object, object)
+  nameWithType: object.ReferenceEquals(object, object)
+  fullName: object.ReferenceEquals(object, object)
+  nameWithType.vb: Object.ReferenceEquals(Object, Object)
+  fullName.vb: Object.ReferenceEquals(Object, Object)
+  name.vb: ReferenceEquals(Object, Object)
+  spec.csharp:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System.Object.ToString
+  commentId: M:System.Object.ToString
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.tostring
+  name: ToString()
+  nameWithType: object.ToString()
+  fullName: object.ToString()
+  nameWithType.vb: Object.ToString()
+  fullName.vb: Object.ToString()
+  spec.csharp:
+  - uid: System.Object.ToString
+    name: ToString
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.tostring
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.ToString
+    name: ToString
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.tostring
+  - name: (
+  - name: )
+- uid: System
+  commentId: N:System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system
+  name: System
+  nameWithType: System
+  fullName: System
+- uid: BOOSEapp.AppCanvas
+  commentId: T:BOOSEapp.AppCanvas
+  parent: BOOSEapp
+  href: BOOSEapp.AppCanvas.html
+  name: AppCanvas
+  nameWithType: AppCanvas
+  fullName: BOOSEapp.AppCanvas
+- uid: BOOSEapp
+  commentId: N:BOOSEapp
+  href: BOOSEapp.html
+  name: BOOSEapp
+  nameWithType: BOOSEapp
+  fullName: BOOSEapp
+- uid: BOOSEapp.AppCommandFactory
+  commentId: T:BOOSEapp.AppCommandFactory
+  parent: BOOSEapp
+  href: BOOSEapp.AppCommandFactory.html
+  name: AppCommandFactory
+  nameWithType: AppCommandFactory
+  fullName: BOOSEapp.AppCommandFactory
+- uid: BOOSE.StoredProgram
+  commentId: T:BOOSE.StoredProgram
+  parent: BOOSE
+  isExternal: true
+  name: StoredProgram
+  nameWithType: StoredProgram
+  fullName: BOOSE.StoredProgram
+- uid: BOOSE
+  commentId: N:BOOSE
+  isExternal: true
+  name: BOOSE
+  nameWithType: BOOSE
+  fullName: BOOSE
+- uid: BOOSE.IParser
+  commentId: T:BOOSE.IParser
+  parent: BOOSE
+  isExternal: true
+  name: IParser
+  nameWithType: IParser
+  fullName: BOOSE.IParser
+- uid: BOOSEappTests.CanvasCommandTests.Setup*
+  commentId: Overload:BOOSEappTests.CanvasCommandTests.Setup
+  href: BOOSEappTests.CanvasCommandTests.html#BOOSEappTests_CanvasCommandTests_Setup
+  name: Setup
+  nameWithType: CanvasCommandTests.Setup
+  fullName: BOOSEappTests.CanvasCommandTests.Setup
+- uid: BOOSEappTests.CanvasCommandTests.MoveToCommand_UpdatesPenPositionVariables*
+  commentId: Overload:BOOSEappTests.CanvasCommandTests.MoveToCommand_UpdatesPenPositionVariables
+  href: BOOSEappTests.CanvasCommandTests.html#BOOSEappTests_CanvasCommandTests_MoveToCommand_UpdatesPenPositionVariables
+  name: MoveToCommand_UpdatesPenPositionVariables
+  nameWithType: CanvasCommandTests.MoveToCommand_UpdatesPenPositionVariables
+  fullName: BOOSEappTests.CanvasCommandTests.MoveToCommand_UpdatesPenPositionVariables
+- uid: BOOSEappTests.CanvasCommandTests.DrawToCommand_UpdatesPenPositionVariables*
+  commentId: Overload:BOOSEappTests.CanvasCommandTests.DrawToCommand_UpdatesPenPositionVariables
+  href: BOOSEappTests.CanvasCommandTests.html#BOOSEappTests_CanvasCommandTests_DrawToCommand_UpdatesPenPositionVariables
+  name: DrawToCommand_UpdatesPenPositionVariables
+  nameWithType: CanvasCommandTests.DrawToCommand_UpdatesPenPositionVariables
+  fullName: BOOSEappTests.CanvasCommandTests.DrawToCommand_UpdatesPenPositionVariables
+- uid: BOOSEappTests.CanvasCommandTests.MultilineProgram_ExecutesAndLeavesPenAtExpectedPosition*
+  commentId: Overload:BOOSEappTests.CanvasCommandTests.MultilineProgram_ExecutesAndLeavesPenAtExpectedPosition
+  href: BOOSEappTests.CanvasCommandTests.html#BOOSEappTests_CanvasCommandTests_MultilineProgram_ExecutesAndLeavesPenAtExpectedPosition
+  name: MultilineProgram_ExecutesAndLeavesPenAtExpectedPosition
+  nameWithType: CanvasCommandTests.MultilineProgram_ExecutesAndLeavesPenAtExpectedPosition
+  fullName: BOOSEappTests.CanvasCommandTests.MultilineProgram_ExecutesAndLeavesPenAtExpectedPosition
