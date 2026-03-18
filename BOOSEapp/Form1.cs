@@ -55,7 +55,12 @@ namespace BOOSEapp
         {
             try
             {
-                if (UserInput.ToLower().Contains("int"))
+                if (UserInput.ToLower().Contains("real"))
+                {
+                    Real app = new Real(canvas);
+                    app.Run(UserInput);
+                }
+                else if (UserInput.ToLower().Contains("int"))
                 {
                     Int app = new Int(canvas);
                     app.Run(UserInput);
