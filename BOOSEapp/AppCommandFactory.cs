@@ -35,6 +35,8 @@ namespace BOOSEapp
                 return new MoveTo();
             else if (commandType == "clear")
                 return new Clear();
+            else if (commandType == "tri")
+                return new Tri();
             else
                 return base.MakeCommand(commandType);
         }

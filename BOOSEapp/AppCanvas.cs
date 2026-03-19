@@ -193,7 +193,17 @@ namespace BOOSEapp
         /// </summary>
         public void Tri(int width, int height)
         {
-            throw new NotImplementedException();
+            if (width <= 0 || height <= 0)
+                throw new CanvasException("Width and height must be greater than 0.");
+
+            Point[] points = new Point[]
+            {
+        new Point(Xpos, Ypos + height),           // left bottom
+        new Point(Xpos + width / 2, Ypos),        // top middle
+        new Point(Xpos + width, Ypos + height)    // right bottom
+            };
+
+            g.DrawPolygon(Pen, points);
         }
 
         /// <summary>
