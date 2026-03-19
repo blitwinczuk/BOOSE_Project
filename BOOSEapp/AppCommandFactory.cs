@@ -33,6 +33,8 @@ namespace BOOSEapp
                 return new Rectangle();
             else if (commandType == "moveto")
                 return new MoveTo();
+            else if (commandType == "clear")
+                return new Clear();
             else
                 return base.MakeCommand(commandType);
         }
