@@ -55,18 +55,23 @@ namespace BOOSEapp
         {
             try
             {
-                if (UserInput.ToLower().Contains("array ") ||
-                    UserInput.ToLower().Contains("boolean"))
+                canvas.Clear();
+                
+
+                string input = UserInput.ToLower();
+
+                if (input.Contains("if ") || input.Contains("else") || input.Contains("end if") ||
+                    input.Contains("array ") || input.Contains("boolean"))
                 {
                     Array app = new Array(canvas);
                     app.Run(UserInput);
                 }
-                else if (UserInput.ToLower().Contains("real"))
+                else if (input.Contains("real"))
                 {
                     Real app = new Real(canvas);
                     app.Run(UserInput);
                 }
-                else if (UserInput.ToLower().Contains("int"))
+                else if (input.Contains("int"))
                 {
                     Int app = new Int(canvas);
                     app.Run(UserInput);

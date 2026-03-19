@@ -20,6 +20,7 @@ namespace BOOSEapp
         // Boolean 
         private Dictionary<string, bool> boolVars = new Dictionary<string, bool>();
         private Maths maths;
+        private If ifHandler;
         /// <summary>
         /// Initializes the array interpreter with a drawing canvas.
         /// </summary>
@@ -28,6 +29,7 @@ namespace BOOSEapp
         {
             this.canvas = canvas;
             maths = new Maths(intVars, realVars);
+            ifHandler = new If(maths);
         }
 
         /// <summary>
@@ -38,14 +40,84 @@ namespace BOOSEapp
         {
             string[] lines = program.Split('\n');
 
-            foreach (string raw in lines)
+            int i = 0;
+
+            while (i < lines.Length)
             {
+                string raw = lines[i];
                 string line = raw.Trim();
 
                 if (line == "")
+                {
+                    i++;
                     continue;
+                }
 
                 string lower = line.ToLower();
+
+                // if statement
+                if (lower.StartsWith("if "))
+                {
+                    bool condition = ifHandler.Evaluate(line.Substring(3).Trim());
+
+                    if (!condition)
+                    {
+                        int depth = 0;
+
+                        while (i < lines.Length - 1)
+                        {
+                            i++;
+                            string check = lines[i].Trim().ToLower();
+
+                            if (check.StartsWith("if "))
+                                depth++;
+
+                            else if (check.StartsWith("end if"))
+                            {
+                                if (depth == 0) break;
+                                depth--;
+                            }
+                            else if (check.StartsWith("else") && depth == 0)
+                            {
+                                break;
+                            }
+                        }
+                    }
+
+                    i++;
+                    continue;
+                }
+
+                // else statement
+                if (lower.StartsWith("else"))
+                {
+                    int depth = 0;
+
+                    while (i < lines.Length - 1)
+                    {
+                        i++;
+                        string check = lines[i].Trim().ToLower();
+
+                        if (check.StartsWith("if "))
+                            depth++;
+
+                        else if (check.StartsWith("end if"))
+                        {
+                            if (depth == 0) break;
+                            depth--;
+                        }
+                    }
+
+                    i++;
+                    continue;
+                }
+
+                // end if statement
+                if (lower.StartsWith("end if"))
+                {
+                    i++;
+                    continue;
+                }
 
                 // int support
                 if (lower.StartsWith("int "))
@@ -168,7 +240,7 @@ namespace BOOSEapp
                 {
                     string[] parts = line.Split('=');
 
-                    string left = parts[0].Trim();          
+                    string left = parts[0].Trim();
                     string[] leftParts = left.Split(' ');
 
                     string name = leftParts[1].Trim().ToLower();
@@ -183,8 +255,6 @@ namespace BOOSEapp
                         boolVars[name] = false;
                     }
                 }
-
-
 
                 else if (line.Contains("="))
                 {
@@ -267,7 +337,8 @@ namespace BOOSEapp
                         canvas.WriteText(text);
                     }
                 }
-                
+
+                i++;
             }
         }
 
@@ -341,8 +412,8 @@ namespace BOOSEapp
             return value;
         }
 
-        ///<summary>Methods that AI suggested to help out with unrestricet issue</summary>
-        ///<param name="name">Name of variable/array to find</param>"
+        /// <summary>Methods that AI suggested to help out with unrestricet issue</summary>
+        /// <param name="name">Name of variable or array to find.</param>
         private string FindIntArrayName(string name)
         {
             if (intArrays.ContainsKey(name))
@@ -399,5 +470,4 @@ namespace BOOSEapp
             throw new Exception("Unknown boolean expression: " + expr);
         }
     }
-}   
-
+}
