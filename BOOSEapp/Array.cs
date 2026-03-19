@@ -17,6 +17,8 @@ namespace BOOSEapp
         private Dictionary<string, double> realVars = new Dictionary<string, double>();
         private Dictionary<string, int[]> intArrays = new Dictionary<string, int[]>();
         private Dictionary<string, double[]> realArrays = new Dictionary<string, double[]>();
+        // Boolean 
+        private Dictionary<string, bool> boolVars = new Dictionary<string, bool>();
         private Maths maths;
         /// <summary>
         /// Initializes the array interpreter with a drawing canvas.
@@ -82,7 +84,7 @@ namespace BOOSEapp
                 // array + int
                 else if (lower.StartsWith("array int "))
                 {
-                    
+
                     string[] p = line.Split(' ');
                     string name = p[2];
                     int size = int.Parse(p[3]);
@@ -97,7 +99,7 @@ namespace BOOSEapp
                 // real + int
                 else if (lower.StartsWith("array real "))
                 {
-                    
+
                     string[] p = line.Split(' ');
                     string name = p[2];
                     int size = int.Parse(p[3]);
@@ -161,12 +163,34 @@ namespace BOOSEapp
                     }
                 }
 
+                // boolean support
+                else if (lower.StartsWith("boolean "))
+                {
+                    string[] parts = line.Split('=');
+
+                    string left = parts[0].Trim();          
+                    string[] leftParts = left.Split(' ');
+
+                    string name = leftParts[1].Trim().ToLower();
+
+                    if (line.Contains("="))
+                    {
+                        string valueStr = parts[1].Trim();
+                        boolVars[name] = EvaluateBoolean(valueStr);
+                    }
+                    else
+                    {
+                        boolVars[name] = false;
+                    }
+                }
+
+
 
                 else if (line.Contains("="))
                 {
                     string[] p = line.Split('=');
 
-                    string name = p[0].Trim();
+                    string name = p[0].Trim().ToLower();
                     string valueStr = p[1].Trim();
 
                     if (intVars.ContainsKey(name))
@@ -176,6 +200,10 @@ namespace BOOSEapp
                     else if (realVars.ContainsKey(name))
                     {
                         realVars[name] = maths.EvaluateReal(valueStr);
+                    }
+                    else if (boolVars.ContainsKey(name))
+                    {
+                        boolVars[name] = EvaluateBoolean(valueStr);
                     }
                 }
 
@@ -226,9 +254,20 @@ namespace BOOSEapp
                 else if (lower.StartsWith("write "))
                 {
                     string expr = line.Substring(6).Trim();
-                    string text = BuildWriteText(expr);
-                    canvas.WriteText(text);
+
+                    // boolean variable
+                    string boolKey = expr.ToLower();
+                    if (boolVars.ContainsKey(boolKey))
+                    {
+                        canvas.WriteText(boolVars[boolKey].ToString().ToLower());
+                    }
+                    else
+                    {
+                        string text = BuildWriteText(expr);
+                        canvas.WriteText(text);
+                    }
                 }
+                
             }
         }
 
@@ -266,13 +305,14 @@ namespace BOOSEapp
 
         /// <summary>
         /// Resolves value for write command.
-        /// Can return string literal, int variable, real variable or plain text.
+        /// Can return string literal, int variable, real variable, boolean variable or plain text.
         /// </summary>
         /// <param name="value">Input text or variable name.</param>
         /// <returns>Resolved text.</returns>
         private string GetWriteValue(string value)
         {
             value = value.Trim();
+            string key = value.ToLower();
 
             // string literal
             if (value.StartsWith("\"") && value.EndsWith("\""))
@@ -281,18 +321,23 @@ namespace BOOSEapp
             }
 
             // int variable
-            if (intVars.ContainsKey(value))
+            if (intVars.ContainsKey(key))
             {
-                return intVars[value].ToString();
+                return intVars[key].ToString();
             }
 
             // real variable
-            if (realVars.ContainsKey(value))
+            if (realVars.ContainsKey(key))
             {
-                return realVars[value].ToString(CultureInfo.InvariantCulture);
+                return realVars[key].ToString(CultureInfo.InvariantCulture);
             }
 
-            
+            // boolean variable
+            if (boolVars.ContainsKey(key))
+            {
+                return boolVars[key].ToString().ToLower();
+            }
+
             return value;
         }
 
@@ -324,6 +369,34 @@ namespace BOOSEapp
             }
 
             return null;
+        }
+
+        /// <summary>
+        /// Evaluates boolean expressions like:
+        /// true, false
+        /// </summary>
+        private bool EvaluateBoolean(string expr)
+        {
+            expr = expr.Trim().ToLower();
+
+            if (expr == "true")
+                return true;
+
+            if (expr == "false")
+                return false;
+
+            if (expr.Contains("&&"))
+            {
+                string[] p = expr.Split(new string[] { "&&" }, StringSplitOptions.None);
+                bool left = EvaluateBoolean(p[0]);
+                bool right = EvaluateBoolean(p[1]);
+                return left && right;
+            }
+
+            if (boolVars.ContainsKey(expr))
+                return boolVars[expr];
+
+            throw new Exception("Unknown boolean expression: " + expr);
         }
     }
 }   

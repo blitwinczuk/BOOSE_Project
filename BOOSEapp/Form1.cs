@@ -55,7 +55,8 @@ namespace BOOSEapp
         {
             try
             {
-                if (UserInput.ToLower().Contains("array "))
+                if (UserInput.ToLower().Contains("array ") ||
+                    UserInput.ToLower().Contains("boolean"))
                 {
                     Array app = new Array(canvas);
                     app.Run(UserInput);
