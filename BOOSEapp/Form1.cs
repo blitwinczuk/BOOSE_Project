@@ -75,6 +75,8 @@ namespace BOOSEapp
                     Parser.ParseProgram(UserInput);
                     Program.Run();
                 }
+
+                pictureBox1.Invalidate();
             }
             catch (Exception ex)
             {

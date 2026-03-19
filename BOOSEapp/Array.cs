@@ -87,7 +87,11 @@ namespace BOOSEapp
                     string name = p[2];
                     int size = int.Parse(p[3]);
 
-                    intArrays[name] = new int[size];
+                    // only create array if it doesn't exist, to allow reusing same name for multiple declarations without losing data (AI suggestion)
+                    if (!intArrays.ContainsKey(name))
+                    {
+                        intArrays[name] = new int[size];
+                    }
                 }
 
                 // real + int
@@ -98,13 +102,16 @@ namespace BOOSEapp
                     string name = p[2];
                     int size = int.Parse(p[3]);
 
-                    realArrays[name] = new double[size];
+                    // only create array if it doesn't exist, to allow reusing same name for multiple declarations without losing data (AI suggestion)
+                    if (!realArrays.ContainsKey(name))
+                    {
+                        realArrays[name] = new double[size];
+                    }
                 }
 
-                // poke
+                // poke - first poke was my own, then I added support for array names that are substrings of each other after AI suggestion, which is why FindIntArrayName and FindRealArrayName methods were added
                 else if (lower.StartsWith("poke "))
                 {
-                    
                     string[] leftRight = line.Split('=');
 
                     string left = leftRight[0].Trim();
@@ -114,20 +121,22 @@ namespace BOOSEapp
                     string arrayName = p[1];
                     int index = maths.EvaluateInt(p[2]);
 
-                    if (intArrays.ContainsKey(arrayName))
+                    string intName = FindIntArrayName(arrayName);
+                    string realName = FindRealArrayName(arrayName);
+
+                    if (intName != null)
                     {
-                        intArrays[arrayName][index] = maths.EvaluateInt(valueStr);
+                        intArrays[intName][index] = maths.EvaluateInt(valueStr);
                     }
-                    else if (realArrays.ContainsKey(arrayName))
+                    else if (realName != null)
                     {
-                        realArrays[arrayName][index] = maths.EvaluateReal(valueStr);
+                        realArrays[realName][index] = maths.EvaluateReal(valueStr);
                     }
                 }
 
-                // peek
+                // peek - first peek was my own, then I added support for array names that are substrings of each other after AI suggestion, which is why FindIntArrayName and FindRealArrayName methods were added
                 else if (lower.StartsWith("peek "))
                 {
-                    
                     string[] leftRight = line.Split('=');
 
                     string left = leftRight[0].Trim();
@@ -139,17 +148,20 @@ namespace BOOSEapp
                     string arrayName = p[0];
                     int index = maths.EvaluateInt(p[1]);
 
-                    if (intArrays.ContainsKey(arrayName) && intVars.ContainsKey(varName))
+                    string intName = FindIntArrayName(arrayName);
+                    string realName = FindRealArrayName(arrayName);
+
+                    if (intName != null && intVars.ContainsKey(varName))
                     {
-                        intVars[varName] = intArrays[arrayName][index];
+                        intVars[varName] = intArrays[intName][index];
                     }
-                    else if (realArrays.ContainsKey(arrayName) && realVars.ContainsKey(varName))
+                    else if (realName != null && realVars.ContainsKey(varName))
                     {
-                        realVars[varName] = realArrays[arrayName][index];
+                        realVars[varName] = realArrays[realName][index];
                     }
                 }
 
-                
+
                 else if (line.Contains("="))
                 {
                     string[] p = line.Split('=');
@@ -282,6 +294,36 @@ namespace BOOSEapp
 
             
             return value;
+        }
+
+        ///<summary>Methods that AI suggested to help out with unrestricet issue</summary>
+        ///<param name="name">Name of variable/array to find</param>"
+        private string FindIntArrayName(string name)
+        {
+            if (intArrays.ContainsKey(name))
+                return name;
+
+            foreach (string key in intArrays.Keys)
+            {
+                if (key.StartsWith(name) || name.StartsWith(key))
+                    return key;
+            }
+
+            return null;
+        }
+
+        private string FindRealArrayName(string name)
+        {
+            if (realArrays.ContainsKey(name))
+                return name;
+
+            foreach (string key in realArrays.Keys)
+            {
+                if (key.StartsWith(name) || name.StartsWith(key))
+                    return key;
+            }
+
+            return null;
         }
     }
 }   
