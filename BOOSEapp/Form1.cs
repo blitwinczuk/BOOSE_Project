@@ -55,7 +55,12 @@ namespace BOOSEapp
         {
             try
             {
-                if (UserInput.ToLower().Contains("real"))
+                if (UserInput.ToLower().Contains("array "))
+                {
+                    Array app = new Array(canvas);
+                    app.Run(UserInput);
+                }
+                else if (UserInput.ToLower().Contains("real"))
                 {
                     Real app = new Real(canvas);
                     app.Run(UserInput);
@@ -70,8 +75,6 @@ namespace BOOSEapp
                     Parser.ParseProgram(UserInput);
                     Program.Run();
                 }
-
-                pictureBox1.Invalidate();
             }
             catch (Exception ex)
             {

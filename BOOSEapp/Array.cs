@@ -28,6 +28,261 @@ namespace BOOSEapp
             maths = new Maths(intVars, realVars);
         }
 
+        /// <summary>
+        /// Executes a BOOSE program with array support.
+        /// </summary>
+        /// <param name="program">Program text entered by the user.</param>
+        public void Run(string program)
+        {
+            string[] lines = program.Split('\n');
 
-    }   
-}
+            foreach (string raw in lines)
+            {
+                string line = raw.Trim();
+
+                if (line == "")
+                    continue;
+
+                string lower = line.ToLower();
+
+                // int support
+                if (lower.StartsWith("int "))
+                {
+                    string[] p = line.Split(' ');
+                    string name = p[1];
+
+                    if (line.Contains("="))
+                    {
+                        string valueStr = line.Split('=')[1].Trim();
+                        intVars[name] = maths.EvaluateInt(valueStr);
+                    }
+                    else
+                    {
+                        intVars[name] = 0;
+                    }
+                }
+
+                // real support
+                else if (lower.StartsWith("real "))
+                {
+                    string[] p = line.Split(' ');
+                    string name = p[1];
+
+                    if (line.Contains("="))
+                    {
+                        string valueStr = line.Split('=')[1].Trim();
+                        realVars[name] = maths.EvaluateReal(valueStr);
+                    }
+                    else
+                    {
+                        realVars[name] = 0;
+                    }
+                }
+
+                // array + int
+                else if (lower.StartsWith("array int "))
+                {
+                    
+                    string[] p = line.Split(' ');
+                    string name = p[2];
+                    int size = int.Parse(p[3]);
+
+                    intArrays[name] = new int[size];
+                }
+
+                // real + int
+                else if (lower.StartsWith("array real "))
+                {
+                    
+                    string[] p = line.Split(' ');
+                    string name = p[2];
+                    int size = int.Parse(p[3]);
+
+                    realArrays[name] = new double[size];
+                }
+
+                // poke
+                else if (lower.StartsWith("poke "))
+                {
+                    
+                    string[] leftRight = line.Split('=');
+
+                    string left = leftRight[0].Trim();
+                    string valueStr = leftRight[1].Trim();
+
+                    string[] p = left.Split(' ');
+                    string arrayName = p[1];
+                    int index = maths.EvaluateInt(p[2]);
+
+                    if (intArrays.ContainsKey(arrayName))
+                    {
+                        intArrays[arrayName][index] = maths.EvaluateInt(valueStr);
+                    }
+                    else if (realArrays.ContainsKey(arrayName))
+                    {
+                        realArrays[arrayName][index] = maths.EvaluateReal(valueStr);
+                    }
+                }
+
+                // peek
+                else if (lower.StartsWith("peek "))
+                {
+                    
+                    string[] leftRight = line.Split('=');
+
+                    string left = leftRight[0].Trim();
+                    string right = leftRight[1].Trim();
+
+                    string varName = left.Split(' ')[1];
+
+                    string[] p = right.Split(' ');
+                    string arrayName = p[0];
+                    int index = maths.EvaluateInt(p[1]);
+
+                    if (intArrays.ContainsKey(arrayName) && intVars.ContainsKey(varName))
+                    {
+                        intVars[varName] = intArrays[arrayName][index];
+                    }
+                    else if (realArrays.ContainsKey(arrayName) && realVars.ContainsKey(varName))
+                    {
+                        realVars[varName] = realArrays[arrayName][index];
+                    }
+                }
+
+                
+                else if (line.Contains("="))
+                {
+                    string[] p = line.Split('=');
+
+                    string name = p[0].Trim();
+                    string valueStr = p[1].Trim();
+
+                    if (intVars.ContainsKey(name))
+                    {
+                        intVars[name] = maths.EvaluateInt(valueStr);
+                    }
+                    else if (realVars.ContainsKey(name))
+                    {
+                        realVars[name] = maths.EvaluateReal(valueStr);
+                    }
+                }
+
+                // moveto
+                else if (lower.StartsWith("moveto "))
+                {
+                    string[] p = line.Substring(7).Split(',');
+
+                    int x = maths.EvaluateInt(p[0]);
+                    int y = maths.EvaluateInt(p[1]);
+
+                    canvas.MoveTo(x, y);
+                }
+
+                // circle
+                else if (lower.StartsWith("circle "))
+                {
+                    string value = line.Substring(7).Trim();
+                    int r = maths.EvaluateInt(value);
+
+                    canvas.Circle(r, false);
+                }
+
+                // rect
+                else if (lower.StartsWith("rect "))
+                {
+                    string[] p = line.Substring(5).Split(',');
+
+                    int w = maths.EvaluateInt(p[0]);
+                    int h = maths.EvaluateInt(p[1]);
+
+                    canvas.Rect(w, h, false);
+                }
+
+                // pen
+                else if (lower.StartsWith("pen "))
+                {
+                    string[] p = line.Substring(4).Split(',');
+
+                    int r = maths.EvaluateInt(p[0]);
+                    int g = maths.EvaluateInt(p[1]);
+                    int b = maths.EvaluateInt(p[2]);
+
+                    canvas.SetColour(r, g, b);
+                }
+
+                // write
+                else if (lower.StartsWith("write "))
+                {
+                    string expr = line.Substring(6).Trim();
+                    string text = BuildWriteText(expr);
+                    canvas.WriteText(text);
+                }
+            }
+        }
+
+        /// <summary>
+        /// Builds text for the write command.
+        /// Supports:
+        /// write x
+        /// write y
+        /// write "hello world!"
+        /// write "" + x/y/z
+        /// </summary>
+        /// <param name="expr">Expression after write.</param>
+        /// <returns>Text to display.</returns>
+        private string BuildWriteText(string expr)
+        {
+            expr = expr.Trim();
+
+            // text + variable
+            if (expr.Contains("+"))
+            {
+                string[] p = expr.Split('+');
+
+                string left = p[0].Trim();
+                string right = p[1].Trim();
+
+                string leftText = GetWriteValue(left);
+                string rightText = GetWriteValue(right);
+
+                return leftText + rightText;
+            }
+
+            // single value
+            return GetWriteValue(expr);
+        }
+
+        /// <summary>
+        /// Resolves value for write command.
+        /// Can return string literal, int variable, real variable or plain text.
+        /// </summary>
+        /// <param name="value">Input text or variable name.</param>
+        /// <returns>Resolved text.</returns>
+        private string GetWriteValue(string value)
+        {
+            value = value.Trim();
+
+            // string literal
+            if (value.StartsWith("\"") && value.EndsWith("\""))
+            {
+                return value.Substring(1, value.Length - 2);
+            }
+
+            // int variable
+            if (intVars.ContainsKey(value))
+            {
+                return intVars[value].ToString();
+            }
+
+            // real variable
+            if (realVars.ContainsKey(value))
+            {
+                return realVars[value].ToString(CultureInfo.InvariantCulture);
+            }
+
+            
+            return value;
+        }
+    }
+}   
+
