@@ -197,15 +197,29 @@ namespace BOOSEapp
         }
 
         /// <summary>
-        /// Writes text to the canvas.
+        /// Writes text to the canvas at the current cursor position.
+        /// Supports plain text including symbols like £, $, %.
         /// </summary>
+        /// <param name="text">Text to display.</param>
         public void WriteText(string text)
         {
+            if (string.IsNullOrEmpty(text))
+                return;
+
+            // this will delete the surrounding quotes if the text is a string literal, allowing symbols to be displayed correctly
+            if (text.StartsWith("\"") && text.EndsWith("\""))
+            {
+                text = text.Substring(1, text.Length - 2);
+            }
+
             using (Font font = new Font("Arial", 12))
             using (Brush brush = new SolidBrush(Pen.Color))
             {
                 g.DrawString(text, font, brush, Xpos, Ypos);
+                //auto move tekst to next line
+                Ypos += 20;
             }
         }
     }
+    
 }
