@@ -17,10 +17,11 @@ namespace BOOSEapp
         private Dictionary<string, double> realVars = new() { };
         private Dictionary<string, int[]> intArrays = new() { };
         private Dictionary<string, double[]> realArrays = new() { };
-        // Boolean 
         private Dictionary<string, bool> boolVars = new() { };
         private Maths maths;
         private If ifHandler;
+        
+        
         /// <summary>
         /// Initializes the array interpreter with a drawing canvas.
         /// </summary>
@@ -54,6 +55,88 @@ namespace BOOSEapp
                 }
 
                 string lower = line.ToLower();
+
+                //for loop
+                if (lower.StartsWith("for "))
+                {
+                    
+                    string afterFor = line.Substring(4).Trim();
+
+                    string[] leftRight = afterFor.Split('=');
+                    string varName = leftRight[0].Trim().ToLower();
+                    string rightSide = leftRight[1].Trim();
+
+                    string[] stepSplit = rightSide.Split(new string[] { "step" }, StringSplitOptions.None);
+                    string rangePart = stepSplit[0].Trim();
+                    string stepPart = stepSplit.Length > 1 ? stepSplit[1].Trim() : "1";
+
+                    string[] rangeSplit = rangePart.Split(new string[] { "to" }, StringSplitOptions.None);
+
+                    int startValue = maths.EvaluateInt(rangeSplit[0].Trim());
+                    int endValue = maths.EvaluateInt(rangeSplit[1].Trim());
+                    int stepValue = maths.EvaluateInt(stepPart);
+
+                    if (!intVars.ContainsKey(varName))
+                    {
+                        intVars[varName] = startValue;
+                    }
+
+                    int start = i + 1;
+                    int end = start;
+                    int depth = 0;
+
+                    while (end < lines.Length)
+                    {
+                        string check = lines[end].Trim().ToLower();
+
+                        if (check.StartsWith("for "))
+                            depth++;
+                        else if (check.StartsWith("end for"))
+                        {
+                            if (depth == 0)
+                                break;
+                            depth--;
+                        }
+
+                        end++;
+                    }
+
+                    string block = "";
+                    for (int k = start; k < end; k++)
+                    {
+                        block += lines[k] + "\n";
+                    }
+
+                    if (stepValue == 0)
+                        throw new Exception("For loop step cannot be zero.");
+
+                    if (stepValue > 0)
+                    {
+                        for (int loopValue = startValue; loopValue <= endValue; loopValue += stepValue)
+                        {
+                            intVars[varName] = loopValue;
+                            Run(block);
+                        }
+                    }
+                    else
+                    {
+                        for (int loopValue = startValue; loopValue >= endValue; loopValue += stepValue)
+                        {
+                            intVars[varName] = loopValue;
+                            Run(block);
+                        }
+                    }
+
+                    i = end + 1;
+                    continue;
+                }
+
+                
+                if (lower.StartsWith("end for"))
+                {
+                    i++;
+                    continue;
+                }
 
                 // while loop
                 if (lower.StartsWith("while "))
@@ -332,7 +415,7 @@ namespace BOOSEapp
                     canvas.Circle(r, false);
                 }
 
-                // rect
+                // rect - AI suggestion
                 else if (lower.StartsWith("rect "))
                 {
                     string[] p = line.Substring(5).Split(',');
