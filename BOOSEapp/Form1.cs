@@ -58,19 +58,21 @@ namespace BOOSEapp
             try
             {
                 canvas.Clear();
-
-
                 string input = UserInput.ToLower();
 
-                if (input.Contains("if ") || input.Contains("else") || input.Contains("end if") ||
-                    input.Contains("while ") || input.Contains("end while") ||
-                    input.Contains("for ") || input.Contains("end for") ||
-                    input.Contains("array ") || input.Contains("boolean"))
+                if (input.Contains("method ") || input.Contains("call "))
+                {
+                    Method app = new Method(canvas);
+                    app.Run(UserInput);
+                }
+                else if (input.Contains("if ") || input.Contains("else") || input.Contains("end if") ||
+                         input.Contains("while ") || input.Contains("end while") ||
+                         input.Contains("for ") || input.Contains("end for") ||
+                         input.Contains("array ") || input.Contains("boolean"))
                 {
                     Array app = new Array(canvas);
                     app.Run(UserInput);
                 }
-
                 else if (input.Contains("real"))
                 {
                     Real app = new Real(canvas);

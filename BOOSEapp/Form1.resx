@@ -133,24 +133,24 @@ write x
 write ""£"" + y
 
 --- Variables ---
-int x = 10
-real y = 5.5
-boolean flag = true
+int x 
+real y 
+boolean flag 
 
 --- Arrays ---
-array int nums 10
-poke nums 5 = 99
-peek x = nums 5
+array 
+poke 
+peek 
 
 --- Control ---
-if x &lt; 10
+if 
 else
 end if
 
-while x &gt; 0
+while 
 end while
 
-for i = 1 to 10 step 1
+for 
 end for</value>
   </data>
 </root>
