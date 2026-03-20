@@ -38,6 +38,8 @@ namespace BOOSEapp
         private void Form1_Load(object sender, EventArgs e)
         {
             canvas.Set(pictureBox1.Width, pictureBox1.Height);
+
+
         }
 
         /// <summary>

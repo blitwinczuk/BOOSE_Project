@@ -32,10 +32,12 @@ namespace BOOSEapp
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form1));
             textBox1 = new TextBox();
             button1 = new Button();
             pictureBox1 = new PictureBox();
             button2 = new Button();
+            richTextBox1 = new RichTextBox();
             ((System.ComponentModel.ISupportInitialize)pictureBox1).BeginInit();
             SuspendLayout();
             // 
@@ -78,11 +80,20 @@ namespace BOOSEapp
             button2.UseVisualStyleBackColor = true;
             button2.Click += button2_Click;
             // 
+            // richTextBox1
+            // 
+            richTextBox1.Location = new Point(1403, 23);
+            richTextBox1.Name = "richTextBox1";
+            richTextBox1.Size = new Size(423, 686);
+            richTextBox1.TabIndex = 4;
+            richTextBox1.Text = resources.GetString("richTextBox1.Text");
+            // 
             // Form1
             // 
             AutoScaleDimensions = new SizeF(10F, 25F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(1404, 721);
+            ClientSize = new Size(1838, 721);
+            Controls.Add(richTextBox1);
             Controls.Add(button2);
             Controls.Add(pictureBox1);
             Controls.Add(button1);
@@ -102,5 +113,6 @@ namespace BOOSEapp
         private TextBox textBox1;
         private Button button1;
         private Button button2;
+        private RichTextBox richTextBox1;
     }
 }

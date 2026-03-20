@@ -117,4 +117,40 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
+  <data name="richTextBox1.Text" xml:space="preserve">
+    <value>--- Drawing ---
+moveto x,y
+drawto x,y
+circle r
+rect w,h
+tri w,h
+pen r,g,b
+clear
+
+--- Text ---
+write ""text""
+write x
+write ""£"" + y
+
+--- Variables ---
+int x = 10
+real y = 5.5
+boolean flag = true
+
+--- Arrays ---
+array int nums 10
+poke nums 5 = 99
+peek x = nums 5
+
+--- Control ---
+if x &lt; 10
+else
+end if
+
+while x &gt; 0
+end while
+
+for i = 1 to 10 step 1
+end for</value>
+  </data>
 </root>
