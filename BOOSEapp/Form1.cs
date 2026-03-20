@@ -33,6 +33,7 @@ namespace BOOSEapp
             Factory = new AppCommandFactory(canvas);
             Program = new StoredProgram(canvas);
             Parser = new Parser(Factory, Program);
+            LogInDebug.Instance.Log("Application started");
         }
 
         private void Form1_Load(object sender, EventArgs e)
@@ -59,14 +60,22 @@ namespace BOOSEapp
             {
                 canvas.Clear();
 
+                LogInDebug.Instance.Log("Executing program");
+
                 IInterpreter interpreter = GetInterpreter(UserInput);
+
+                LogInDebug.Instance.Log("Interpreter selected: " + interpreter.GetType().Name);
+
                 interpreter.Run(UserInput);
 
                 pictureBox1.Invalidate();
+
+                LogInDebug.Instance.Log("Program finished");
             }
             catch (Exception ex)
             {
-                Debug.WriteLine(ex);
+                LogInDebug.Instance.Log("Error: " + ex.Message);
+
                 MessageBox.Show(ex.Message, "BOOSE Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }

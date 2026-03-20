@@ -1,0 +1,879 @@
+### YamlMime:ManagedReference
+items:
+- uid: BOOSEapp.Method
+  commentId: T:BOOSEapp.Method
+  id: Method
+  parent: BOOSEapp
+  children:
+  - BOOSEapp.Method.#ctor(BOOSEapp.AppCanvas)
+  - BOOSEapp.Method.ExecuteBlock(System.String)
+  - BOOSEapp.Method.ExecuteLine(System.String)
+  - BOOSEapp.Method.Run(System.String)
+  - BOOSEapp.Method.canvas
+  - BOOSEapp.Method.intVars
+  - BOOSEapp.Method.maths
+  - BOOSEapp.Method.methods
+  - BOOSEapp.Method.parameters
+  langs:
+  - csharp
+  - vb
+  name: Method
+  nameWithType: Method
+  fullName: BOOSEapp.Method
+  type: Class
+  source:
+    remote:
+      path: BOOSEapp/Method.cs
+      branch: main
+      repo: https://github.com/ASE2025repos/ase-boose-assignment-blitwinczuk.git
+    id: Method
+    path: Method.cs
+    startLine: 10
+  assemblies:
+  - BOOSEapp
+  namespace: BOOSEapp
+  summary: >-
+    Simple interpreter that supports integer methods in BOOSE.
+
+    Methods do not return values explicitly – instead, the result
+
+    is stored in a variable with the same name as the method.
+  example: []
+  syntax:
+    content: 'public class Method : IInterpreter'
+    content.vb: Public Class Method Implements IInterpreter
+  inheritance:
+  - System.Object
+  implements:
+  - BOOSEapp.IInterpreter
+  inheritedMembers:
+  - System.Object.Equals(System.Object)
+  - System.Object.Equals(System.Object,System.Object)
+  - System.Object.GetHashCode
+  - System.Object.GetType
+  - System.Object.MemberwiseClone
+  - System.Object.ReferenceEquals(System.Object,System.Object)
+  - System.Object.ToString
+- uid: BOOSEapp.Method.canvas
+  commentId: F:BOOSEapp.Method.canvas
+  id: canvas
+  parent: BOOSEapp.Method
+  langs:
+  - csharp
+  - vb
+  name: canvas
+  nameWithType: Method.canvas
+  fullName: BOOSEapp.Method.canvas
+  type: Field
+  source:
+    remote:
+      path: BOOSEapp/Method.cs
+      branch: main
+      repo: https://github.com/ASE2025repos/ase-boose-assignment-blitwinczuk.git
+    id: canvas
+    path: Method.cs
+    startLine: 12
+  assemblies:
+  - BOOSEapp
+  namespace: BOOSEapp
+  syntax:
+    content: private AppCanvas canvas
+    return:
+      type: BOOSEapp.AppCanvas
+    content.vb: Private canvas As AppCanvas
+- uid: BOOSEapp.Method.intVars
+  commentId: F:BOOSEapp.Method.intVars
+  id: intVars
+  parent: BOOSEapp.Method
+  langs:
+  - csharp
+  - vb
+  name: intVars
+  nameWithType: Method.intVars
+  fullName: BOOSEapp.Method.intVars
+  type: Field
+  source:
+    remote:
+      path: BOOSEapp/Method.cs
+      branch: main
+      repo: https://github.com/ASE2025repos/ase-boose-assignment-blitwinczuk.git
+    id: intVars
+    path: Method.cs
+    startLine: 15
+  assemblies:
+  - BOOSEapp
+  namespace: BOOSEapp
+  syntax:
+    content: private Dictionary<string, int> intVars
+    return:
+      type: System.Collections.Generic.Dictionary{System.String,System.Int32}
+    content.vb: Private intVars As Dictionary(Of String, Integer)
+- uid: BOOSEapp.Method.methods
+  commentId: F:BOOSEapp.Method.methods
+  id: methods
+  parent: BOOSEapp.Method
+  langs:
+  - csharp
+  - vb
+  name: methods
+  nameWithType: Method.methods
+  fullName: BOOSEapp.Method.methods
+  type: Field
+  source:
+    remote:
+      path: BOOSEapp/Method.cs
+      branch: main
+      repo: https://github.com/ASE2025repos/ase-boose-assignment-blitwinczuk.git
+    id: methods
+    path: Method.cs
+    startLine: 18
+  assemblies:
+  - BOOSEapp
+  namespace: BOOSEapp
+  syntax:
+    content: private Dictionary<string, string> methods
+    return:
+      type: System.Collections.Generic.Dictionary{System.String,System.String}
+    content.vb: Private methods As Dictionary(Of String, String)
+- uid: BOOSEapp.Method.parameters
+  commentId: F:BOOSEapp.Method.parameters
+  id: parameters
+  parent: BOOSEapp.Method
+  langs:
+  - csharp
+  - vb
+  name: parameters
+  nameWithType: Method.parameters
+  fullName: BOOSEapp.Method.parameters
+  type: Field
+  source:
+    remote:
+      path: BOOSEapp/Method.cs
+      branch: main
+      repo: https://github.com/ASE2025repos/ase-boose-assignment-blitwinczuk.git
+    id: parameters
+    path: Method.cs
+    startLine: 21
+  assemblies:
+  - BOOSEapp
+  namespace: BOOSEapp
+  syntax:
+    content: private Dictionary<string, string[]> parameters
+    return:
+      type: System.Collections.Generic.Dictionary{System.String,System.String[]}
+    content.vb: Private parameters As Dictionary(Of String, String())
+- uid: BOOSEapp.Method.maths
+  commentId: F:BOOSEapp.Method.maths
+  id: maths
+  parent: BOOSEapp.Method
+  langs:
+  - csharp
+  - vb
+  name: maths
+  nameWithType: Method.maths
+  fullName: BOOSEapp.Method.maths
+  type: Field
+  source:
+    remote:
+      path: BOOSEapp/Method.cs
+      branch: main
+      repo: https://github.com/ASE2025repos/ase-boose-assignment-blitwinczuk.git
+    id: maths
+    path: Method.cs
+    startLine: 23
+  assemblies:
+  - BOOSEapp
+  namespace: BOOSEapp
+  syntax:
+    content: private Maths maths
+    return:
+      type: BOOSEapp.Maths
+    content.vb: Private maths As Maths
+- uid: BOOSEapp.Method.#ctor(BOOSEapp.AppCanvas)
+  commentId: M:BOOSEapp.Method.#ctor(BOOSEapp.AppCanvas)
+  id: '#ctor(BOOSEapp.AppCanvas)'
+  parent: BOOSEapp.Method
+  langs:
+  - csharp
+  - vb
+  name: Method(AppCanvas)
+  nameWithType: Method.Method(AppCanvas)
+  fullName: BOOSEapp.Method.Method(BOOSEapp.AppCanvas)
+  type: Constructor
+  source:
+    remote:
+      path: BOOSEapp/Method.cs
+      branch: main
+      repo: https://github.com/ASE2025repos/ase-boose-assignment-blitwinczuk.git
+    id: .ctor
+    path: Method.cs
+    startLine: 28
+  assemblies:
+  - BOOSEapp
+  namespace: BOOSEapp
+  summary: Constructor - initialises canvas and maths engine.
+  example: []
+  syntax:
+    content: public Method(AppCanvas canvas)
+    parameters:
+    - id: canvas
+      type: BOOSEapp.AppCanvas
+    content.vb: Public Sub New(canvas As AppCanvas)
+  overload: BOOSEapp.Method.#ctor*
+  nameWithType.vb: Method.New(AppCanvas)
+  fullName.vb: BOOSEapp.Method.New(BOOSEapp.AppCanvas)
+  name.vb: New(AppCanvas)
+- uid: BOOSEapp.Method.Run(System.String)
+  commentId: M:BOOSEapp.Method.Run(System.String)
+  id: Run(System.String)
+  parent: BOOSEapp.Method
+  langs:
+  - csharp
+  - vb
+  name: Run(string)
+  nameWithType: Method.Run(string)
+  fullName: BOOSEapp.Method.Run(string)
+  type: Method
+  source:
+    remote:
+      path: BOOSEapp/Method.cs
+      branch: main
+      repo: https://github.com/ASE2025repos/ase-boose-assignment-blitwinczuk.git
+    id: Run
+    path: Method.cs
+    startLine: 37
+  assemblies:
+  - BOOSEapp
+  namespace: BOOSEapp
+  summary: Runs the BOOSE program line by line.
+  example: []
+  syntax:
+    content: public void Run(string program)
+    parameters:
+    - id: program
+      type: System.String
+    content.vb: Public Sub Run(program As String)
+  overload: BOOSEapp.Method.Run*
+  implements:
+  - BOOSEapp.IInterpreter.Run(System.String)
+  nameWithType.vb: Method.Run(String)
+  fullName.vb: BOOSEapp.Method.Run(String)
+  name.vb: Run(String)
+- uid: BOOSEapp.Method.ExecuteBlock(System.String)
+  commentId: M:BOOSEapp.Method.ExecuteBlock(System.String)
+  id: ExecuteBlock(System.String)
+  parent: BOOSEapp.Method
+  langs:
+  - csharp
+  - vb
+  name: ExecuteBlock(string)
+  nameWithType: Method.ExecuteBlock(string)
+  fullName: BOOSEapp.Method.ExecuteBlock(string)
+  type: Method
+  source:
+    remote:
+      path: BOOSEapp/Method.cs
+      branch: main
+      repo: https://github.com/ASE2025repos/ase-boose-assignment-blitwinczuk.git
+    id: ExecuteBlock
+    path: Method.cs
+    startLine: 184
+  assemblies:
+  - BOOSEapp
+  namespace: BOOSEapp
+  summary: Executes multiple lines of code (used for method body).
+  example: []
+  syntax:
+    content: private void ExecuteBlock(string block)
+    parameters:
+    - id: block
+      type: System.String
+    content.vb: Private Sub ExecuteBlock(block As String)
+  overload: BOOSEapp.Method.ExecuteBlock*
+  nameWithType.vb: Method.ExecuteBlock(String)
+  fullName.vb: BOOSEapp.Method.ExecuteBlock(String)
+  name.vb: ExecuteBlock(String)
+- uid: BOOSEapp.Method.ExecuteLine(System.String)
+  commentId: M:BOOSEapp.Method.ExecuteLine(System.String)
+  id: ExecuteLine(System.String)
+  parent: BOOSEapp.Method
+  langs:
+  - csharp
+  - vb
+  name: ExecuteLine(string)
+  nameWithType: Method.ExecuteLine(string)
+  fullName: BOOSEapp.Method.ExecuteLine(string)
+  type: Method
+  source:
+    remote:
+      path: BOOSEapp/Method.cs
+      branch: main
+      repo: https://github.com/ASE2025repos/ase-boose-assignment-blitwinczuk.git
+    id: ExecuteLine
+    path: Method.cs
+    startLine: 202
+  assemblies:
+  - BOOSEapp
+  namespace: BOOSEapp
+  summary: Executes a single BOOSE command.
+  example: []
+  syntax:
+    content: private void ExecuteLine(string line)
+    parameters:
+    - id: line
+      type: System.String
+    content.vb: Private Sub ExecuteLine(line As String)
+  overload: BOOSEapp.Method.ExecuteLine*
+  nameWithType.vb: Method.ExecuteLine(String)
+  fullName.vb: BOOSEapp.Method.ExecuteLine(String)
+  name.vb: ExecuteLine(String)
+references:
+- uid: BOOSEapp
+  commentId: N:BOOSEapp
+  href: BOOSEapp.html
+  name: BOOSEapp
+  nameWithType: BOOSEapp
+  fullName: BOOSEapp
+- uid: System.Object
+  commentId: T:System.Object
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object
+  name: object
+  nameWithType: object
+  fullName: object
+  nameWithType.vb: Object
+  fullName.vb: Object
+  name.vb: Object
+- uid: BOOSEapp.IInterpreter
+  commentId: T:BOOSEapp.IInterpreter
+  parent: BOOSEapp
+  href: BOOSEapp.IInterpreter.html
+  name: IInterpreter
+  nameWithType: IInterpreter
+  fullName: BOOSEapp.IInterpreter
+- uid: System.Object.Equals(System.Object)
+  commentId: M:System.Object.Equals(System.Object)
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)
+  name: Equals(object)
+  nameWithType: object.Equals(object)
+  fullName: object.Equals(object)
+  nameWithType.vb: Object.Equals(Object)
+  fullName.vb: Object.Equals(Object)
+  name.vb: Equals(Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System.Object.Equals(System.Object,System.Object)
+  commentId: M:System.Object.Equals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  name: Equals(object, object)
+  nameWithType: object.Equals(object, object)
+  fullName: object.Equals(object, object)
+  nameWithType.vb: Object.Equals(Object, Object)
+  fullName.vb: Object.Equals(Object, Object)
+  name.vb: Equals(Object, Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System.Object.GetHashCode
+  commentId: M:System.Object.GetHashCode
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.gethashcode
+  name: GetHashCode()
+  nameWithType: object.GetHashCode()
+  fullName: object.GetHashCode()
+  nameWithType.vb: Object.GetHashCode()
+  fullName.vb: Object.GetHashCode()
+  spec.csharp:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gethashcode
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gethashcode
+  - name: (
+  - name: )
+- uid: System.Object.GetType
+  commentId: M:System.Object.GetType
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  name: GetType()
+  nameWithType: object.GetType()
+  fullName: object.GetType()
+  nameWithType.vb: Object.GetType()
+  fullName.vb: Object.GetType()
+  spec.csharp:
+  - uid: System.Object.GetType
+    name: GetType
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.GetType
+    name: GetType
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  - name: (
+  - name: )
+- uid: System.Object.MemberwiseClone
+  commentId: M:System.Object.MemberwiseClone
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.memberwiseclone
+  name: MemberwiseClone()
+  nameWithType: object.MemberwiseClone()
+  fullName: object.MemberwiseClone()
+  nameWithType.vb: Object.MemberwiseClone()
+  fullName.vb: Object.MemberwiseClone()
+  spec.csharp:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.memberwiseclone
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.memberwiseclone
+  - name: (
+  - name: )
+- uid: System.Object.ReferenceEquals(System.Object,System.Object)
+  commentId: M:System.Object.ReferenceEquals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  name: ReferenceEquals(object, object)
+  nameWithType: object.ReferenceEquals(object, object)
+  fullName: object.ReferenceEquals(object, object)
+  nameWithType.vb: Object.ReferenceEquals(Object, Object)
+  fullName.vb: Object.ReferenceEquals(Object, Object)
+  name.vb: ReferenceEquals(Object, Object)
+  spec.csharp:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System.Object.ToString
+  commentId: M:System.Object.ToString
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.tostring
+  name: ToString()
+  nameWithType: object.ToString()
+  fullName: object.ToString()
+  nameWithType.vb: Object.ToString()
+  fullName.vb: Object.ToString()
+  spec.csharp:
+  - uid: System.Object.ToString
+    name: ToString
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.tostring
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.ToString
+    name: ToString
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.tostring
+  - name: (
+  - name: )
+- uid: System
+  commentId: N:System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system
+  name: System
+  nameWithType: System
+  fullName: System
+- uid: BOOSEapp.AppCanvas
+  commentId: T:BOOSEapp.AppCanvas
+  parent: BOOSEapp
+  href: BOOSEapp.AppCanvas.html
+  name: AppCanvas
+  nameWithType: AppCanvas
+  fullName: BOOSEapp.AppCanvas
+- uid: System.Collections.Generic.Dictionary{System.String,System.Int32}
+  commentId: T:System.Collections.Generic.Dictionary{System.String,System.Int32}
+  parent: System.Collections.Generic
+  definition: System.Collections.Generic.Dictionary`2
+  href: https://learn.microsoft.com/dotnet/api/system.collections.generic.dictionary-2
+  name: Dictionary<string, int>
+  nameWithType: Dictionary<string, int>
+  fullName: System.Collections.Generic.Dictionary<string, int>
+  nameWithType.vb: Dictionary(Of String, Integer)
+  fullName.vb: System.Collections.Generic.Dictionary(Of String, Integer)
+  name.vb: Dictionary(Of String, Integer)
+  spec.csharp:
+  - uid: System.Collections.Generic.Dictionary`2
+    name: Dictionary
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.dictionary-2
+  - name: <
+  - uid: System.String
+    name: string
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.string
+  - name: ','
+  - name: " "
+  - uid: System.Int32
+    name: int
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.int32
+  - name: '>'
+  spec.vb:
+  - uid: System.Collections.Generic.Dictionary`2
+    name: Dictionary
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.dictionary-2
+  - name: (
+  - name: Of
+  - name: " "
+  - uid: System.String
+    name: String
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.string
+  - name: ','
+  - name: " "
+  - uid: System.Int32
+    name: Integer
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.int32
+  - name: )
+- uid: System.Collections.Generic.Dictionary`2
+  commentId: T:System.Collections.Generic.Dictionary`2
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.collections.generic.dictionary-2
+  name: Dictionary<TKey, TValue>
+  nameWithType: Dictionary<TKey, TValue>
+  fullName: System.Collections.Generic.Dictionary<TKey, TValue>
+  nameWithType.vb: Dictionary(Of TKey, TValue)
+  fullName.vb: System.Collections.Generic.Dictionary(Of TKey, TValue)
+  name.vb: Dictionary(Of TKey, TValue)
+  spec.csharp:
+  - uid: System.Collections.Generic.Dictionary`2
+    name: Dictionary
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.dictionary-2
+  - name: <
+  - name: TKey
+  - name: ','
+  - name: " "
+  - name: TValue
+  - name: '>'
+  spec.vb:
+  - uid: System.Collections.Generic.Dictionary`2
+    name: Dictionary
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.dictionary-2
+  - name: (
+  - name: Of
+  - name: " "
+  - name: TKey
+  - name: ','
+  - name: " "
+  - name: TValue
+  - name: )
+- uid: System.Collections.Generic
+  commentId: N:System.Collections.Generic
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system
+  name: System.Collections.Generic
+  nameWithType: System.Collections.Generic
+  fullName: System.Collections.Generic
+  spec.csharp:
+  - uid: System
+    name: System
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system
+  - name: .
+  - uid: System.Collections
+    name: Collections
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections
+  - name: .
+  - uid: System.Collections.Generic
+    name: Generic
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic
+  spec.vb:
+  - uid: System
+    name: System
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system
+  - name: .
+  - uid: System.Collections
+    name: Collections
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections
+  - name: .
+  - uid: System.Collections.Generic
+    name: Generic
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic
+- uid: System.Collections.Generic.Dictionary{System.String,System.String}
+  commentId: T:System.Collections.Generic.Dictionary{System.String,System.String}
+  parent: System.Collections.Generic
+  definition: System.Collections.Generic.Dictionary`2
+  href: https://learn.microsoft.com/dotnet/api/system.collections.generic.dictionary-2
+  name: Dictionary<string, string>
+  nameWithType: Dictionary<string, string>
+  fullName: System.Collections.Generic.Dictionary<string, string>
+  nameWithType.vb: Dictionary(Of String, String)
+  fullName.vb: System.Collections.Generic.Dictionary(Of String, String)
+  name.vb: Dictionary(Of String, String)
+  spec.csharp:
+  - uid: System.Collections.Generic.Dictionary`2
+    name: Dictionary
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.dictionary-2
+  - name: <
+  - uid: System.String
+    name: string
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.string
+  - name: ','
+  - name: " "
+  - uid: System.String
+    name: string
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.string
+  - name: '>'
+  spec.vb:
+  - uid: System.Collections.Generic.Dictionary`2
+    name: Dictionary
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.dictionary-2
+  - name: (
+  - name: Of
+  - name: " "
+  - uid: System.String
+    name: String
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.string
+  - name: ','
+  - name: " "
+  - uid: System.String
+    name: String
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.string
+  - name: )
+- uid: System.Collections.Generic.Dictionary{System.String,System.String[]}
+  commentId: T:System.Collections.Generic.Dictionary{System.String,System.String[]}
+  parent: System.Collections.Generic
+  definition: System.Collections.Generic.Dictionary`2
+  href: https://learn.microsoft.com/dotnet/api/system.collections.generic.dictionary-2
+  name: Dictionary<string, string[]>
+  nameWithType: Dictionary<string, string[]>
+  fullName: System.Collections.Generic.Dictionary<string, string[]>
+  nameWithType.vb: Dictionary(Of String, String())
+  fullName.vb: System.Collections.Generic.Dictionary(Of String, String())
+  name.vb: Dictionary(Of String, String())
+  spec.csharp:
+  - uid: System.Collections.Generic.Dictionary`2
+    name: Dictionary
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.dictionary-2
+  - name: <
+  - uid: System.String
+    name: string
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.string
+  - name: ','
+  - name: " "
+  - uid: System.String
+    name: string
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.string
+  - name: '['
+  - name: ']'
+  - name: '>'
+  spec.vb:
+  - uid: System.Collections.Generic.Dictionary`2
+    name: Dictionary
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.dictionary-2
+  - name: (
+  - name: Of
+  - name: " "
+  - uid: System.String
+    name: String
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.string
+  - name: ','
+  - name: " "
+  - uid: System.String
+    name: String
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.string
+  - name: (
+  - name: )
+  - name: )
+- uid: BOOSEapp.Maths
+  commentId: T:BOOSEapp.Maths
+  parent: BOOSEapp
+  href: BOOSEapp.Maths.html
+  name: Maths
+  nameWithType: Maths
+  fullName: BOOSEapp.Maths
+- uid: BOOSEapp.Method.#ctor*
+  commentId: Overload:BOOSEapp.Method.#ctor
+  href: BOOSEapp.Method.html#BOOSEapp_Method__ctor_BOOSEapp_AppCanvas_
+  name: Method
+  nameWithType: Method.Method
+  fullName: BOOSEapp.Method.Method
+  nameWithType.vb: Method.New
+  fullName.vb: BOOSEapp.Method.New
+  name.vb: New
+- uid: BOOSEapp.Method.Run*
+  commentId: Overload:BOOSEapp.Method.Run
+  href: BOOSEapp.Method.html#BOOSEapp_Method_Run_System_String_
+  name: Run
+  nameWithType: Method.Run
+  fullName: BOOSEapp.Method.Run
+- uid: BOOSEapp.IInterpreter.Run(System.String)
+  commentId: M:BOOSEapp.IInterpreter.Run(System.String)
+  parent: BOOSEapp.IInterpreter
+  isExternal: true
+  href: BOOSEapp.IInterpreter.html#BOOSEapp_IInterpreter_Run_System_String_
+  name: Run(string)
+  nameWithType: IInterpreter.Run(string)
+  fullName: BOOSEapp.IInterpreter.Run(string)
+  nameWithType.vb: IInterpreter.Run(String)
+  fullName.vb: BOOSEapp.IInterpreter.Run(String)
+  name.vb: Run(String)
+  spec.csharp:
+  - uid: BOOSEapp.IInterpreter.Run(System.String)
+    name: Run
+    href: BOOSEapp.IInterpreter.html#BOOSEapp_IInterpreter_Run_System_String_
+  - name: (
+  - uid: System.String
+    name: string
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.string
+  - name: )
+  spec.vb:
+  - uid: BOOSEapp.IInterpreter.Run(System.String)
+    name: Run
+    href: BOOSEapp.IInterpreter.html#BOOSEapp_IInterpreter_Run_System_String_
+  - name: (
+  - uid: System.String
+    name: String
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.string
+  - name: )
+- uid: System.String
+  commentId: T:System.String
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.string
+  name: string
+  nameWithType: string
+  fullName: string
+  nameWithType.vb: String
+  fullName.vb: String
+  name.vb: String
+- uid: BOOSEapp.Method.ExecuteBlock*
+  commentId: Overload:BOOSEapp.Method.ExecuteBlock
+  href: BOOSEapp.Method.html#BOOSEapp_Method_ExecuteBlock_System_String_
+  name: ExecuteBlock
+  nameWithType: Method.ExecuteBlock
+  fullName: BOOSEapp.Method.ExecuteBlock
+- uid: BOOSEapp.Method.ExecuteLine*
+  commentId: Overload:BOOSEapp.Method.ExecuteLine
+  href: BOOSEapp.Method.html#BOOSEapp_Method_ExecuteLine_System_String_
+  name: ExecuteLine
+  nameWithType: Method.ExecuteLine
+  fullName: BOOSEapp.Method.ExecuteLine

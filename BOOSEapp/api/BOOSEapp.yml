@@ -11,9 +11,11 @@ items:
   - BOOSEapp.Circle
   - BOOSEapp.Clear
   - BOOSEapp.Form1
+  - BOOSEapp.IInterpreter
   - BOOSEapp.If
   - BOOSEapp.Int
   - BOOSEapp.Maths
+  - BOOSEapp.Method
   - BOOSEapp.MoveTo
   - BOOSEapp.Program
   - BOOSEapp.Real
@@ -74,6 +76,13 @@ references:
   name: If
   nameWithType: If
   fullName: BOOSEapp.If
+- uid: BOOSEapp.IInterpreter
+  commentId: T:BOOSEapp.IInterpreter
+  parent: BOOSEapp
+  href: BOOSEapp.IInterpreter.html
+  name: IInterpreter
+  nameWithType: IInterpreter
+  fullName: BOOSEapp.IInterpreter
 - uid: BOOSEapp.Int
   commentId: T:BOOSEapp.Int
   href: BOOSEapp.Int.html
@@ -87,6 +96,12 @@ references:
   name: Maths
   nameWithType: Maths
   fullName: BOOSEapp.Maths
+- uid: BOOSEapp.Method
+  commentId: T:BOOSEapp.Method
+  href: BOOSEapp.Method.html
+  name: Method
+  nameWithType: Method
+  fullName: BOOSEapp.Method
 - uid: BOOSEapp.MoveTo
   commentId: T:BOOSEapp.MoveTo
   href: BOOSEapp.MoveTo.html

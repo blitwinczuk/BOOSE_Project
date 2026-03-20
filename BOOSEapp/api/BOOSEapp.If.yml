@@ -122,6 +122,8 @@ items:
   assemblies:
   - BOOSEapp
   namespace: BOOSEapp
+  summary: 'Evaluates conditions like: <code>x &lt; 10</code>, <code>x &gt; 5</code>, <code>x == 3</code>.'
+  example: []
   syntax:
     content: public bool Evaluate(string cond)
     parameters:

@@ -423,6 +423,22 @@ references:
   isSpec: "True"
   fullName: BOOSEapp.Array.FindRealArrayName
   nameWithType: Array.FindRealArrayName
+- uid: BOOSEapp.Array.GetWhileBlock(System.String[],System.Int32@)
+  name: GetWhileBlock(string[], ref int)
+  href: api/BOOSEapp.Array.html#BOOSEapp_Array_GetWhileBlock_System_String___System_Int32__
+  commentId: M:BOOSEapp.Array.GetWhileBlock(System.String[],System.Int32@)
+  name.vb: GetWhileBlock(String(), Integer)
+  fullName: BOOSEapp.Array.GetWhileBlock(string[], ref int)
+  fullName.vb: BOOSEapp.Array.GetWhileBlock(String(), Integer)
+  nameWithType: Array.GetWhileBlock(string[], ref int)
+  nameWithType.vb: Array.GetWhileBlock(String(), Integer)
+- uid: BOOSEapp.Array.GetWhileBlock*
+  name: GetWhileBlock
+  href: api/BOOSEapp.Array.html#BOOSEapp_Array_GetWhileBlock_
+  commentId: Overload:BOOSEapp.Array.GetWhileBlock
+  isSpec: "True"
+  fullName: BOOSEapp.Array.GetWhileBlock
+  nameWithType: Array.GetWhileBlock
 - uid: BOOSEapp.Array.GetWriteValue(System.String)
   name: GetWriteValue(string)
   href: api/BOOSEapp.Array.html#BOOSEapp_Array_GetWriteValue_System_String_
@@ -657,6 +673,22 @@ references:
   isSpec: "True"
   fullName: BOOSEapp.Form1.Form1_Load
   nameWithType: Form1.Form1_Load
+- uid: BOOSEapp.Form1.GetInterpreter(System.String)
+  name: GetInterpreter(string)
+  href: api/BOOSEapp.Form1.html#BOOSEapp_Form1_GetInterpreter_System_String_
+  commentId: M:BOOSEapp.Form1.GetInterpreter(System.String)
+  name.vb: GetInterpreter(String)
+  fullName: BOOSEapp.Form1.GetInterpreter(string)
+  fullName.vb: BOOSEapp.Form1.GetInterpreter(String)
+  nameWithType: Form1.GetInterpreter(string)
+  nameWithType.vb: Form1.GetInterpreter(String)
+- uid: BOOSEapp.Form1.GetInterpreter*
+  name: GetInterpreter
+  href: api/BOOSEapp.Form1.html#BOOSEapp_Form1_GetInterpreter_
+  commentId: Overload:BOOSEapp.Form1.GetInterpreter
+  isSpec: "True"
+  fullName: BOOSEapp.Form1.GetInterpreter
+  nameWithType: Form1.GetInterpreter
 - uid: BOOSEapp.Form1.InitializeComponent
   name: InitializeComponent()
   href: api/BOOSEapp.Form1.html#BOOSEapp_Form1_InitializeComponent
@@ -717,6 +749,28 @@ references:
   isSpec: "True"
   fullName: BOOSEapp.Form1.button1_Click
   nameWithType: Form1.button1_Click
+- uid: BOOSEapp.Form1.button2
+  name: button2
+  href: api/BOOSEapp.Form1.html#BOOSEapp_Form1_button2
+  commentId: F:BOOSEapp.Form1.button2
+  fullName: BOOSEapp.Form1.button2
+  nameWithType: Form1.button2
+- uid: BOOSEapp.Form1.button2_Click(System.Object,System.EventArgs)
+  name: button2_Click(object, EventArgs)
+  href: api/BOOSEapp.Form1.html#BOOSEapp_Form1_button2_Click_System_Object_System_EventArgs_
+  commentId: M:BOOSEapp.Form1.button2_Click(System.Object,System.EventArgs)
+  name.vb: button2_Click(Object, EventArgs)
+  fullName: BOOSEapp.Form1.button2_Click(object, System.EventArgs)
+  fullName.vb: BOOSEapp.Form1.button2_Click(Object, System.EventArgs)
+  nameWithType: Form1.button2_Click(object, EventArgs)
+  nameWithType.vb: Form1.button2_Click(Object, EventArgs)
+- uid: BOOSEapp.Form1.button2_Click*
+  name: button2_Click
+  href: api/BOOSEapp.Form1.html#BOOSEapp_Form1_button2_Click_
+  commentId: Overload:BOOSEapp.Form1.button2_Click
+  isSpec: "True"
+  fullName: BOOSEapp.Form1.button2_Click
+  nameWithType: Form1.button2_Click
 - uid: BOOSEapp.Form1.canvas
   name: canvas
   href: api/BOOSEapp.Form1.html#BOOSEapp_Form1_canvas
@@ -783,6 +837,12 @@ references:
   isSpec: "True"
   fullName: BOOSEapp.Form1.pictureBox1_Paint
   nameWithType: Form1.pictureBox1_Paint
+- uid: BOOSEapp.Form1.richTextBox1
+  name: richTextBox1
+  href: api/BOOSEapp.Form1.html#BOOSEapp_Form1_richTextBox1
+  commentId: F:BOOSEapp.Form1.richTextBox1
+  fullName: BOOSEapp.Form1.richTextBox1
+  nameWithType: Form1.richTextBox1
 - uid: BOOSEapp.Form1.textBox1
   name: textBox1
   href: api/BOOSEapp.Form1.html#BOOSEapp_Form1_textBox1
@@ -821,6 +881,28 @@ references:
   isSpec: "True"
   fullName: BOOSEapp.Form1.textBox2_TextChanged
   nameWithType: Form1.textBox2_TextChanged
+- uid: BOOSEapp.IInterpreter
+  name: IInterpreter
+  href: api/BOOSEapp.IInterpreter.html
+  commentId: T:BOOSEapp.IInterpreter
+  fullName: BOOSEapp.IInterpreter
+  nameWithType: IInterpreter
+- uid: BOOSEapp.IInterpreter.Run(System.String)
+  name: Run(string)
+  href: api/BOOSEapp.IInterpreter.html#BOOSEapp_IInterpreter_Run_System_String_
+  commentId: M:BOOSEapp.IInterpreter.Run(System.String)
+  name.vb: Run(String)
+  fullName: BOOSEapp.IInterpreter.Run(string)
+  fullName.vb: BOOSEapp.IInterpreter.Run(String)
+  nameWithType: IInterpreter.Run(string)
+  nameWithType.vb: IInterpreter.Run(String)
+- uid: BOOSEapp.IInterpreter.Run*
+  name: Run
+  href: api/BOOSEapp.IInterpreter.html#BOOSEapp_IInterpreter_Run_
+  commentId: Overload:BOOSEapp.IInterpreter.Run
+  isSpec: "True"
+  fullName: BOOSEapp.IInterpreter.Run
+  nameWithType: IInterpreter.Run
 - uid: BOOSEapp.If
   name: If
   href: api/BOOSEapp.If.html
@@ -1028,6 +1110,109 @@ references:
   commentId: F:BOOSEapp.Maths.realVars
   fullName: BOOSEapp.Maths.realVars
   nameWithType: Maths.realVars
+- uid: BOOSEapp.Method
+  name: Method
+  href: api/BOOSEapp.Method.html
+  commentId: T:BOOSEapp.Method
+  fullName: BOOSEapp.Method
+  nameWithType: Method
+- uid: BOOSEapp.Method.#ctor(BOOSEapp.AppCanvas)
+  name: Method(AppCanvas)
+  href: api/BOOSEapp.Method.html#BOOSEapp_Method__ctor_BOOSEapp_AppCanvas_
+  commentId: M:BOOSEapp.Method.#ctor(BOOSEapp.AppCanvas)
+  name.vb: New(AppCanvas)
+  fullName: BOOSEapp.Method.Method(BOOSEapp.AppCanvas)
+  fullName.vb: BOOSEapp.Method.New(BOOSEapp.AppCanvas)
+  nameWithType: Method.Method(AppCanvas)
+  nameWithType.vb: Method.New(AppCanvas)
+- uid: BOOSEapp.Method.#ctor*
+  name: Method
+  href: api/BOOSEapp.Method.html#BOOSEapp_Method__ctor_
+  commentId: Overload:BOOSEapp.Method.#ctor
+  isSpec: "True"
+  name.vb: New
+  fullName: BOOSEapp.Method.Method
+  fullName.vb: BOOSEapp.Method.New
+  nameWithType: Method.Method
+  nameWithType.vb: Method.New
+- uid: BOOSEapp.Method.ExecuteBlock(System.String)
+  name: ExecuteBlock(string)
+  href: api/BOOSEapp.Method.html#BOOSEapp_Method_ExecuteBlock_System_String_
+  commentId: M:BOOSEapp.Method.ExecuteBlock(System.String)
+  name.vb: ExecuteBlock(String)
+  fullName: BOOSEapp.Method.ExecuteBlock(string)
+  fullName.vb: BOOSEapp.Method.ExecuteBlock(String)
+  nameWithType: Method.ExecuteBlock(string)
+  nameWithType.vb: Method.ExecuteBlock(String)
+- uid: BOOSEapp.Method.ExecuteBlock*
+  name: ExecuteBlock
+  href: api/BOOSEapp.Method.html#BOOSEapp_Method_ExecuteBlock_
+  commentId: Overload:BOOSEapp.Method.ExecuteBlock
+  isSpec: "True"
+  fullName: BOOSEapp.Method.ExecuteBlock
+  nameWithType: Method.ExecuteBlock
+- uid: BOOSEapp.Method.ExecuteLine(System.String)
+  name: ExecuteLine(string)
+  href: api/BOOSEapp.Method.html#BOOSEapp_Method_ExecuteLine_System_String_
+  commentId: M:BOOSEapp.Method.ExecuteLine(System.String)
+  name.vb: ExecuteLine(String)
+  fullName: BOOSEapp.Method.ExecuteLine(string)
+  fullName.vb: BOOSEapp.Method.ExecuteLine(String)
+  nameWithType: Method.ExecuteLine(string)
+  nameWithType.vb: Method.ExecuteLine(String)
+- uid: BOOSEapp.Method.ExecuteLine*
+  name: ExecuteLine
+  href: api/BOOSEapp.Method.html#BOOSEapp_Method_ExecuteLine_
+  commentId: Overload:BOOSEapp.Method.ExecuteLine
+  isSpec: "True"
+  fullName: BOOSEapp.Method.ExecuteLine
+  nameWithType: Method.ExecuteLine
+- uid: BOOSEapp.Method.Run(System.String)
+  name: Run(string)
+  href: api/BOOSEapp.Method.html#BOOSEapp_Method_Run_System_String_
+  commentId: M:BOOSEapp.Method.Run(System.String)
+  name.vb: Run(String)
+  fullName: BOOSEapp.Method.Run(string)
+  fullName.vb: BOOSEapp.Method.Run(String)
+  nameWithType: Method.Run(string)
+  nameWithType.vb: Method.Run(String)
+- uid: BOOSEapp.Method.Run*
+  name: Run
+  href: api/BOOSEapp.Method.html#BOOSEapp_Method_Run_
+  commentId: Overload:BOOSEapp.Method.Run
+  isSpec: "True"
+  fullName: BOOSEapp.Method.Run
+  nameWithType: Method.Run
+- uid: BOOSEapp.Method.canvas
+  name: canvas
+  href: api/BOOSEapp.Method.html#BOOSEapp_Method_canvas
+  commentId: F:BOOSEapp.Method.canvas
+  fullName: BOOSEapp.Method.canvas
+  nameWithType: Method.canvas
+- uid: BOOSEapp.Method.intVars
+  name: intVars
+  href: api/BOOSEapp.Method.html#BOOSEapp_Method_intVars
+  commentId: F:BOOSEapp.Method.intVars
+  fullName: BOOSEapp.Method.intVars
+  nameWithType: Method.intVars
+- uid: BOOSEapp.Method.maths
+  name: maths
+  href: api/BOOSEapp.Method.html#BOOSEapp_Method_maths
+  commentId: F:BOOSEapp.Method.maths
+  fullName: BOOSEapp.Method.maths
+  nameWithType: Method.maths
+- uid: BOOSEapp.Method.methods
+  name: methods
+  href: api/BOOSEapp.Method.html#BOOSEapp_Method_methods
+  commentId: F:BOOSEapp.Method.methods
+  fullName: BOOSEapp.Method.methods
+  nameWithType: Method.methods
+- uid: BOOSEapp.Method.parameters
+  name: parameters
+  href: api/BOOSEapp.Method.html#BOOSEapp_Method_parameters
+  commentId: F:BOOSEapp.Method.parameters
+  fullName: BOOSEapp.Method.parameters
+  nameWithType: Method.parameters
 - uid: BOOSEapp.MoveTo
   name: MoveTo
   href: api/BOOSEapp.MoveTo.html

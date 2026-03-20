@@ -9,18 +9,22 @@ items:
   - BOOSEapp.Form1.Dispose(System.Boolean)
   - BOOSEapp.Form1.Factory
   - BOOSEapp.Form1.Form1_Load(System.Object,System.EventArgs)
+  - BOOSEapp.Form1.GetInterpreter(System.String)
   - BOOSEapp.Form1.InitializeComponent
   - BOOSEapp.Form1.Parser
   - BOOSEapp.Form1.Program
   - BOOSEapp.Form1.UserInput
   - BOOSEapp.Form1.button1
   - BOOSEapp.Form1.button1_Click(System.Object,System.EventArgs)
+  - BOOSEapp.Form1.button2
+  - BOOSEapp.Form1.button2_Click(System.Object,System.EventArgs)
   - BOOSEapp.Form1.canvas
   - BOOSEapp.Form1.components
   - BOOSEapp.Form1.panel1_Paint(System.Object,System.Windows.Forms.PaintEventArgs)
   - BOOSEapp.Form1.pictureBox1
   - BOOSEapp.Form1.pictureBox1_Click(System.Object,System.EventArgs)
   - BOOSEapp.Form1.pictureBox1_Paint(System.Object,System.Windows.Forms.PaintEventArgs)
+  - BOOSEapp.Form1.richTextBox1
   - BOOSEapp.Form1.textBox1
   - BOOSEapp.Form1.textBox1_TextChanged(System.Object,System.EventArgs)
   - BOOSEapp.Form1.textBox2_TextChanged(System.Object,System.EventArgs)
@@ -1008,7 +1012,7 @@ items:
       repo: https://github.com/ASE2025repos/ase-boose-assignment-blitwinczuk.git
     id: UserInput
     path: Form1.cs
-    startLine: 45
+    startLine: 47
   assemblies:
   - BOOSEapp
   namespace: BOOSEapp
@@ -1060,7 +1064,7 @@ items:
       repo: https://github.com/ASE2025repos/ase-boose-assignment-blitwinczuk.git
     id: button1_Click
     path: Form1.cs
-    startLine: 53
+    startLine: 55
   assemblies:
   - BOOSEapp
   namespace: BOOSEapp
@@ -1094,7 +1098,7 @@ items:
       repo: https://github.com/ASE2025repos/ase-boose-assignment-blitwinczuk.git
     id: pictureBox1_Paint
     path: Form1.cs
-    startLine: 93
+    startLine: 73
   assemblies:
   - BOOSEapp
   namespace: BOOSEapp
@@ -1128,7 +1132,7 @@ items:
       repo: https://github.com/ASE2025repos/ase-boose-assignment-blitwinczuk.git
     id: pictureBox1_Click
     path: Form1.cs
-    startLine: 102
+    startLine: 82
   assemblies:
   - BOOSEapp
   namespace: BOOSEapp
@@ -1162,7 +1166,7 @@ items:
       repo: https://github.com/ASE2025repos/ase-boose-assignment-blitwinczuk.git
     id: textBox1_TextChanged
     path: Form1.cs
-    startLine: 106
+    startLine: 86
   assemblies:
   - BOOSEapp
   namespace: BOOSEapp
@@ -1196,7 +1200,7 @@ items:
       repo: https://github.com/ASE2025repos/ase-boose-assignment-blitwinczuk.git
     id: textBox2_TextChanged
     path: Form1.cs
-    startLine: 110
+    startLine: 90
   assemblies:
   - BOOSEapp
   namespace: BOOSEapp
@@ -1230,7 +1234,7 @@ items:
       repo: https://github.com/ASE2025repos/ase-boose-assignment-blitwinczuk.git
     id: panel1_Paint
     path: Form1.cs
-    startLine: 114
+    startLine: 94
   assemblies:
   - BOOSEapp
   namespace: BOOSEapp
@@ -1246,6 +1250,76 @@ items:
   nameWithType.vb: Form1.panel1_Paint(Object, PaintEventArgs)
   fullName.vb: BOOSEapp.Form1.panel1_Paint(Object, System.Windows.Forms.PaintEventArgs)
   name.vb: panel1_Paint(Object, PaintEventArgs)
+- uid: BOOSEapp.Form1.button2_Click(System.Object,System.EventArgs)
+  commentId: M:BOOSEapp.Form1.button2_Click(System.Object,System.EventArgs)
+  id: button2_Click(System.Object,System.EventArgs)
+  parent: BOOSEapp.Form1
+  langs:
+  - csharp
+  - vb
+  name: button2_Click(object, EventArgs)
+  nameWithType: Form1.button2_Click(object, EventArgs)
+  fullName: BOOSEapp.Form1.button2_Click(object, System.EventArgs)
+  type: Method
+  source:
+    remote:
+      path: BOOSEapp/Form1.cs
+      branch: main
+      repo: https://github.com/ASE2025repos/ase-boose-assignment-blitwinczuk.git
+    id: button2_Click
+    path: Form1.cs
+    startLine: 98
+  assemblies:
+  - BOOSEapp
+  namespace: BOOSEapp
+  syntax:
+    content: private void button2_Click(object sender, EventArgs e)
+    parameters:
+    - id: sender
+      type: System.Object
+    - id: e
+      type: System.EventArgs
+    content.vb: Private Sub button2_Click(sender As Object, e As EventArgs)
+  overload: BOOSEapp.Form1.button2_Click*
+  nameWithType.vb: Form1.button2_Click(Object, EventArgs)
+  fullName.vb: BOOSEapp.Form1.button2_Click(Object, System.EventArgs)
+  name.vb: button2_Click(Object, EventArgs)
+- uid: BOOSEapp.Form1.GetInterpreter(System.String)
+  commentId: M:BOOSEapp.Form1.GetInterpreter(System.String)
+  id: GetInterpreter(System.String)
+  parent: BOOSEapp.Form1
+  langs:
+  - csharp
+  - vb
+  name: GetInterpreter(string)
+  nameWithType: Form1.GetInterpreter(string)
+  fullName: BOOSEapp.Form1.GetInterpreter(string)
+  type: Method
+  source:
+    remote:
+      path: BOOSEapp/Form1.cs
+      branch: main
+      repo: https://github.com/ASE2025repos/ase-boose-assignment-blitwinczuk.git
+    id: GetInterpreter
+    path: Form1.cs
+    startLine: 108
+  assemblies:
+  - BOOSEapp
+  namespace: BOOSEapp
+  summary: Selects the appropriate interpreter based on the program content.
+  example: []
+  syntax:
+    content: private IInterpreter GetInterpreter(string input)
+    parameters:
+    - id: input
+      type: System.String
+    return:
+      type: BOOSEapp.IInterpreter
+    content.vb: Private Function GetInterpreter(input As String) As IInterpreter
+  overload: BOOSEapp.Form1.GetInterpreter*
+  nameWithType.vb: Form1.GetInterpreter(String)
+  fullName.vb: BOOSEapp.Form1.GetInterpreter(String)
+  name.vb: GetInterpreter(String)
 - uid: BOOSEapp.Form1.components
   commentId: F:BOOSEapp.Form1.components
   id: components
@@ -1360,7 +1434,7 @@ items:
       repo: https://github.com/ASE2025repos/ase-boose-assignment-blitwinczuk.git
     id: pictureBox1
     path: Form1.Designer.cs
-    startLine: 88
+    startLine: 111
   assemblies:
   - BOOSEapp
   namespace: BOOSEapp
@@ -1387,7 +1461,7 @@ items:
       repo: https://github.com/ASE2025repos/ase-boose-assignment-blitwinczuk.git
     id: textBox1
     path: Form1.Designer.cs
-    startLine: 89
+    startLine: 112
   assemblies:
   - BOOSEapp
   namespace: BOOSEapp
@@ -1414,7 +1488,7 @@ items:
       repo: https://github.com/ASE2025repos/ase-boose-assignment-blitwinczuk.git
     id: button1
     path: Form1.Designer.cs
-    startLine: 90
+    startLine: 113
   assemblies:
   - BOOSEapp
   namespace: BOOSEapp
@@ -1423,6 +1497,60 @@ items:
     return:
       type: System.Windows.Forms.Button
     content.vb: Private button1 As Button
+- uid: BOOSEapp.Form1.button2
+  commentId: F:BOOSEapp.Form1.button2
+  id: button2
+  parent: BOOSEapp.Form1
+  langs:
+  - csharp
+  - vb
+  name: button2
+  nameWithType: Form1.button2
+  fullName: BOOSEapp.Form1.button2
+  type: Field
+  source:
+    remote:
+      path: BOOSEapp/Form1.Designer.cs
+      branch: main
+      repo: https://github.com/ASE2025repos/ase-boose-assignment-blitwinczuk.git
+    id: button2
+    path: Form1.Designer.cs
+    startLine: 114
+  assemblies:
+  - BOOSEapp
+  namespace: BOOSEapp
+  syntax:
+    content: private Button button2
+    return:
+      type: System.Windows.Forms.Button
+    content.vb: Private button2 As Button
+- uid: BOOSEapp.Form1.richTextBox1
+  commentId: F:BOOSEapp.Form1.richTextBox1
+  id: richTextBox1
+  parent: BOOSEapp.Form1
+  langs:
+  - csharp
+  - vb
+  name: richTextBox1
+  nameWithType: Form1.richTextBox1
+  fullName: BOOSEapp.Form1.richTextBox1
+  type: Field
+  source:
+    remote:
+      path: BOOSEapp/Form1.Designer.cs
+      branch: main
+      repo: https://github.com/ASE2025repos/ase-boose-assignment-blitwinczuk.git
+    id: richTextBox1
+    path: Form1.Designer.cs
+    startLine: 115
+  assemblies:
+  - BOOSEapp
+  namespace: BOOSEapp
+  syntax:
+    content: private RichTextBox richTextBox1
+    return:
+      type: System.Windows.Forms.RichTextBox
+    content.vb: Private richTextBox1 As RichTextBox
 references:
 - uid: BOOSEapp
   commentId: N:BOOSEapp
@@ -19027,6 +19155,25 @@ references:
   name: panel1_Paint
   nameWithType: Form1.panel1_Paint
   fullName: BOOSEapp.Form1.panel1_Paint
+- uid: BOOSEapp.Form1.button2_Click*
+  commentId: Overload:BOOSEapp.Form1.button2_Click
+  href: BOOSEapp.Form1.html#BOOSEapp_Form1_button2_Click_System_Object_System_EventArgs_
+  name: button2_Click
+  nameWithType: Form1.button2_Click
+  fullName: BOOSEapp.Form1.button2_Click
+- uid: BOOSEapp.Form1.GetInterpreter*
+  commentId: Overload:BOOSEapp.Form1.GetInterpreter
+  href: BOOSEapp.Form1.html#BOOSEapp_Form1_GetInterpreter_System_String_
+  name: GetInterpreter
+  nameWithType: Form1.GetInterpreter
+  fullName: BOOSEapp.Form1.GetInterpreter
+- uid: BOOSEapp.IInterpreter
+  commentId: T:BOOSEapp.IInterpreter
+  parent: BOOSEapp
+  href: BOOSEapp.IInterpreter.html
+  name: IInterpreter
+  nameWithType: IInterpreter
+  fullName: BOOSEapp.IInterpreter
 - uid: System.ComponentModel.IContainer
   commentId: T:System.ComponentModel.IContainer
   parent: System.ComponentModel
@@ -19115,3 +19262,11 @@ references:
   name: Button
   nameWithType: Button
   fullName: System.Windows.Forms.Button
+- uid: System.Windows.Forms.RichTextBox
+  commentId: T:System.Windows.Forms.RichTextBox
+  parent: System.Windows.Forms
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.windows.forms.richtextbox
+  name: RichTextBox
+  nameWithType: RichTextBox
+  fullName: System.Windows.Forms.RichTextBox

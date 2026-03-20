@@ -1,0 +1,97 @@
+### YamlMime:ManagedReference
+items:
+- uid: BOOSEapp.IInterpreter
+  commentId: T:BOOSEapp.IInterpreter
+  id: IInterpreter
+  parent: BOOSEapp
+  children:
+  - BOOSEapp.IInterpreter.Run(System.String)
+  langs:
+  - csharp
+  - vb
+  name: IInterpreter
+  nameWithType: IInterpreter
+  fullName: BOOSEapp.IInterpreter
+  type: Interface
+  source:
+    remote:
+      path: BOOSEapp/IInterface.cs
+      branch: main
+      repo: https://github.com/ASE2025repos/ase-boose-assignment-blitwinczuk.git
+    id: IInterpreter
+    path: IInterface.cs
+    startLine: 5
+  assemblies:
+  - BOOSEapp
+  namespace: BOOSEapp
+  summary: Common interface for classes that can run a BOOSE program.
+  example: []
+  syntax:
+    content: public interface IInterpreter
+    content.vb: Public Interface IInterpreter
+- uid: BOOSEapp.IInterpreter.Run(System.String)
+  commentId: M:BOOSEapp.IInterpreter.Run(System.String)
+  id: Run(System.String)
+  parent: BOOSEapp.IInterpreter
+  langs:
+  - csharp
+  - vb
+  name: Run(string)
+  nameWithType: IInterpreter.Run(string)
+  fullName: BOOSEapp.IInterpreter.Run(string)
+  type: Method
+  source:
+    remote:
+      path: BOOSEapp/IInterface.cs
+      branch: main
+      repo: https://github.com/ASE2025repos/ase-boose-assignment-blitwinczuk.git
+    id: Run
+    path: IInterface.cs
+    startLine: 11
+  assemblies:
+  - BOOSEapp
+  namespace: BOOSEapp
+  summary: Runs the supplied BOOSE program.
+  example: []
+  syntax:
+    content: void Run(string program)
+    parameters:
+    - id: program
+      type: System.String
+      description: Program entered by the user.
+    content.vb: Sub Run(program As String)
+  overload: BOOSEapp.IInterpreter.Run*
+  nameWithType.vb: IInterpreter.Run(String)
+  fullName.vb: BOOSEapp.IInterpreter.Run(String)
+  name.vb: Run(String)
+references:
+- uid: BOOSEapp
+  commentId: N:BOOSEapp
+  href: BOOSEapp.html
+  name: BOOSEapp
+  nameWithType: BOOSEapp
+  fullName: BOOSEapp
+- uid: BOOSEapp.IInterpreter.Run*
+  commentId: Overload:BOOSEapp.IInterpreter.Run
+  href: BOOSEapp.IInterpreter.html#BOOSEapp_IInterpreter_Run_System_String_
+  name: Run
+  nameWithType: IInterpreter.Run
+  fullName: BOOSEapp.IInterpreter.Run
+- uid: System.String
+  commentId: T:System.String
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.string
+  name: string
+  nameWithType: string
+  fullName: string
+  nameWithType.vb: String
+  fullName.vb: String
+  name.vb: String
+- uid: System
+  commentId: N:System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system
+  name: System
+  nameWithType: System
+  fullName: System

@@ -393,7 +393,7 @@ items:
       repo: https://github.com/ASE2025repos/ase-boose-assignment-blitwinczuk.git
     id: Clear
     path: AppCanvas.cs
-    startLine: 91
+    startLine: 95
   assemblies:
   - BOOSEapp
   namespace: BOOSEapp
@@ -423,7 +423,7 @@ items:
       repo: https://github.com/ASE2025repos/ase-boose-assignment-blitwinczuk.git
     id: DrawTo
     path: AppCanvas.cs
-    startLine: 101
+    startLine: 105
   assemblies:
   - BOOSEapp
   namespace: BOOSEapp
@@ -463,7 +463,7 @@ items:
       repo: https://github.com/ASE2025repos/ase-boose-assignment-blitwinczuk.git
     id: getBitmap
     path: AppCanvas.cs
-    startLine: 112
+    startLine: 116
   assemblies:
   - BOOSEapp
   namespace: BOOSEapp
@@ -496,7 +496,7 @@ items:
       repo: https://github.com/ASE2025repos/ase-boose-assignment-blitwinczuk.git
     id: MoveTo
     path: AppCanvas.cs
-    startLine: 122
+    startLine: 126
   assemblies:
   - BOOSEapp
   namespace: BOOSEapp
@@ -536,7 +536,7 @@ items:
       repo: https://github.com/ASE2025repos/ase-boose-assignment-blitwinczuk.git
     id: Rect
     path: AppCanvas.cs
-    startLine: 134
+    startLine: 138
   assemblies:
   - BOOSEapp
   namespace: BOOSEapp
@@ -579,7 +579,7 @@ items:
       repo: https://github.com/ASE2025repos/ase-boose-assignment-blitwinczuk.git
     id: Reset
     path: AppCanvas.cs
-    startLine: 152
+    startLine: 156
   assemblies:
   - BOOSEapp
   namespace: BOOSEapp
@@ -609,7 +609,7 @@ items:
       repo: https://github.com/ASE2025repos/ase-boose-assignment-blitwinczuk.git
     id: Set
     path: AppCanvas.cs
-    startLine: 163
+    startLine: 167
   assemblies:
   - BOOSEapp
   namespace: BOOSEapp
@@ -649,7 +649,7 @@ items:
       repo: https://github.com/ASE2025repos/ase-boose-assignment-blitwinczuk.git
     id: SetColour
     path: AppCanvas.cs
-    startLine: 185
+    startLine: 189
   assemblies:
   - BOOSEapp
   namespace: BOOSEapp
@@ -692,7 +692,7 @@ items:
       repo: https://github.com/ASE2025repos/ase-boose-assignment-blitwinczuk.git
     id: Tri
     path: AppCanvas.cs
-    startLine: 193
+    startLine: 197
   assemblies:
   - BOOSEapp
   namespace: BOOSEapp
@@ -730,7 +730,7 @@ items:
       repo: https://github.com/ASE2025repos/ase-boose-assignment-blitwinczuk.git
     id: WriteText
     path: AppCanvas.cs
-    startLine: 213
+    startLine: 217
   assemblies:
   - BOOSEapp
   namespace: BOOSEapp

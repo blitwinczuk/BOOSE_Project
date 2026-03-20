@@ -10,6 +10,7 @@ items:
   - BOOSEapp.Array.EvaluateBoolean(System.String)
   - BOOSEapp.Array.FindIntArrayName(System.String)
   - BOOSEapp.Array.FindRealArrayName(System.String)
+  - BOOSEapp.Array.GetWhileBlock(System.String[],System.Int32@)
   - BOOSEapp.Array.GetWriteValue(System.String)
   - BOOSEapp.Array.Run(System.String)
   - BOOSEapp.Array.boolVars
@@ -46,10 +47,12 @@ items:
     together with poke, peek and simple write commands.
   example: []
   syntax:
-    content: public class Array
-    content.vb: Public Class Array
+    content: 'public class Array : IInterpreter'
+    content.vb: Public Class Array Implements IInterpreter
   inheritance:
   - System.Object
+  implements:
+  - BOOSEapp.IInterpreter
   inheritedMembers:
   - System.Object.Equals(System.Object)
   - System.Object.Equals(System.Object,System.Object)
@@ -211,7 +214,7 @@ items:
       repo: https://github.com/ASE2025repos/ase-boose-assignment-blitwinczuk.git
     id: boolVars
     path: Array.cs
-    startLine: 20
+    startLine: 19
   assemblies:
   - BOOSEapp
   namespace: BOOSEapp
@@ -238,7 +241,7 @@ items:
       repo: https://github.com/ASE2025repos/ase-boose-assignment-blitwinczuk.git
     id: maths
     path: Array.cs
-    startLine: 21
+    startLine: 20
   assemblies:
   - BOOSEapp
   namespace: BOOSEapp
@@ -265,7 +268,7 @@ items:
       repo: https://github.com/ASE2025repos/ase-boose-assignment-blitwinczuk.git
     id: ifHandler
     path: Array.cs
-    startLine: 22
+    startLine: 21
   assemblies:
   - BOOSEapp
   namespace: BOOSEapp
@@ -292,7 +295,7 @@ items:
       repo: https://github.com/ASE2025repos/ase-boose-assignment-blitwinczuk.git
     id: .ctor
     path: Array.cs
-    startLine: 27
+    startLine: 28
   assemblies:
   - BOOSEapp
   namespace: BOOSEapp
@@ -327,7 +330,7 @@ items:
       repo: https://github.com/ASE2025repos/ase-boose-assignment-blitwinczuk.git
     id: Run
     path: Array.cs
-    startLine: 38
+    startLine: 39
   assemblies:
   - BOOSEapp
   namespace: BOOSEapp
@@ -341,6 +344,8 @@ items:
       description: Program text entered by the user.
     content.vb: Public Sub Run(program As String)
   overload: BOOSEapp.Array.Run*
+  implements:
+  - BOOSEapp.IInterpreter.Run(System.String)
   nameWithType.vb: Array.Run(String)
   fullName.vb: BOOSEapp.Array.Run(String)
   name.vb: Run(String)
@@ -362,7 +367,7 @@ items:
       repo: https://github.com/ASE2025repos/ase-boose-assignment-blitwinczuk.git
     id: BuildWriteText
     path: Array.cs
-    startLine: 354
+    startLine: 472
   assemblies:
   - BOOSEapp
   namespace: BOOSEapp
@@ -411,7 +416,7 @@ items:
       repo: https://github.com/ASE2025repos/ase-boose-assignment-blitwinczuk.git
     id: GetWriteValue
     path: Array.cs
-    startLine: 382
+    startLine: 500
   assemblies:
   - BOOSEapp
   namespace: BOOSEapp
@@ -452,14 +457,14 @@ items:
       repo: https://github.com/ASE2025repos/ase-boose-assignment-blitwinczuk.git
     id: FindIntArrayName
     path: Array.cs
-    startLine: 416
+    startLine: 534
   assemblies:
   - BOOSEapp
   namespace: BOOSEapp
   summary: Methods that AI suggested to help out with unrestricet issue
   example: []
   syntax:
-    content: private string FindIntArrayName(string name)
+    content: private string? FindIntArrayName(string name)
     parameters:
     - id: name
       type: System.String
@@ -489,12 +494,12 @@ items:
       repo: https://github.com/ASE2025repos/ase-boose-assignment-blitwinczuk.git
     id: FindRealArrayName
     path: Array.cs
-    startLine: 430
+    startLine: 548
   assemblies:
   - BOOSEapp
   namespace: BOOSEapp
   syntax:
-    content: private string FindRealArrayName(string name)
+    content: private string? FindRealArrayName(string name)
     parameters:
     - id: name
       type: System.String
@@ -523,7 +528,7 @@ items:
       repo: https://github.com/ASE2025repos/ase-boose-assignment-blitwinczuk.git
     id: EvaluateBoolean
     path: Array.cs
-    startLine: 448
+    startLine: 566
   assemblies:
   - BOOSEapp
   namespace: BOOSEapp
@@ -544,6 +549,50 @@ items:
   nameWithType.vb: Array.EvaluateBoolean(String)
   fullName.vb: BOOSEapp.Array.EvaluateBoolean(String)
   name.vb: EvaluateBoolean(String)
+- uid: BOOSEapp.Array.GetWhileBlock(System.String[],System.Int32@)
+  commentId: M:BOOSEapp.Array.GetWhileBlock(System.String[],System.Int32@)
+  id: GetWhileBlock(System.String[],System.Int32@)
+  parent: BOOSEapp.Array
+  langs:
+  - csharp
+  - vb
+  name: GetWhileBlock(string[], ref int)
+  nameWithType: Array.GetWhileBlock(string[], ref int)
+  fullName: BOOSEapp.Array.GetWhileBlock(string[], ref int)
+  type: Method
+  source:
+    remote:
+      path: BOOSEapp/Array.cs
+      branch: main
+      repo: https://github.com/ASE2025repos/ase-boose-assignment-blitwinczuk.git
+    id: GetWhileBlock
+    path: Array.cs
+    startLine: 597
+  assemblies:
+  - BOOSEapp
+  namespace: BOOSEapp
+  summary: >-
+    Gets the block of code inside a while loop.
+
+    Supports nested while loops.
+  example: []
+  syntax:
+    content: private string GetWhileBlock(string[] lines, ref int index)
+    parameters:
+    - id: lines
+      type: System.String[]
+      description: Program lines.
+    - id: index
+      type: System.Int32
+      description: Current line index.
+    return:
+      type: System.String
+      description: Block text inside while.
+    content.vb: Private Function GetWhileBlock(lines As String(), index As Integer) As String
+  overload: BOOSEapp.Array.GetWhileBlock*
+  nameWithType.vb: Array.GetWhileBlock(String(), Integer)
+  fullName.vb: BOOSEapp.Array.GetWhileBlock(String(), Integer)
+  name.vb: GetWhileBlock(String(), Integer)
 references:
 - uid: BOOSEapp
   commentId: N:BOOSEapp
@@ -562,6 +611,13 @@ references:
   nameWithType.vb: Object
   fullName.vb: Object
   name.vb: Object
+- uid: BOOSEapp.IInterpreter
+  commentId: T:BOOSEapp.IInterpreter
+  parent: BOOSEapp
+  href: BOOSEapp.IInterpreter.html
+  name: IInterpreter
+  nameWithType: IInterpreter
+  fullName: BOOSEapp.IInterpreter
 - uid: System.Object.Equals(System.Object)
   commentId: M:System.Object.Equals(System.Object)
   parent: System.Object
@@ -1138,6 +1194,37 @@ references:
   name: Run
   nameWithType: Array.Run
   fullName: BOOSEapp.Array.Run
+- uid: BOOSEapp.IInterpreter.Run(System.String)
+  commentId: M:BOOSEapp.IInterpreter.Run(System.String)
+  parent: BOOSEapp.IInterpreter
+  isExternal: true
+  href: BOOSEapp.IInterpreter.html#BOOSEapp_IInterpreter_Run_System_String_
+  name: Run(string)
+  nameWithType: IInterpreter.Run(string)
+  fullName: BOOSEapp.IInterpreter.Run(string)
+  nameWithType.vb: IInterpreter.Run(String)
+  fullName.vb: BOOSEapp.IInterpreter.Run(String)
+  name.vb: Run(String)
+  spec.csharp:
+  - uid: BOOSEapp.IInterpreter.Run(System.String)
+    name: Run
+    href: BOOSEapp.IInterpreter.html#BOOSEapp_IInterpreter_Run_System_String_
+  - name: (
+  - uid: System.String
+    name: string
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.string
+  - name: )
+  spec.vb:
+  - uid: BOOSEapp.IInterpreter.Run(System.String)
+    name: Run
+    href: BOOSEapp.IInterpreter.html#BOOSEapp_IInterpreter_Run_System_String_
+  - name: (
+  - uid: System.String
+    name: String
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.string
+  - name: )
 - uid: System.String
   commentId: T:System.String
   parent: System
@@ -1190,3 +1277,43 @@ references:
   nameWithType.vb: Boolean
   fullName.vb: Boolean
   name.vb: Boolean
+- uid: BOOSEapp.Array.GetWhileBlock*
+  commentId: Overload:BOOSEapp.Array.GetWhileBlock
+  href: BOOSEapp.Array.html#BOOSEapp_Array_GetWhileBlock_System_String___System_Int32__
+  name: GetWhileBlock
+  nameWithType: Array.GetWhileBlock
+  fullName: BOOSEapp.Array.GetWhileBlock
+- uid: System.String[]
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.string
+  name: string[]
+  nameWithType: string[]
+  fullName: string[]
+  nameWithType.vb: String()
+  fullName.vb: String()
+  name.vb: String()
+  spec.csharp:
+  - uid: System.String
+    name: string
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.string
+  - name: '['
+  - name: ']'
+  spec.vb:
+  - uid: System.String
+    name: String
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.string
+  - name: (
+  - name: )
+- uid: System.Int32
+  commentId: T:System.Int32
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.int32
+  name: int
+  nameWithType: int
+  fullName: int
+  nameWithType.vb: Integer
+  fullName.vb: Integer
+  name.vb: Integer

@@ -110,6 +110,20 @@
     },
     {
       "type": "ManagedReference",
+      "source_relative_path": "api/BOOSEapp.IInterpreter.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/BOOSEapp.IInterpreter.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "BOOSEapp.IInterpreter",
+      "Summary": "<p sourcefile=\"api/BOOSEapp.IInterpreter.yml\" sourcestartlinenumber=\"1\">Common interface for classes that can run a BOOSE program.</p>\n"
+    },
+    {
+      "type": "ManagedReference",
       "source_relative_path": "api/BOOSEapp.If.yml",
       "output": {
         ".html": {
@@ -149,6 +163,20 @@
       "IsMRef": true,
       "Title": "BOOSEapp.Maths",
       "Summary": "<p sourcefile=\"api/BOOSEapp.Maths.yml\" sourcestartlinenumber=\"1\">Provides simple mathematical expression evaluation (+, -, *, /)</p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/BOOSEapp.Method.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/BOOSEapp.Method.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "BOOSEapp.Method",
+      "Summary": "<p sourcefile=\"api/BOOSEapp.Method.yml\" sourcestartlinenumber=\"1\">Simple interpreter that supports integer methods in BOOSE.\nMethods do not return values explicitly – instead, the result\nis stored in a variable with the same name as the method.</p>\n"
     },
     {
       "type": "ManagedReference",

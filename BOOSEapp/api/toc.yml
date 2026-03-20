@@ -25,6 +25,9 @@ items:
   - uid: BOOSEapp.Form1
     name: Form1
     type: Class
+  - uid: BOOSEapp.IInterpreter
+    name: IInterpreter
+    type: Interface
   - uid: BOOSEapp.If
     name: If
     type: Class
@@ -33,6 +36,9 @@ items:
     type: Class
   - uid: BOOSEapp.Maths
     name: Maths
+    type: Class
+  - uid: BOOSEapp.Method
+    name: Method
     type: Class
   - uid: BOOSEapp.MoveTo
     name: MoveTo

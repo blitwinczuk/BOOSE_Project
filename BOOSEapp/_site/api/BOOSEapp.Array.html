@@ -104,7 +104,7 @@ together with poke, peek and simple write commands.</p>
   <div class="markdown conceptual"></div>
 
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public class Array</code></pre>
+    <pre><code class="lang-csharp hljs">public class Array : IInterpreter</code></pre>
   </div>
 
 
@@ -118,6 +118,12 @@ together with poke, peek and simple write commands.</p>
     </dd>
   </dl>
 
+  <dl class="typelist implements">
+    <dt>Implements</dt>
+    <dd>
+      <div><a class="xref" href="BOOSEapp.IInterpreter.html">IInterpreter</a></div>
+    </dd>
+  </dl>
 
 
   <dl class="typelist inheritedMembers">
@@ -159,7 +165,7 @@ together with poke, peek and simple write commands.</p>
 
   <h3 id="BOOSEapp_Array__ctor_BOOSEapp_AppCanvas_" data-uid="BOOSEapp.Array.#ctor(BOOSEapp.AppCanvas)">
   Array(AppCanvas)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/ASE2025repos/ase-boose-assignment-blitwinczuk/blob/main/BOOSEapp/Array.cs/#L28"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/ASE2025repos/ase-boose-assignment-blitwinczuk/blob/main/BOOSEapp/Array.cs/#L29"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p>Initializes the array interpreter with a drawing canvas.</p>
@@ -195,7 +201,7 @@ together with poke, peek and simple write commands.</p>
 
   <h3 id="BOOSEapp_Array_boolVars" data-uid="BOOSEapp.Array.boolVars">
   boolVars
-  <a class="header-action link-secondary" title="View source" href="https://github.com/ASE2025repos/ase-boose-assignment-blitwinczuk/blob/main/BOOSEapp/Array.cs/#L21"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/ASE2025repos/ase-boose-assignment-blitwinczuk/blob/main/BOOSEapp/Array.cs/#L20"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"></div>
@@ -255,7 +261,7 @@ together with poke, peek and simple write commands.</p>
 
   <h3 id="BOOSEapp_Array_ifHandler" data-uid="BOOSEapp.Array.ifHandler">
   ifHandler
-  <a class="header-action link-secondary" title="View source" href="https://github.com/ASE2025repos/ase-boose-assignment-blitwinczuk/blob/main/BOOSEapp/Array.cs/#L23"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/ASE2025repos/ase-boose-assignment-blitwinczuk/blob/main/BOOSEapp/Array.cs/#L22"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"></div>
@@ -345,7 +351,7 @@ together with poke, peek and simple write commands.</p>
 
   <h3 id="BOOSEapp_Array_maths" data-uid="BOOSEapp.Array.maths">
   maths
-  <a class="header-action link-secondary" title="View source" href="https://github.com/ASE2025repos/ase-boose-assignment-blitwinczuk/blob/main/BOOSEapp/Array.cs/#L22"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/ASE2025repos/ase-boose-assignment-blitwinczuk/blob/main/BOOSEapp/Array.cs/#L21"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"></div>
@@ -440,7 +446,7 @@ together with poke, peek and simple write commands.</p>
 
   <h3 id="BOOSEapp_Array_BuildWriteText_System_String_" data-uid="BOOSEapp.Array.BuildWriteText(System.String)">
   BuildWriteText(string)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/ASE2025repos/ase-boose-assignment-blitwinczuk/blob/main/BOOSEapp/Array.cs/#L355"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/ASE2025repos/ase-boose-assignment-blitwinczuk/blob/main/BOOSEapp/Array.cs/#L473"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p>Builds text for the write command.
@@ -484,7 +490,7 @@ write &quot;&quot; + x/y/z</p>
 
   <h3 id="BOOSEapp_Array_EvaluateBoolean_System_String_" data-uid="BOOSEapp.Array.EvaluateBoolean(System.String)">
   EvaluateBoolean(string)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/ASE2025repos/ase-boose-assignment-blitwinczuk/blob/main/BOOSEapp/Array.cs/#L449"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/ASE2025repos/ase-boose-assignment-blitwinczuk/blob/main/BOOSEapp/Array.cs/#L567"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p>Evaluates boolean expressions like:
@@ -522,7 +528,7 @@ true, false</p>
 
   <h3 id="BOOSEapp_Array_FindIntArrayName_System_String_" data-uid="BOOSEapp.Array.FindIntArrayName(System.String)">
   FindIntArrayName(string)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/ASE2025repos/ase-boose-assignment-blitwinczuk/blob/main/BOOSEapp/Array.cs/#L417"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/ASE2025repos/ase-boose-assignment-blitwinczuk/blob/main/BOOSEapp/Array.cs/#L535"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p>Methods that AI suggested to help out with unrestricet issue</p>
@@ -530,7 +536,7 @@ true, false</p>
   <div class="markdown level1 conceptual"></div>
 
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">private string FindIntArrayName(string name)</code></pre>
+    <pre><code class="lang-csharp hljs">private string? FindIntArrayName(string name)</code></pre>
   </div>
 
   <h4 class="section">Parameters</h4>
@@ -560,14 +566,14 @@ true, false</p>
 
   <h3 id="BOOSEapp_Array_FindRealArrayName_System_String_" data-uid="BOOSEapp.Array.FindRealArrayName(System.String)">
   FindRealArrayName(string)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/ASE2025repos/ase-boose-assignment-blitwinczuk/blob/main/BOOSEapp/Array.cs/#L431"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/ASE2025repos/ase-boose-assignment-blitwinczuk/blob/main/BOOSEapp/Array.cs/#L549"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"></div>
   <div class="markdown level1 conceptual"></div>
 
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">private string FindRealArrayName(string name)</code></pre>
+    <pre><code class="lang-csharp hljs">private string? FindRealArrayName(string name)</code></pre>
   </div>
 
   <h4 class="section">Parameters</h4>
@@ -592,11 +598,54 @@ true, false</p>
 
 
 
+  <a id="BOOSEapp_Array_GetWhileBlock_" data-uid="BOOSEapp.Array.GetWhileBlock*"></a>
+
+  <h3 id="BOOSEapp_Array_GetWhileBlock_System_String___System_Int32__" data-uid="BOOSEapp.Array.GetWhileBlock(System.String[],System.Int32@)">
+  GetWhileBlock(string[], ref int)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/ASE2025repos/ase-boose-assignment-blitwinczuk/blob/main/BOOSEapp/Array.cs/#L598"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Gets the block of code inside a while loop.
+Supports nested while loops.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">private string GetWhileBlock(string[] lines, ref int index)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>lines</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a>[]</dt>
+    <dd><p>Program lines.</p>
+</dd>
+    <dt><code>index</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a></dt>
+    <dd><p>Current line index.</p>
+</dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
+    <dd><p>Block text inside while.</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
   <a id="BOOSEapp_Array_GetWriteValue_" data-uid="BOOSEapp.Array.GetWriteValue*"></a>
 
   <h3 id="BOOSEapp_Array_GetWriteValue_System_String_" data-uid="BOOSEapp.Array.GetWriteValue(System.String)">
   GetWriteValue(string)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/ASE2025repos/ase-boose-assignment-blitwinczuk/blob/main/BOOSEapp/Array.cs/#L383"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/ASE2025repos/ase-boose-assignment-blitwinczuk/blob/main/BOOSEapp/Array.cs/#L501"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p>Resolves value for write command.
@@ -636,7 +685,7 @@ Can return string literal, int variable, real variable, boolean variable or plai
 
   <h3 id="BOOSEapp_Array_Run_System_String_" data-uid="BOOSEapp.Array.Run(System.String)">
   Run(string)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/ASE2025repos/ase-boose-assignment-blitwinczuk/blob/main/BOOSEapp/Array.cs/#L39"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/ASE2025repos/ase-boose-assignment-blitwinczuk/blob/main/BOOSEapp/Array.cs/#L40"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p>Executes a BOOSE program with array support.</p>
