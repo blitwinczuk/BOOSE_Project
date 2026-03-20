@@ -7,7 +7,7 @@ namespace BOOSEapp
     /// Real variable support for BOOSE interpreter.
     /// Allows declaration, assignment and usage of variables in BOOSE commands.
     /// </summary>
-    public class Real
+    public class Real : IInterpreter
     {
         private AppCanvas canvas;
         private Dictionary<string, double> vars = new Dictionary<string, double>();

@@ -7,7 +7,7 @@ namespace BOOSEapp
     /// Simple interpreter extension that adds support for integer variables (int).
     /// Allows declaration, assignment and usage of variables in BOOSE commands.
     /// </summary>
-    public class Int
+    public class Int : IInterpreter
     {
         private AppCanvas canvas;
         private Dictionary<string, int> vars = new Dictionary<string, int>();

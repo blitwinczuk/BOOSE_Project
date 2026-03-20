@@ -9,7 +9,7 @@ namespace BOOSEapp
     /// Supports int variables, real variables, int arrays, real arrays,
     /// together with poke, peek and simple write commands.
     /// </summary>
-    public class Array
+    public class Array : IInterpreter
     {
 
         private AppCanvas canvas;

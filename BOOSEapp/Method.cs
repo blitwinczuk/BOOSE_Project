@@ -8,7 +8,7 @@ namespace BOOSEapp
     /// Methods do not return values explicitly – instead, the result
     /// is stored in a variable with the same name as the method.
     /// </summary>
-    public class Method
+    public class Method : IInterpreter
     {
         private AppCanvas canvas;
 

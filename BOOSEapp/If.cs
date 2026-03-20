@@ -3,7 +3,7 @@
     /// <summary>
     /// Handles IF, ELSE and END IF logic in BOOSE programs.
     /// </summary>
-    public class If
+    public class If 
     {
         private Maths maths;
 

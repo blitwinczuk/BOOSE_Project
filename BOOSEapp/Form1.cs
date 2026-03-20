@@ -58,36 +58,9 @@ namespace BOOSEapp
             try
             {
                 canvas.Clear();
-                string input = UserInput.ToLower();
 
-                if (input.Contains("method ") || input.Contains("call "))
-                {
-                    Method app = new Method(canvas);
-                    app.Run(UserInput);
-                }
-                else if (input.Contains("if ") || input.Contains("else") || input.Contains("end if") ||
-                         input.Contains("while ") || input.Contains("end while") ||
-                         input.Contains("for ") || input.Contains("end for") ||
-                         input.Contains("array ") || input.Contains("boolean"))
-                {
-                    Array app = new Array(canvas);
-                    app.Run(UserInput);
-                }
-                else if (input.Contains("real"))
-                {
-                    Real app = new Real(canvas);
-                    app.Run(UserInput);
-                }
-                else if (input.Contains("int"))
-                {
-                    Int app = new Int(canvas);
-                    app.Run(UserInput);
-                }
-                else
-                {
-                    Parser.ParseProgram(UserInput);
-                    Program.Run();
-                }
+                IInterpreter interpreter = GetInterpreter(UserInput);
+                interpreter.Run(UserInput);
 
                 pictureBox1.Invalidate();
             }
@@ -129,5 +102,18 @@ namespace BOOSEapp
             pictureBox1.Invalidate(); 
         }
 
+
+        /// <summary>
+        /// Selects the appropriate interpreter based on the program content.
+        /// </summary>
+        private IInterpreter GetInterpreter(string input)
+        {
+            string lower = input.ToLower();
+
+            return lower.Contains("method") || lower.Contains("call") ? new Method(canvas)
+                 : lower.Contains("if") || lower.Contains("while") || lower.Contains("for") ? new Array(canvas)
+                 : lower.Contains("real") ? new Real(canvas)
+                 : new Int(canvas);
+        }
     }
 }
