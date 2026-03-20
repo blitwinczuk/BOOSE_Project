@@ -54,6 +54,20 @@
     },
     {
       "type": "ManagedReference",
+      "source_relative_path": "api/BOOSEapp.Array.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/BOOSEapp.Array.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "BOOSEapp.Array",
+      "Summary": "<p sourcefile=\"api/BOOSEapp.Array.yml\" sourcestartlinenumber=\"1\">Array interpreter extension for BOOSE, adding support for array variables.\nSupports int variables, real variables, int arrays, real arrays,\ntogether with poke, peek and simple write commands.</p>\n"
+    },
+    {
+      "type": "ManagedReference",
       "source_relative_path": "api/BOOSEapp.Circle.yml",
       "output": {
         ".html": {
@@ -68,6 +82,20 @@
     },
     {
       "type": "ManagedReference",
+      "source_relative_path": "api/BOOSEapp.Clear.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/BOOSEapp.Clear.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "BOOSEapp.Clear",
+      "Summary": "<p sourcefile=\"api/BOOSEapp.Clear.yml\" sourcestartlinenumber=\"1\">Clears the drawing canvas.</p>\n"
+    },
+    {
+      "type": "ManagedReference",
       "source_relative_path": "api/BOOSEapp.Form1.yml",
       "output": {
         ".html": {
@@ -79,6 +107,48 @@
       "IsMRef": true,
       "Title": "BOOSEapp.Form1",
       "Summary": "<p sourcefile=\"api/BOOSEapp.Form1.yml\" sourcestartlinenumber=\"1\">Main user interface for the BOOSE interpreter.\nAllows the user to input BOOSE programs, execute them,\nand display graphical output on the canvas.</p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/BOOSEapp.If.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/BOOSEapp.If.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "BOOSEapp.If",
+      "Summary": "<p sourcefile=\"api/BOOSEapp.If.yml\" sourcestartlinenumber=\"1\">Handles IF, ELSE and END IF logic in BOOSE programs.</p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/BOOSEapp.Int.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/BOOSEapp.Int.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "BOOSEapp.Int",
+      "Summary": "<p sourcefile=\"api/BOOSEapp.Int.yml\" sourcestartlinenumber=\"1\">Simple interpreter extension that adds support for integer variables (int).\nAllows declaration, assignment and usage of variables in BOOSE commands.</p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/BOOSEapp.Maths.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/BOOSEapp.Maths.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "BOOSEapp.Maths",
+      "Summary": "<p sourcefile=\"api/BOOSEapp.Maths.yml\" sourcestartlinenumber=\"1\">Provides simple mathematical expression evaluation (+, -, *, /)</p>\n"
     },
     {
       "type": "ManagedReference",
@@ -110,6 +180,20 @@
     },
     {
       "type": "ManagedReference",
+      "source_relative_path": "api/BOOSEapp.Real.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/BOOSEapp.Real.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "BOOSEapp.Real",
+      "Summary": "<p sourcefile=\"api/BOOSEapp.Real.yml\" sourcestartlinenumber=\"1\">Real variable support for BOOSE interpreter.\nAllows declaration, assignment and usage of variables in BOOSE commands.</p>\n"
+    },
+    {
+      "type": "ManagedReference",
       "source_relative_path": "api/BOOSEapp.Rectangle.yml",
       "output": {
         ".html": {
@@ -121,6 +205,20 @@
       "IsMRef": true,
       "Title": "BOOSEapp.Rectangle",
       "Summary": "<p sourcefile=\"api/BOOSEapp.Rectangle.yml\" sourcestartlinenumber=\"1\">BOOSE command that draws a rectangle on the canvas.</p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/BOOSEapp.Tri.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/BOOSEapp.Tri.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "BOOSEapp.Tri",
+      "Summary": "<p sourcefile=\"api/BOOSEapp.Tri.yml\" sourcestartlinenumber=\"1\">BOOSE command that draws a triangle on the canvas.</p>\n"
     },
     {
       "type": "ManagedReference",

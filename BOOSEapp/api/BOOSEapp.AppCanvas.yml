@@ -730,17 +730,21 @@ items:
       repo: https://github.com/ASE2025repos/ase-boose-assignment-blitwinczuk.git
     id: WriteText
     path: AppCanvas.cs
-    startLine: 201
+    startLine: 213
   assemblies:
   - BOOSEapp
   namespace: BOOSEapp
-  summary: Writes text to the canvas.
+  summary: >-
+    Writes text to the canvas at the current cursor position.
+
+    Supports plain text including symbols like £, $, %.
   example: []
   syntax:
     content: public void WriteText(string text)
     parameters:
     - id: text
       type: System.String
+      description: Text to display.
     content.vb: Public Sub WriteText(text As String)
   overload: BOOSEapp.AppCanvas.WriteText*
   implements:

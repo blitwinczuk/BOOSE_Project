@@ -13,11 +13,26 @@ items:
   - uid: BOOSEapp.ApplicationConfiguration
     name: ApplicationConfiguration
     type: Class
+  - uid: BOOSEapp.Array
+    name: Array
+    type: Class
   - uid: BOOSEapp.Circle
     name: Circle
     type: Class
+  - uid: BOOSEapp.Clear
+    name: Clear
+    type: Class
   - uid: BOOSEapp.Form1
     name: Form1
+    type: Class
+  - uid: BOOSEapp.If
+    name: If
+    type: Class
+  - uid: BOOSEapp.Int
+    name: Int
+    type: Class
+  - uid: BOOSEapp.Maths
+    name: Maths
     type: Class
   - uid: BOOSEapp.MoveTo
     name: MoveTo
@@ -25,8 +40,14 @@ items:
   - uid: BOOSEapp.Program
     name: Program
     type: Class
+  - uid: BOOSEapp.Real
+    name: Real
+    type: Class
   - uid: BOOSEapp.Rectangle
     name: Rectangle
+    type: Class
+  - uid: BOOSEapp.Tri
+    name: Tri
     type: Class
 - uid: BOOSEappTests
   name: BOOSEappTests

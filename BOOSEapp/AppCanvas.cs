@@ -82,7 +82,11 @@ namespace BOOSEapp
             }
             else
             {
-                g.DrawEllipse(Pen, Xpos - radius, Ypos - radius, radius * 2, radius * 2);
+                int diameter = radius * 2;
+                int startX = Xpos - radius;
+                int startY = Ypos - radius;
+
+                g.DrawEllipse(Pen, startX, startY, diameter, diameter);
             }
         }
 

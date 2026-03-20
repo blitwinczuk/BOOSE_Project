@@ -13,12 +13,12 @@ namespace BOOSEapp
     {
 
         private AppCanvas canvas;
-        private Dictionary<string, int> intVars = new Dictionary<string, int>();
-        private Dictionary<string, double> realVars = new Dictionary<string, double>();
-        private Dictionary<string, int[]> intArrays = new Dictionary<string, int[]>();
-        private Dictionary<string, double[]> realArrays = new Dictionary<string, double[]>();
+        private Dictionary<string, int> intVars = new() { };
+        private Dictionary<string, double> realVars = new() { };
+        private Dictionary<string, int[]> intArrays = new() { };
+        private Dictionary<string, double[]> realArrays = new() { };
         // Boolean 
-        private Dictionary<string, bool> boolVars = new Dictionary<string, bool>();
+        private Dictionary<string, bool> boolVars = new() { };
         private Maths maths;
         private If ifHandler;
         /// <summary>
@@ -54,6 +54,41 @@ namespace BOOSEapp
                 }
 
                 string lower = line.ToLower();
+
+                // while loop
+                if (lower.StartsWith("while "))
+                {
+                    string condition = line.Substring(6).Trim();
+
+                    int start = i + 1;
+                    int end = start;
+
+                    while (end < lines.Length && lines[end].Trim().ToLower() != "end while")
+                    {
+                        end++;
+                    }
+
+                    string block = "";
+                    for (int k = start; k < end; k++)
+                    {
+                        block += lines[k] + "\n";
+                    }
+
+                    while (ifHandler.Evaluate(condition))
+                    {
+                        Run(block);
+                    }
+
+                    i = end + 1;
+                    continue;
+                }
+
+                
+                if (lower.StartsWith("end while"))
+                {
+                    i++;
+                    continue;
+                }
 
                 // if statement
                 if (lower.StartsWith("if "))
@@ -195,8 +230,8 @@ namespace BOOSEapp
                     string arrayName = p[1];
                     int index = maths.EvaluateInt(p[2]);
 
-                    string intName = FindIntArrayName(arrayName);
-                    string realName = FindRealArrayName(arrayName);
+                    string? intName = FindIntArrayName(arrayName);
+                    string? realName = FindRealArrayName(arrayName);
 
                     if (intName != null)
                     {
@@ -211,7 +246,7 @@ namespace BOOSEapp
                 // peek - first peek was my own, then I added support for array names that are substrings of each other after AI suggestion, which is why FindIntArrayName and FindRealArrayName methods were added
                 else if (lower.StartsWith("peek "))
                 {
-                    string[] leftRight = line.Split('=');
+                    string[] leftRight = line.Split(('='));
 
                     string left = leftRight[0].Trim();
                     string right = leftRight[1].Trim();
@@ -222,8 +257,8 @@ namespace BOOSEapp
                     string arrayName = p[0];
                     int index = maths.EvaluateInt(p[1]);
 
-                    string intName = FindIntArrayName(arrayName);
-                    string realName = FindRealArrayName(arrayName);
+                    string? intName = FindIntArrayName(arrayName);
+                    string? realName = FindRealArrayName(arrayName);
 
                     if (intName != null && intVars.ContainsKey(varName))
                     {
@@ -305,7 +340,7 @@ namespace BOOSEapp
                     int w = maths.EvaluateInt(p[0]);
                     int h = maths.EvaluateInt(p[1]);
 
-                    canvas.Rect(w, h, false);
+                    canvas.Rect(w * 2, h * 2, false);
                 }
 
                 // pen
@@ -414,7 +449,7 @@ namespace BOOSEapp
 
         /// <summary>Methods that AI suggested to help out with unrestricet issue</summary>
         /// <param name="name">Name of variable or array to find.</param>
-        private string FindIntArrayName(string name)
+        private string? FindIntArrayName(string name)
         {
             if (intArrays.ContainsKey(name))
                 return name;
@@ -428,7 +463,7 @@ namespace BOOSEapp
             return null;
         }
 
-        private string FindRealArrayName(string name)
+        private string? FindRealArrayName(string name)
         {
             if (realArrays.ContainsKey(name))
                 return name;
@@ -468,6 +503,44 @@ namespace BOOSEapp
                 return boolVars[expr];
 
             throw new Exception("Unknown boolean expression: " + expr);
+        }
+
+        /// <summary>
+        /// Gets the block of code inside a while loop.
+        /// Supports nested while loops.
+        /// </summary>
+        /// <param name="lines">Program lines.</param>
+        /// <param name="index">Current line index.</param>
+        /// <returns>Block text inside while.</returns>
+        private string GetWhileBlock(string[] lines, ref int index)
+        {
+            int depth = 0;
+            string block = "";
+
+            index++;
+
+            while (index < lines.Length)
+            {
+                string current = lines[index].Trim();
+                string lower = current.ToLower();
+
+                if (lower.StartsWith("while "))
+                {
+                    depth++;
+                }
+                else if (lower.StartsWith("end while"))
+                {
+                    if (depth == 0)
+                        break;
+
+                    depth--;
+                }
+
+                block += lines[index] + "\n";
+                index++;
+            }
+
+            return block;
         }
     }
 }

@@ -38,7 +38,7 @@ items:
       repo: https://github.com/ASE2025repos/ase-boose-assignment-blitwinczuk.git
     id: Form1
     path: Form1.Designer.cs
-    startLine: 5
+    startLine: 6
   assemblies:
   - BOOSEapp
   namespace: BOOSEapp
@@ -1094,7 +1094,7 @@ items:
       repo: https://github.com/ASE2025repos/ase-boose-assignment-blitwinczuk.git
     id: pictureBox1_Paint
     path: Form1.cs
-    startLine: 68
+    startLine: 93
   assemblies:
   - BOOSEapp
   namespace: BOOSEapp
@@ -1128,7 +1128,7 @@ items:
       repo: https://github.com/ASE2025repos/ase-boose-assignment-blitwinczuk.git
     id: pictureBox1_Click
     path: Form1.cs
-    startLine: 77
+    startLine: 102
   assemblies:
   - BOOSEapp
   namespace: BOOSEapp
@@ -1162,7 +1162,7 @@ items:
       repo: https://github.com/ASE2025repos/ase-boose-assignment-blitwinczuk.git
     id: textBox1_TextChanged
     path: Form1.cs
-    startLine: 81
+    startLine: 106
   assemblies:
   - BOOSEapp
   namespace: BOOSEapp
@@ -1196,7 +1196,7 @@ items:
       repo: https://github.com/ASE2025repos/ase-boose-assignment-blitwinczuk.git
     id: textBox2_TextChanged
     path: Form1.cs
-    startLine: 85
+    startLine: 110
   assemblies:
   - BOOSEapp
   namespace: BOOSEapp
@@ -1230,7 +1230,7 @@ items:
       repo: https://github.com/ASE2025repos/ase-boose-assignment-blitwinczuk.git
     id: panel1_Paint
     path: Form1.cs
-    startLine: 89
+    startLine: 114
   assemblies:
   - BOOSEapp
   namespace: BOOSEapp
@@ -1264,7 +1264,7 @@ items:
       repo: https://github.com/ASE2025repos/ase-boose-assignment-blitwinczuk.git
     id: components
     path: Form1.Designer.cs
-    startLine: 10
+    startLine: 11
   assemblies:
   - BOOSEapp
   namespace: BOOSEapp
@@ -1293,7 +1293,7 @@ items:
       repo: https://github.com/ASE2025repos/ase-boose-assignment-blitwinczuk.git
     id: Dispose
     path: Form1.Designer.cs
-    startLine: 16
+    startLine: 17
   assemblies:
   - BOOSEapp
   namespace: BOOSEapp
@@ -1329,7 +1329,7 @@ items:
       repo: https://github.com/ASE2025repos/ase-boose-assignment-blitwinczuk.git
     id: InitializeComponent
     path: Form1.Designer.cs
-    startLine: 31
+    startLine: 32
   assemblies:
   - BOOSEapp
   namespace: BOOSEapp
@@ -1360,7 +1360,7 @@ items:
       repo: https://github.com/ASE2025repos/ase-boose-assignment-blitwinczuk.git
     id: pictureBox1
     path: Form1.Designer.cs
-    startLine: 87
+    startLine: 88
   assemblies:
   - BOOSEapp
   namespace: BOOSEapp
@@ -1387,7 +1387,7 @@ items:
       repo: https://github.com/ASE2025repos/ase-boose-assignment-blitwinczuk.git
     id: textBox1
     path: Form1.Designer.cs
-    startLine: 88
+    startLine: 89
   assemblies:
   - BOOSEapp
   namespace: BOOSEapp
@@ -1414,7 +1414,7 @@ items:
       repo: https://github.com/ASE2025repos/ase-boose-assignment-blitwinczuk.git
     id: button1
     path: Form1.Designer.cs
-    startLine: 89
+    startLine: 90
   assemblies:
   - BOOSEapp
   namespace: BOOSEapp

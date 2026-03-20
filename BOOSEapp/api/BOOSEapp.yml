@@ -7,11 +7,18 @@ items:
   - BOOSEapp.AppCanvas
   - BOOSEapp.AppCommandFactory
   - BOOSEapp.ApplicationConfiguration
+  - BOOSEapp.Array
   - BOOSEapp.Circle
+  - BOOSEapp.Clear
   - BOOSEapp.Form1
+  - BOOSEapp.If
+  - BOOSEapp.Int
+  - BOOSEapp.Maths
   - BOOSEapp.MoveTo
   - BOOSEapp.Program
+  - BOOSEapp.Real
   - BOOSEapp.Rectangle
+  - BOOSEapp.Tri
   langs:
   - csharp
   - vb
@@ -36,18 +43,50 @@ references:
   name: AppCommandFactory
   nameWithType: AppCommandFactory
   fullName: BOOSEapp.AppCommandFactory
+- uid: BOOSEapp.Array
+  commentId: T:BOOSEapp.Array
+  href: BOOSEapp.Array.html
+  name: Array
+  nameWithType: Array
+  fullName: BOOSEapp.Array
 - uid: BOOSEapp.Circle
   commentId: T:BOOSEapp.Circle
   href: BOOSEapp.Circle.html
   name: Circle
   nameWithType: Circle
   fullName: BOOSEapp.Circle
+- uid: BOOSEapp.Clear
+  commentId: T:BOOSEapp.Clear
+  href: BOOSEapp.Clear.html
+  name: Clear
+  nameWithType: Clear
+  fullName: BOOSEapp.Clear
 - uid: BOOSEapp.Form1
   commentId: T:BOOSEapp.Form1
   href: BOOSEapp.Form1.html
   name: Form1
   nameWithType: Form1
   fullName: BOOSEapp.Form1
+- uid: BOOSEapp.If
+  commentId: T:BOOSEapp.If
+  parent: BOOSEapp
+  href: BOOSEapp.If.html
+  name: If
+  nameWithType: If
+  fullName: BOOSEapp.If
+- uid: BOOSEapp.Int
+  commentId: T:BOOSEapp.Int
+  href: BOOSEapp.Int.html
+  name: Int
+  nameWithType: Int
+  fullName: BOOSEapp.Int
+- uid: BOOSEapp.Maths
+  commentId: T:BOOSEapp.Maths
+  parent: BOOSEapp
+  href: BOOSEapp.Maths.html
+  name: Maths
+  nameWithType: Maths
+  fullName: BOOSEapp.Maths
 - uid: BOOSEapp.MoveTo
   commentId: T:BOOSEapp.MoveTo
   href: BOOSEapp.MoveTo.html
@@ -60,12 +99,24 @@ references:
   name: Program
   nameWithType: Program
   fullName: BOOSEapp.Program
+- uid: BOOSEapp.Real
+  commentId: T:BOOSEapp.Real
+  href: BOOSEapp.Real.html
+  name: Real
+  nameWithType: Real
+  fullName: BOOSEapp.Real
 - uid: BOOSEapp.Rectangle
   commentId: T:BOOSEapp.Rectangle
   href: BOOSEapp.Rectangle.html
   name: Rectangle
   nameWithType: Rectangle
   fullName: BOOSEapp.Rectangle
+- uid: BOOSEapp.Tri
+  commentId: T:BOOSEapp.Tri
+  href: BOOSEapp.Tri.html
+  name: Tri
+  nameWithType: Tri
+  fullName: BOOSEapp.Tri
 - uid: BOOSEapp.ApplicationConfiguration
   commentId: T:BOOSEapp.ApplicationConfiguration
   href: BOOSEapp.ApplicationConfiguration.html

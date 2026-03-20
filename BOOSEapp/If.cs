@@ -13,7 +13,7 @@
         }
 
         /// <summary>
-        /// Evaluates condition like: x < 10, x > 5, x == 3
+        /// Evaluates conditions like: <c>x &lt; 10</c>, <c>x &gt; 5</c>, <c>x == 3</c>.
         /// </summary>
         public bool Evaluate(string cond)
         {
