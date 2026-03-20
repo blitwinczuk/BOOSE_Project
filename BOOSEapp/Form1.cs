@@ -56,7 +56,7 @@ namespace BOOSEapp
             try
             {
                 canvas.Clear();
-                
+
 
                 string input = UserInput.ToLower();
 
@@ -68,7 +68,7 @@ namespace BOOSEapp
                     Array app = new Array(canvas);
                     app.Run(UserInput);
                 }
-            
+
                 else if (input.Contains("real"))
                 {
                     Real app = new Real(canvas);
@@ -118,5 +118,12 @@ namespace BOOSEapp
         private void panel1_Paint(object sender, PaintEventArgs e)
         {
         }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+            canvas.Clear();            
+            pictureBox1.Invalidate(); 
+        }
+
     }
 }
