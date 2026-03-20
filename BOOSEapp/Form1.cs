@@ -113,8 +113,10 @@ namespace BOOSEapp
 
 
         /// <summary>
-        /// Selects the appropriate interpreter based on the program content.
+        /// Selects the appropriate interpreter strategy based on the program content.
         /// </summary>
+        /// <param name="input">Program entered by the user.</param>
+        /// <returns>An interpreter implementing the selected strategy.</returns>
         private IInterpreter GetInterpreter(string input)
         {
             string lower = input.ToLower();
