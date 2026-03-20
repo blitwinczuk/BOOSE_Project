@@ -59,7 +59,7 @@ namespace BOOSEapp
                 //for loop
                 if (lower.StartsWith("for "))
                 {
-                    
+
                     string afterFor = line.Substring(4).Trim();
 
                     string[] leftRight = afterFor.Split('=');
@@ -131,7 +131,7 @@ namespace BOOSEapp
                     continue;
                 }
 
-                
+
                 if (lower.StartsWith("end for"))
                 {
                     i++;

@@ -47,15 +47,16 @@ namespace BOOSEapp
         {
             expr = expr.Trim();
 
+            // negative number, e.g. -2 or -10.5
+            if (double.TryParse(expr, NumberStyles.Any, CultureInfo.InvariantCulture, out double number))
+            {
+                return number;
+            }
+
             if (expr.Contains("+"))
             {
                 var p = expr.Split('+');
                 return GetValue(p[0]) + GetValue(p[1]);
-            }
-            else if (expr.Contains("-"))
-            {
-                var p = expr.Split('-');
-                return GetValue(p[0]) - GetValue(p[1]);
             }
             else if (expr.Contains("*"))
             {
@@ -67,10 +68,20 @@ namespace BOOSEapp
                 var p = expr.Split('/');
                 return GetValue(p[0]) / GetValue(p[1]);
             }
-            else
+            else if (expr.Contains("-"))
             {
-                return GetValue(expr);
+                int minusIndex = expr.IndexOf('-');
+
+                // subtraction only if '-' is not the first character
+                if (minusIndex > 0)
+                {
+                    string left = expr.Substring(0, minusIndex);
+                    string right = expr.Substring(minusIndex + 1);
+                    return GetValue(left) - GetValue(right);
+                }
             }
+
+            return GetValue(expr);
         }
 
         /// <summary>
