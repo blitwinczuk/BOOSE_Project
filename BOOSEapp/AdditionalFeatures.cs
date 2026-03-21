@@ -80,6 +80,16 @@ namespace BOOSEapp
                     canvas.SetColour(0, 0, 255);
                 else if (colourName == "black")
                     canvas.SetColour(0, 0, 0);
+                else if (colourName == "yellow")
+                    canvas.SetColour(255, 255, 0);
+                else if (colourName == "purple")
+                    canvas.SetColour(128, 0, 128);
+                else if (colourName == "magenta")
+                    canvas.SetColour(255, 0, 255);
+                else if (colourName == "sky blue")
+                    canvas.SetColour(135, 206, 235);
+                else if (colourName == "cyan")
+                    canvas.SetColour(0, 255, 255);
                 else
                     throw new Exception("Unknown colour name: " + colourName);
 
