@@ -22,6 +22,7 @@ namespace BOOSEapp
         private Dictionary<string, string[]> parameters = new Dictionary<string, string[]>();
 
         private Maths maths;
+        private AdditionalFeatures addFeatures;
 
         /// <summary>
         /// Constructor - initialises canvas and maths engine.
@@ -30,6 +31,7 @@ namespace BOOSEapp
         {
             this.canvas = canvas;
             maths = new Maths(intVars, null);
+            addFeatures = new AdditionalFeatures(canvas, intVars);
         }
 
         /// <summary>
@@ -54,6 +56,14 @@ namespace BOOSEapp
                 }
 
                 string lower = line.ToLower();
+
+                // check for additional features first
+
+                if (addFeatures.TryExecute(line))
+                {
+                    i++;
+                    continue;
+                }
 
                 // method declaration - defines a new method with given name and parameters
                 if (lower.StartsWith("method int "))
@@ -265,7 +275,7 @@ namespace BOOSEapp
                 int w = maths.EvaluateInt(p[0]);
                 int h = maths.EvaluateInt(p[1]);
 
-                canvas.Rect(w, h, fill);
+                canvas.Rect(w * 2, h * 2, fill);
             }
             else if (lower.StartsWith("pen "))
             {

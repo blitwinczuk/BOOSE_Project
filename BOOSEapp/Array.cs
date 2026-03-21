@@ -20,8 +20,9 @@ namespace BOOSEapp
         private Dictionary<string, bool> boolVars = new() { };
         private Maths maths;
         private If ifHandler;
-        
-        
+        private AdditionalFeatures addFeatures;
+
+
         /// <summary>
         /// Initializes the array interpreter with a drawing canvas.
         /// </summary>
@@ -31,6 +32,7 @@ namespace BOOSEapp
             this.canvas = canvas;
             maths = new Maths(intVars, realVars);
             ifHandler = new If(maths);
+            addFeatures = new AdditionalFeatures(canvas, intVars);
         }
 
         /// <summary>
@@ -55,6 +57,14 @@ namespace BOOSEapp
                 }
 
                 string lower = line.ToLower();
+
+                // check for additional features first
+
+                if (addFeatures.TryExecute(line))
+                {
+                    i++;
+                    continue;
+                }
 
                 //for loop
                 if (lower.StartsWith("for "))

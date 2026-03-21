@@ -64,9 +64,17 @@ namespace BOOSEapp
 
                 IInterpreter interpreter = GetInterpreter(UserInput);
 
-                LogInDebug.Instance.Log("Interpreter selected: " + interpreter.GetType().Name);
-
-                interpreter.Run(UserInput);
+                if (interpreter != null)
+                {
+                    LogInDebug.Instance.Log("Interpreter selected: " + interpreter.GetType().Name);
+                    interpreter.Run(UserInput);
+                }
+                else
+                {
+                    LogInDebug.Instance.Log("Using BOOSE parser");
+                    Parser.ParseProgram(UserInput);
+                    Program.Run();
+                }
 
                 pictureBox1.Invalidate();
 
@@ -121,10 +129,25 @@ namespace BOOSEapp
         {
             string lower = input.ToLower();
 
-            return lower.Contains("method") || lower.Contains("call") ? new Method(canvas)
-                 : lower.Contains("if") || lower.Contains("while") || lower.Contains("for") ? new Array(canvas)
-                 : lower.Contains("real") ? new Real(canvas)
-                 : new Int(canvas);
+            if (lower.Contains("method ") || lower.Contains("call "))
+                return new Method(canvas);
+
+            if (lower.Contains("if ") || lower.Contains("else") || lower.Contains("end if") ||
+                lower.Contains("while ") || lower.Contains("end while") ||
+                lower.Contains("for ") || lower.Contains("end for") ||
+                lower.Contains("array ") || lower.Contains("boolean") ||
+                lower.Contains("random ") || lower.Contains("input ") ||
+                lower.Contains("colour ") || lower.Contains("fill") ||
+                lower.Contains("tri "))
+                return new Array(canvas);
+
+            if (lower.Contains("real "))
+                return new Real(canvas);
+
+            if (lower.Contains("int "))
+                return new Int(canvas);
+
+            return null;
         }
     }
 }
