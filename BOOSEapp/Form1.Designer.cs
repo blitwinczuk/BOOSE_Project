@@ -82,7 +82,7 @@ namespace BOOSEapp
             // 
             // richTextBox1
             // 
-            richTextBox1.Location = new Point(1403, 23);
+            richTextBox1.Location = new Point(1388, 23);
             richTextBox1.Name = "richTextBox1";
             richTextBox1.Size = new Size(423, 686);
             richTextBox1.TabIndex = 4;

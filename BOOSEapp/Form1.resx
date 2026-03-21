@@ -151,6 +151,18 @@ while
 end while
 
 for 
-end for</value>
+end for
+
+---Methods---
+
+method int addMethod int x, int y
+    addMethod = x + y
+end method
+
+---Additional Features---
+
+random x (range between two int)
+colour red green black blue etc.
+fill for example circle 150 fill</value>
   </data>
 </root>
