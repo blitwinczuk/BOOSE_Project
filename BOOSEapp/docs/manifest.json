@@ -1,0 +1,480 @@
+{
+  "source_base_path": "C:/Users/litwi/source/repos/ase-boose-assignment-blitwinczuk/BOOSEapp",
+  "xrefmap": "xrefmap.yml",
+  "files": [
+    {
+      "type": "Resource",
+      "output": {
+        "resource": {
+          "relative_path": "index.json"
+        }
+      }
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/BOOSEapp.AdditionalFeatures.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/BOOSEapp.AdditionalFeatures.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "BOOSEapp.AdditionalFeatures",
+      "Summary": "<p sourcefile=\"api/BOOSEapp.AdditionalFeatures.yml\" sourcestartlinenumber=\"1\">Provides additional BOOSE features such as random values,\nuser input, and named colours.</p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/BOOSEapp.AppCanvas.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/BOOSEapp.AppCanvas.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "BOOSEapp.AppCanvas",
+      "Summary": "<p sourcefile=\"api/BOOSEapp.AppCanvas.yml\" sourcestartlinenumber=\"1\">Custom canvas implementation used by the BOOSE interpreter.\nResponsible for drawing shapes and managing the drawing cursor.</p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/BOOSEapp.AppCommandFactory.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/BOOSEapp.AppCommandFactory.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "BOOSEapp.AppCommandFactory",
+      "Summary": "<p sourcefile=\"api/BOOSEapp.AppCommandFactory.yml\" sourcestartlinenumber=\"1\">Custom command factory used to create BOOSE commands.\nIt extends the default command factory and returns\napplication-specific command implementations.</p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/BOOSEapp.ApplicationConfiguration.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/BOOSEapp.ApplicationConfiguration.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "BOOSEapp.ApplicationConfiguration",
+      "Summary": "<p sourcefile=\"api/BOOSEapp.ApplicationConfiguration.yml\" sourcestartlinenumber=\"1\">Bootstrap the application configuration.</p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/BOOSEapp.Array.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/BOOSEapp.Array.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "BOOSEapp.Array",
+      "Summary": "<p sourcefile=\"api/BOOSEapp.Array.yml\" sourcestartlinenumber=\"1\">Array interpreter extension for BOOSE, adding support for array variables.\nSupports int variables, real variables, int arrays, real arrays,\ntogether with poke, peek and simple write commands.</p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/BOOSEapp.Circle.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/BOOSEapp.Circle.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "BOOSEapp.Circle",
+      "Summary": "<p sourcefile=\"api/BOOSEapp.Circle.yml\" sourcestartlinenumber=\"1\">BOOSE command that draws a circle on the canvas.</p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/BOOSEapp.Clear.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/BOOSEapp.Clear.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "BOOSEapp.Clear",
+      "Summary": "<p sourcefile=\"api/BOOSEapp.Clear.yml\" sourcestartlinenumber=\"1\">Clears the drawing canvas.</p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/BOOSEapp.Form1.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/BOOSEapp.Form1.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "BOOSEapp.Form1",
+      "Summary": "<p sourcefile=\"api/BOOSEapp.Form1.yml\" sourcestartlinenumber=\"1\">Main user interface for the BOOSE interpreter.\nAllows the user to input BOOSE programs, execute them,\nand display graphical output on the canvas.</p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/BOOSEapp.IInterpreter.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/BOOSEapp.IInterpreter.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "BOOSEapp.IInterpreter",
+      "Summary": "<p sourcefile=\"api/BOOSEapp.IInterpreter.yml\" sourcestartlinenumber=\"1\">Common interface for classes that can run a BOOSE program.</p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/BOOSEapp.If.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/BOOSEapp.If.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "BOOSEapp.If",
+      "Summary": "<p sourcefile=\"api/BOOSEapp.If.yml\" sourcestartlinenumber=\"1\">Handles IF, ELSE and END IF logic in BOOSE programs.</p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/BOOSEapp.Int.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/BOOSEapp.Int.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "BOOSEapp.Int",
+      "Summary": "<p sourcefile=\"api/BOOSEapp.Int.yml\" sourcestartlinenumber=\"1\">Simple interpreter extension that adds support for integer variables (int).\nAllows declaration, assignment and usage of variables in BOOSE commands.</p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/BOOSEapp.LogInDebug.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/BOOSEapp.LogInDebug.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "BOOSEapp.LogInDebug",
+      "Summary": "<p sourcefile=\"api/BOOSEapp.LogInDebug.yml\" sourcestartlinenumber=\"1\">Singleton logger used to write debug information.</p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/BOOSEapp.Maths.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/BOOSEapp.Maths.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "BOOSEapp.Maths",
+      "Summary": "<p sourcefile=\"api/BOOSEapp.Maths.yml\" sourcestartlinenumber=\"1\">Provides simple mathematical expression evaluation (+, -, *, /)</p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/BOOSEapp.Method.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/BOOSEapp.Method.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "BOOSEapp.Method",
+      "Summary": "<p sourcefile=\"api/BOOSEapp.Method.yml\" sourcestartlinenumber=\"1\">Simple interpreter that supports integer methods in BOOSE.\nMethods do not return values explicitly – instead, the result\nis stored in a variable with the same name as the method.</p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/BOOSEapp.MoveTo.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/BOOSEapp.MoveTo.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "BOOSEapp.MoveTo",
+      "Summary": "<p sourcefile=\"api/BOOSEapp.MoveTo.yml\" sourcestartlinenumber=\"1\">BOOSE command that moves the drawing cursor\nto a specified position on the canvas.</p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/BOOSEapp.Program.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/BOOSEapp.Program.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "BOOSEapp.Program",
+      "Summary": null
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/BOOSEapp.Real.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/BOOSEapp.Real.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "BOOSEapp.Real",
+      "Summary": "<p sourcefile=\"api/BOOSEapp.Real.yml\" sourcestartlinenumber=\"1\">Real variable support for BOOSE interpreter.\nAllows declaration, assignment and usage of variables in BOOSE commands.</p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/BOOSEapp.Rectangle.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/BOOSEapp.Rectangle.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "BOOSEapp.Rectangle",
+      "Summary": "<p sourcefile=\"api/BOOSEapp.Rectangle.yml\" sourcestartlinenumber=\"1\">BOOSE command that draws a rectangle on the canvas.</p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/BOOSEapp.Tri.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/BOOSEapp.Tri.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "BOOSEapp.Tri",
+      "Summary": "<p sourcefile=\"api/BOOSEapp.Tri.yml\" sourcestartlinenumber=\"1\">BOOSE command that draws a triangle on the canvas.</p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/BOOSEapp.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/BOOSEapp.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "BOOSEapp",
+      "Summary": null
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/BOOSEappTests.AdditionalFeaturesTests.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/BOOSEappTests.AdditionalFeaturesTests.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "BOOSEappTests.AdditionalFeaturesTests",
+      "Summary": "<p sourcefile=\"api/BOOSEappTests.AdditionalFeaturesTests.yml\" sourcestartlinenumber=\"1\">Unit tests for custom BOOSE additional features.\nCovers random values, named colours, and filled shapes.</p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/BOOSEappTests.CanvasCommandTests.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/BOOSEappTests.CanvasCommandTests.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "BOOSEappTests.CanvasCommandTests",
+      "Summary": "<p sourcefile=\"api/BOOSEappTests.CanvasCommandTests.yml\" sourcestartlinenumber=\"1\">Unit tests for BOOSE canvas commands and interpreter execution.</p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/BOOSEappTests.ControlFlowTests.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/BOOSEappTests.ControlFlowTests.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "BOOSEappTests.ControlFlowTests",
+      "Summary": "<p sourcefile=\"api/BOOSEappTests.ControlFlowTests.yml\" sourcestartlinenumber=\"1\">Unit tests for BOOSE control flow features.\nCovers if, else, while, and for support.</p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/BOOSEappTests.MethodNotFoundTests.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/BOOSEappTests.MethodNotFoundTests.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "BOOSEappTests.MethodNotFoundTests",
+      "Summary": "<p sourcefile=\"api/BOOSEappTests.MethodNotFoundTests.yml\" sourcestartlinenumber=\"1\">Unit tests for invalid method calls.</p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/BOOSEappTests.MethodsTests.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/BOOSEappTests.MethodsTests.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "BOOSEappTests.MethodsTests",
+      "Summary": "<p sourcefile=\"api/BOOSEappTests.MethodsTests.yml\" sourcestartlinenumber=\"1\">Unit tests for BOOSE method features.\nCovers method definition, parameter passing, and method calls.</p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/BOOSEappTests.VariablesTests.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/BOOSEappTests.VariablesTests.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "BOOSEappTests.VariablesTests",
+      "Summary": "<p sourcefile=\"api/BOOSEappTests.VariablesTests.yml\" sourcestartlinenumber=\"1\">Unit tests for BOOSE variable features.\nCovers int, real, and array support.</p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/BOOSEappTests.WrongParameterTests.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/BOOSEappTests.WrongParameterTests.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "BOOSEappTests.WrongParameterTests",
+      "Summary": "<p sourcefile=\"api/BOOSEappTests.WrongParameterTests.yml\" sourcestartlinenumber=\"1\">Unit tests for invalid method parameter usage.</p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/BOOSEappTests.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/BOOSEappTests.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "BOOSEappTests",
+      "Summary": null
+    },
+    {
+      "type": "Toc",
+      "source_relative_path": "api/toc.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/toc.html"
+        },
+        ".json": {
+          "relative_path": "api/toc.json"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "docs/getting-started.md",
+      "output": {
+        ".html": {
+          "relative_path": "docs/getting-started.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "docs/introduction.md",
+      "output": {
+        ".html": {
+          "relative_path": "docs/introduction.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Toc",
+      "source_relative_path": "docs/toc.yml",
+      "output": {
+        ".html": {
+          "relative_path": "docs/toc.html"
+        },
+        ".json": {
+          "relative_path": "docs/toc.json"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "index.md",
+      "output": {
+        ".html": {
+          "relative_path": "index.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Toc",
+      "source_relative_path": "toc.yml",
+      "output": {
+        ".html": {
+          "relative_path": "toc.html"
+        },
+        ".json": {
+          "relative_path": "toc.json"
+        }
+      },
+      "version": ""
+    }
+  ],
+  "groups": [
+    {
+      "xrefmap": "xrefmap.yml"
+    }
+  ]
+}

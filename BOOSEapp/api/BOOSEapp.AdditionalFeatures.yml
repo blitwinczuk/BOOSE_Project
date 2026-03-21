@@ -1,0 +1,619 @@
+### YamlMime:ManagedReference
+items:
+- uid: BOOSEapp.AdditionalFeatures
+  commentId: T:BOOSEapp.AdditionalFeatures
+  id: AdditionalFeatures
+  parent: BOOSEapp
+  children:
+  - BOOSEapp.AdditionalFeatures.#ctor(BOOSEapp.AppCanvas,System.Collections.Generic.Dictionary{System.String,System.Int32})
+  - BOOSEapp.AdditionalFeatures.TryExecute(System.String)
+  - BOOSEapp.AdditionalFeatures.canvas
+  - BOOSEapp.AdditionalFeatures.intVars
+  - BOOSEapp.AdditionalFeatures.rnd
+  langs:
+  - csharp
+  - vb
+  name: AdditionalFeatures
+  nameWithType: AdditionalFeatures
+  fullName: BOOSEapp.AdditionalFeatures
+  type: Class
+  source:
+    remote:
+      path: BOOSEapp/AdditionalFeatures.cs
+      branch: main
+      repo: https://github.com/ASE2025repos/ase-boose-assignment-blitwinczuk.git
+    id: AdditionalFeatures
+    path: AdditionalFeatures.cs
+    startLine: 10
+  assemblies:
+  - BOOSEapp
+  namespace: BOOSEapp
+  summary: >-
+    Provides additional BOOSE features such as random values,
+
+    user input, and named colours.
+  example: []
+  syntax:
+    content: public class AdditionalFeatures
+    content.vb: Public Class AdditionalFeatures
+  inheritance:
+  - System.Object
+  inheritedMembers:
+  - System.Object.Equals(System.Object)
+  - System.Object.Equals(System.Object,System.Object)
+  - System.Object.GetHashCode
+  - System.Object.GetType
+  - System.Object.MemberwiseClone
+  - System.Object.ReferenceEquals(System.Object,System.Object)
+  - System.Object.ToString
+- uid: BOOSEapp.AdditionalFeatures.canvas
+  commentId: F:BOOSEapp.AdditionalFeatures.canvas
+  id: canvas
+  parent: BOOSEapp.AdditionalFeatures
+  langs:
+  - csharp
+  - vb
+  name: canvas
+  nameWithType: AdditionalFeatures.canvas
+  fullName: BOOSEapp.AdditionalFeatures.canvas
+  type: Field
+  source:
+    remote:
+      path: BOOSEapp/AdditionalFeatures.cs
+      branch: main
+      repo: https://github.com/ASE2025repos/ase-boose-assignment-blitwinczuk.git
+    id: canvas
+    path: AdditionalFeatures.cs
+    startLine: 12
+  assemblies:
+  - BOOSEapp
+  namespace: BOOSEapp
+  syntax:
+    content: private AppCanvas canvas
+    return:
+      type: BOOSEapp.AppCanvas
+    content.vb: Private canvas As AppCanvas
+- uid: BOOSEapp.AdditionalFeatures.intVars
+  commentId: F:BOOSEapp.AdditionalFeatures.intVars
+  id: intVars
+  parent: BOOSEapp.AdditionalFeatures
+  langs:
+  - csharp
+  - vb
+  name: intVars
+  nameWithType: AdditionalFeatures.intVars
+  fullName: BOOSEapp.AdditionalFeatures.intVars
+  type: Field
+  source:
+    remote:
+      path: BOOSEapp/AdditionalFeatures.cs
+      branch: main
+      repo: https://github.com/ASE2025repos/ase-boose-assignment-blitwinczuk.git
+    id: intVars
+    path: AdditionalFeatures.cs
+    startLine: 13
+  assemblies:
+  - BOOSEapp
+  namespace: BOOSEapp
+  syntax:
+    content: private Dictionary<string, int> intVars
+    return:
+      type: System.Collections.Generic.Dictionary{System.String,System.Int32}
+    content.vb: Private intVars As Dictionary(Of String, Integer)
+- uid: BOOSEapp.AdditionalFeatures.rnd
+  commentId: F:BOOSEapp.AdditionalFeatures.rnd
+  id: rnd
+  parent: BOOSEapp.AdditionalFeatures
+  langs:
+  - csharp
+  - vb
+  name: rnd
+  nameWithType: AdditionalFeatures.rnd
+  fullName: BOOSEapp.AdditionalFeatures.rnd
+  type: Field
+  source:
+    remote:
+      path: BOOSEapp/AdditionalFeatures.cs
+      branch: main
+      repo: https://github.com/ASE2025repos/ase-boose-assignment-blitwinczuk.git
+    id: rnd
+    path: AdditionalFeatures.cs
+    startLine: 14
+  assemblies:
+  - BOOSEapp
+  namespace: BOOSEapp
+  syntax:
+    content: private Random rnd
+    return:
+      type: System.Random
+    content.vb: Private rnd As Random
+- uid: BOOSEapp.AdditionalFeatures.#ctor(BOOSEapp.AppCanvas,System.Collections.Generic.Dictionary{System.String,System.Int32})
+  commentId: M:BOOSEapp.AdditionalFeatures.#ctor(BOOSEapp.AppCanvas,System.Collections.Generic.Dictionary{System.String,System.Int32})
+  id: '#ctor(BOOSEapp.AppCanvas,System.Collections.Generic.Dictionary{System.String,System.Int32})'
+  parent: BOOSEapp.AdditionalFeatures
+  langs:
+  - csharp
+  - vb
+  name: AdditionalFeatures(AppCanvas, Dictionary<string, int>)
+  nameWithType: AdditionalFeatures.AdditionalFeatures(AppCanvas, Dictionary<string, int>)
+  fullName: BOOSEapp.AdditionalFeatures.AdditionalFeatures(BOOSEapp.AppCanvas, System.Collections.Generic.Dictionary<string, int>)
+  type: Constructor
+  source:
+    remote:
+      path: BOOSEapp/AdditionalFeatures.cs
+      branch: main
+      repo: https://github.com/ASE2025repos/ase-boose-assignment-blitwinczuk.git
+    id: .ctor
+    path: AdditionalFeatures.cs
+    startLine: 21
+  assemblies:
+  - BOOSEapp
+  namespace: BOOSEapp
+  summary: Initialises the additional features helper.
+  example: []
+  syntax:
+    content: public AdditionalFeatures(AppCanvas canvas, Dictionary<string, int> intVars)
+    parameters:
+    - id: canvas
+      type: BOOSEapp.AppCanvas
+      description: Canvas used for drawing commands.
+    - id: intVars
+      type: System.Collections.Generic.Dictionary{System.String,System.Int32}
+      description: Integer variables used by the interpreter.
+    content.vb: Public Sub New(canvas As AppCanvas, intVars As Dictionary(Of String, Integer))
+  overload: BOOSEapp.AdditionalFeatures.#ctor*
+  nameWithType.vb: AdditionalFeatures.New(AppCanvas, Dictionary(Of String, Integer))
+  fullName.vb: BOOSEapp.AdditionalFeatures.New(BOOSEapp.AppCanvas, System.Collections.Generic.Dictionary(Of String, Integer))
+  name.vb: New(AppCanvas, Dictionary(Of String, Integer))
+- uid: BOOSEapp.AdditionalFeatures.TryExecute(System.String)
+  commentId: M:BOOSEapp.AdditionalFeatures.TryExecute(System.String)
+  id: TryExecute(System.String)
+  parent: BOOSEapp.AdditionalFeatures
+  langs:
+  - csharp
+  - vb
+  name: TryExecute(string)
+  nameWithType: AdditionalFeatures.TryExecute(string)
+  fullName: BOOSEapp.AdditionalFeatures.TryExecute(string)
+  type: Method
+  source:
+    remote:
+      path: BOOSEapp/AdditionalFeatures.cs
+      branch: main
+      repo: https://github.com/ASE2025repos/ase-boose-assignment-blitwinczuk.git
+    id: TryExecute
+    path: AdditionalFeatures.cs
+    startLine: 32
+  assemblies:
+  - BOOSEapp
+  namespace: BOOSEapp
+  summary: Tries to execute an additional feature command.
+  example: []
+  syntax:
+    content: public bool TryExecute(string line)
+    parameters:
+    - id: line
+      type: System.String
+      description: Single line of BOOSE code.
+    return:
+      type: System.Boolean
+      description: True if the command was handled; otherwise false.
+    content.vb: Public Function TryExecute(line As String) As Boolean
+  overload: BOOSEapp.AdditionalFeatures.TryExecute*
+  nameWithType.vb: AdditionalFeatures.TryExecute(String)
+  fullName.vb: BOOSEapp.AdditionalFeatures.TryExecute(String)
+  name.vb: TryExecute(String)
+references:
+- uid: BOOSEapp
+  commentId: N:BOOSEapp
+  href: BOOSEapp.html
+  name: BOOSEapp
+  nameWithType: BOOSEapp
+  fullName: BOOSEapp
+- uid: System.Object
+  commentId: T:System.Object
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object
+  name: object
+  nameWithType: object
+  fullName: object
+  nameWithType.vb: Object
+  fullName.vb: Object
+  name.vb: Object
+- uid: System.Object.Equals(System.Object)
+  commentId: M:System.Object.Equals(System.Object)
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)
+  name: Equals(object)
+  nameWithType: object.Equals(object)
+  fullName: object.Equals(object)
+  nameWithType.vb: Object.Equals(Object)
+  fullName.vb: Object.Equals(Object)
+  name.vb: Equals(Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System.Object.Equals(System.Object,System.Object)
+  commentId: M:System.Object.Equals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  name: Equals(object, object)
+  nameWithType: object.Equals(object, object)
+  fullName: object.Equals(object, object)
+  nameWithType.vb: Object.Equals(Object, Object)
+  fullName.vb: Object.Equals(Object, Object)
+  name.vb: Equals(Object, Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System.Object.GetHashCode
+  commentId: M:System.Object.GetHashCode
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.gethashcode
+  name: GetHashCode()
+  nameWithType: object.GetHashCode()
+  fullName: object.GetHashCode()
+  nameWithType.vb: Object.GetHashCode()
+  fullName.vb: Object.GetHashCode()
+  spec.csharp:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gethashcode
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gethashcode
+  - name: (
+  - name: )
+- uid: System.Object.GetType
+  commentId: M:System.Object.GetType
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  name: GetType()
+  nameWithType: object.GetType()
+  fullName: object.GetType()
+  nameWithType.vb: Object.GetType()
+  fullName.vb: Object.GetType()
+  spec.csharp:
+  - uid: System.Object.GetType
+    name: GetType
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.GetType
+    name: GetType
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  - name: (
+  - name: )
+- uid: System.Object.MemberwiseClone
+  commentId: M:System.Object.MemberwiseClone
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.memberwiseclone
+  name: MemberwiseClone()
+  nameWithType: object.MemberwiseClone()
+  fullName: object.MemberwiseClone()
+  nameWithType.vb: Object.MemberwiseClone()
+  fullName.vb: Object.MemberwiseClone()
+  spec.csharp:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.memberwiseclone
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.memberwiseclone
+  - name: (
+  - name: )
+- uid: System.Object.ReferenceEquals(System.Object,System.Object)
+  commentId: M:System.Object.ReferenceEquals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  name: ReferenceEquals(object, object)
+  nameWithType: object.ReferenceEquals(object, object)
+  fullName: object.ReferenceEquals(object, object)
+  nameWithType.vb: Object.ReferenceEquals(Object, Object)
+  fullName.vb: Object.ReferenceEquals(Object, Object)
+  name.vb: ReferenceEquals(Object, Object)
+  spec.csharp:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System.Object.ToString
+  commentId: M:System.Object.ToString
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.tostring
+  name: ToString()
+  nameWithType: object.ToString()
+  fullName: object.ToString()
+  nameWithType.vb: Object.ToString()
+  fullName.vb: Object.ToString()
+  spec.csharp:
+  - uid: System.Object.ToString
+    name: ToString
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.tostring
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.ToString
+    name: ToString
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.tostring
+  - name: (
+  - name: )
+- uid: System
+  commentId: N:System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system
+  name: System
+  nameWithType: System
+  fullName: System
+- uid: BOOSEapp.AppCanvas
+  commentId: T:BOOSEapp.AppCanvas
+  parent: BOOSEapp
+  href: BOOSEapp.AppCanvas.html
+  name: AppCanvas
+  nameWithType: AppCanvas
+  fullName: BOOSEapp.AppCanvas
+- uid: System.Collections.Generic.Dictionary{System.String,System.Int32}
+  commentId: T:System.Collections.Generic.Dictionary{System.String,System.Int32}
+  parent: System.Collections.Generic
+  definition: System.Collections.Generic.Dictionary`2
+  href: https://learn.microsoft.com/dotnet/api/system.collections.generic.dictionary-2
+  name: Dictionary<string, int>
+  nameWithType: Dictionary<string, int>
+  fullName: System.Collections.Generic.Dictionary<string, int>
+  nameWithType.vb: Dictionary(Of String, Integer)
+  fullName.vb: System.Collections.Generic.Dictionary(Of String, Integer)
+  name.vb: Dictionary(Of String, Integer)
+  spec.csharp:
+  - uid: System.Collections.Generic.Dictionary`2
+    name: Dictionary
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.dictionary-2
+  - name: <
+  - uid: System.String
+    name: string
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.string
+  - name: ','
+  - name: " "
+  - uid: System.Int32
+    name: int
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.int32
+  - name: '>'
+  spec.vb:
+  - uid: System.Collections.Generic.Dictionary`2
+    name: Dictionary
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.dictionary-2
+  - name: (
+  - name: Of
+  - name: " "
+  - uid: System.String
+    name: String
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.string
+  - name: ','
+  - name: " "
+  - uid: System.Int32
+    name: Integer
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.int32
+  - name: )
+- uid: System.Collections.Generic.Dictionary`2
+  commentId: T:System.Collections.Generic.Dictionary`2
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.collections.generic.dictionary-2
+  name: Dictionary<TKey, TValue>
+  nameWithType: Dictionary<TKey, TValue>
+  fullName: System.Collections.Generic.Dictionary<TKey, TValue>
+  nameWithType.vb: Dictionary(Of TKey, TValue)
+  fullName.vb: System.Collections.Generic.Dictionary(Of TKey, TValue)
+  name.vb: Dictionary(Of TKey, TValue)
+  spec.csharp:
+  - uid: System.Collections.Generic.Dictionary`2
+    name: Dictionary
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.dictionary-2
+  - name: <
+  - name: TKey
+  - name: ','
+  - name: " "
+  - name: TValue
+  - name: '>'
+  spec.vb:
+  - uid: System.Collections.Generic.Dictionary`2
+    name: Dictionary
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.dictionary-2
+  - name: (
+  - name: Of
+  - name: " "
+  - name: TKey
+  - name: ','
+  - name: " "
+  - name: TValue
+  - name: )
+- uid: System.Collections.Generic
+  commentId: N:System.Collections.Generic
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system
+  name: System.Collections.Generic
+  nameWithType: System.Collections.Generic
+  fullName: System.Collections.Generic
+  spec.csharp:
+  - uid: System
+    name: System
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system
+  - name: .
+  - uid: System.Collections
+    name: Collections
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections
+  - name: .
+  - uid: System.Collections.Generic
+    name: Generic
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic
+  spec.vb:
+  - uid: System
+    name: System
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system
+  - name: .
+  - uid: System.Collections
+    name: Collections
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections
+  - name: .
+  - uid: System.Collections.Generic
+    name: Generic
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic
+- uid: System.Random
+  commentId: T:System.Random
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.random
+  name: Random
+  nameWithType: Random
+  fullName: System.Random
+- uid: BOOSEapp.AdditionalFeatures.#ctor*
+  commentId: Overload:BOOSEapp.AdditionalFeatures.#ctor
+  href: BOOSEapp.AdditionalFeatures.html#BOOSEapp_AdditionalFeatures__ctor_BOOSEapp_AppCanvas_System_Collections_Generic_Dictionary_System_String_System_Int32__
+  name: AdditionalFeatures
+  nameWithType: AdditionalFeatures.AdditionalFeatures
+  fullName: BOOSEapp.AdditionalFeatures.AdditionalFeatures
+  nameWithType.vb: AdditionalFeatures.New
+  fullName.vb: BOOSEapp.AdditionalFeatures.New
+  name.vb: New
+- uid: BOOSEapp.AdditionalFeatures.TryExecute*
+  commentId: Overload:BOOSEapp.AdditionalFeatures.TryExecute
+  href: BOOSEapp.AdditionalFeatures.html#BOOSEapp_AdditionalFeatures_TryExecute_System_String_
+  name: TryExecute
+  nameWithType: AdditionalFeatures.TryExecute
+  fullName: BOOSEapp.AdditionalFeatures.TryExecute
+- uid: System.String
+  commentId: T:System.String
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.string
+  name: string
+  nameWithType: string
+  fullName: string
+  nameWithType.vb: String
+  fullName.vb: String
+  name.vb: String
+- uid: System.Boolean
+  commentId: T:System.Boolean
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.boolean
+  name: bool
+  nameWithType: bool
+  fullName: bool
+  nameWithType.vb: Boolean
+  fullName.vb: Boolean
+  name.vb: Boolean

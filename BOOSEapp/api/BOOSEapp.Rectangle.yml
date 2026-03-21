@@ -229,7 +229,7 @@ items:
   exceptions:
   - type: BOOSE.CanvasException
     commentId: T:BOOSE.CanvasException
-    description: Thrown when width or height parameters are invalid.
+    description: Thrown when parameters are invalid.
 references:
 - uid: BOOSEapp
   commentId: N:BOOSEapp

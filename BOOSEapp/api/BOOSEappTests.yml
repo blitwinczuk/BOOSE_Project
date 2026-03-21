@@ -4,7 +4,13 @@ items:
   commentId: N:BOOSEappTests
   id: BOOSEappTests
   children:
+  - BOOSEappTests.AdditionalFeaturesTests
   - BOOSEappTests.CanvasCommandTests
+  - BOOSEappTests.ControlFlowTests
+  - BOOSEappTests.MethodNotFoundTests
+  - BOOSEappTests.MethodsTests
+  - BOOSEappTests.VariablesTests
+  - BOOSEappTests.WrongParameterTests
   langs:
   - csharp
   - vb
@@ -15,9 +21,45 @@ items:
   assemblies:
   - BOOSEappTests
 references:
+- uid: BOOSEappTests.AdditionalFeaturesTests
+  commentId: T:BOOSEappTests.AdditionalFeaturesTests
+  href: BOOSEappTests.AdditionalFeaturesTests.html
+  name: AdditionalFeaturesTests
+  nameWithType: AdditionalFeaturesTests
+  fullName: BOOSEappTests.AdditionalFeaturesTests
+- uid: BOOSEappTests.ControlFlowTests
+  commentId: T:BOOSEappTests.ControlFlowTests
+  href: BOOSEappTests.ControlFlowTests.html
+  name: ControlFlowTests
+  nameWithType: ControlFlowTests
+  fullName: BOOSEappTests.ControlFlowTests
+- uid: BOOSEappTests.VariablesTests
+  commentId: T:BOOSEappTests.VariablesTests
+  href: BOOSEappTests.VariablesTests.html
+  name: VariablesTests
+  nameWithType: VariablesTests
+  fullName: BOOSEappTests.VariablesTests
+- uid: BOOSEappTests.MethodNotFoundTests
+  commentId: T:BOOSEappTests.MethodNotFoundTests
+  href: BOOSEappTests.MethodNotFoundTests.html
+  name: MethodNotFoundTests
+  nameWithType: MethodNotFoundTests
+  fullName: BOOSEappTests.MethodNotFoundTests
+- uid: BOOSEappTests.MethodsTests
+  commentId: T:BOOSEappTests.MethodsTests
+  href: BOOSEappTests.MethodsTests.html
+  name: MethodsTests
+  nameWithType: MethodsTests
+  fullName: BOOSEappTests.MethodsTests
 - uid: BOOSEappTests.CanvasCommandTests
   commentId: T:BOOSEappTests.CanvasCommandTests
   href: BOOSEappTests.CanvasCommandTests.html
   name: CanvasCommandTests
   nameWithType: CanvasCommandTests
   fullName: BOOSEappTests.CanvasCommandTests
+- uid: BOOSEappTests.WrongParameterTests
+  commentId: T:BOOSEappTests.WrongParameterTests
+  href: BOOSEappTests.WrongParameterTests.html
+  name: WrongParameterTests
+  nameWithType: WrongParameterTests
+  fullName: BOOSEappTests.WrongParameterTests

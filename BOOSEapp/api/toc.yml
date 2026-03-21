@@ -4,6 +4,9 @@ items:
   name: BOOSEapp
   type: Namespace
   items:
+  - uid: BOOSEapp.AdditionalFeatures
+    name: AdditionalFeatures
+    type: Class
   - uid: BOOSEapp.AppCanvas
     name: AppCanvas
     type: Class
@@ -34,6 +37,9 @@ items:
   - uid: BOOSEapp.Int
     name: Int
     type: Class
+  - uid: BOOSEapp.LogInDebug
+    name: LogInDebug
+    type: Class
   - uid: BOOSEapp.Maths
     name: Maths
     type: Class
@@ -59,7 +65,25 @@ items:
   name: BOOSEappTests
   type: Namespace
   items:
+  - uid: BOOSEappTests.AdditionalFeaturesTests
+    name: AdditionalFeaturesTests
+    type: Class
   - uid: BOOSEappTests.CanvasCommandTests
     name: CanvasCommandTests
+    type: Class
+  - uid: BOOSEappTests.ControlFlowTests
+    name: ControlFlowTests
+    type: Class
+  - uid: BOOSEappTests.MethodNotFoundTests
+    name: MethodNotFoundTests
+    type: Class
+  - uid: BOOSEappTests.MethodsTests
+    name: MethodsTests
+    type: Class
+  - uid: BOOSEappTests.VariablesTests
+    name: VariablesTests
+    type: Class
+  - uid: BOOSEappTests.WrongParameterTests
+    name: WrongParameterTests
     type: Class
 memberLayout: SamePage

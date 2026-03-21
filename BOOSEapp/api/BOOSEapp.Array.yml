@@ -10,9 +10,9 @@ items:
   - BOOSEapp.Array.EvaluateBoolean(System.String)
   - BOOSEapp.Array.FindIntArrayName(System.String)
   - BOOSEapp.Array.FindRealArrayName(System.String)
-  - BOOSEapp.Array.GetWhileBlock(System.String[],System.Int32@)
   - BOOSEapp.Array.GetWriteValue(System.String)
   - BOOSEapp.Array.Run(System.String)
+  - BOOSEapp.Array.addFeatures
   - BOOSEapp.Array.boolVars
   - BOOSEapp.Array.canvas
   - BOOSEapp.Array.ifHandler
@@ -277,6 +277,33 @@ items:
     return:
       type: BOOSEapp.If
     content.vb: Private ifHandler As [If]
+- uid: BOOSEapp.Array.addFeatures
+  commentId: F:BOOSEapp.Array.addFeatures
+  id: addFeatures
+  parent: BOOSEapp.Array
+  langs:
+  - csharp
+  - vb
+  name: addFeatures
+  nameWithType: Array.addFeatures
+  fullName: BOOSEapp.Array.addFeatures
+  type: Field
+  source:
+    remote:
+      path: BOOSEapp/Array.cs
+      branch: main
+      repo: https://github.com/ASE2025repos/ase-boose-assignment-blitwinczuk.git
+    id: addFeatures
+    path: Array.cs
+    startLine: 22
+  assemblies:
+  - BOOSEapp
+  namespace: BOOSEapp
+  syntax:
+    content: private AdditionalFeatures addFeatures
+    return:
+      type: BOOSEapp.AdditionalFeatures
+    content.vb: Private addFeatures As AdditionalFeatures
 - uid: BOOSEapp.Array.#ctor(BOOSEapp.AppCanvas)
   commentId: M:BOOSEapp.Array.#ctor(BOOSEapp.AppCanvas)
   id: '#ctor(BOOSEapp.AppCanvas)'
@@ -295,7 +322,7 @@ items:
       repo: https://github.com/ASE2025repos/ase-boose-assignment-blitwinczuk.git
     id: .ctor
     path: Array.cs
-    startLine: 28
+    startLine: 29
   assemblies:
   - BOOSEapp
   namespace: BOOSEapp
@@ -330,7 +357,7 @@ items:
       repo: https://github.com/ASE2025repos/ase-boose-assignment-blitwinczuk.git
     id: Run
     path: Array.cs
-    startLine: 39
+    startLine: 41
   assemblies:
   - BOOSEapp
   namespace: BOOSEapp
@@ -367,7 +394,7 @@ items:
       repo: https://github.com/ASE2025repos/ase-boose-assignment-blitwinczuk.git
     id: BuildWriteText
     path: Array.cs
-    startLine: 472
+    startLine: 494
   assemblies:
   - BOOSEapp
   namespace: BOOSEapp
@@ -416,7 +443,7 @@ items:
       repo: https://github.com/ASE2025repos/ase-boose-assignment-blitwinczuk.git
     id: GetWriteValue
     path: Array.cs
-    startLine: 500
+    startLine: 522
   assemblies:
   - BOOSEapp
   namespace: BOOSEapp
@@ -457,7 +484,7 @@ items:
       repo: https://github.com/ASE2025repos/ase-boose-assignment-blitwinczuk.git
     id: FindIntArrayName
     path: Array.cs
-    startLine: 534
+    startLine: 556
   assemblies:
   - BOOSEapp
   namespace: BOOSEapp
@@ -494,7 +521,7 @@ items:
       repo: https://github.com/ASE2025repos/ase-boose-assignment-blitwinczuk.git
     id: FindRealArrayName
     path: Array.cs
-    startLine: 548
+    startLine: 570
   assemblies:
   - BOOSEapp
   namespace: BOOSEapp
@@ -528,7 +555,7 @@ items:
       repo: https://github.com/ASE2025repos/ase-boose-assignment-blitwinczuk.git
     id: EvaluateBoolean
     path: Array.cs
-    startLine: 566
+    startLine: 588
   assemblies:
   - BOOSEapp
   namespace: BOOSEapp
@@ -549,50 +576,6 @@ items:
   nameWithType.vb: Array.EvaluateBoolean(String)
   fullName.vb: BOOSEapp.Array.EvaluateBoolean(String)
   name.vb: EvaluateBoolean(String)
-- uid: BOOSEapp.Array.GetWhileBlock(System.String[],System.Int32@)
-  commentId: M:BOOSEapp.Array.GetWhileBlock(System.String[],System.Int32@)
-  id: GetWhileBlock(System.String[],System.Int32@)
-  parent: BOOSEapp.Array
-  langs:
-  - csharp
-  - vb
-  name: GetWhileBlock(string[], ref int)
-  nameWithType: Array.GetWhileBlock(string[], ref int)
-  fullName: BOOSEapp.Array.GetWhileBlock(string[], ref int)
-  type: Method
-  source:
-    remote:
-      path: BOOSEapp/Array.cs
-      branch: main
-      repo: https://github.com/ASE2025repos/ase-boose-assignment-blitwinczuk.git
-    id: GetWhileBlock
-    path: Array.cs
-    startLine: 597
-  assemblies:
-  - BOOSEapp
-  namespace: BOOSEapp
-  summary: >-
-    Gets the block of code inside a while loop.
-
-    Supports nested while loops.
-  example: []
-  syntax:
-    content: private string GetWhileBlock(string[] lines, ref int index)
-    parameters:
-    - id: lines
-      type: System.String[]
-      description: Program lines.
-    - id: index
-      type: System.Int32
-      description: Current line index.
-    return:
-      type: System.String
-      description: Block text inside while.
-    content.vb: Private Function GetWhileBlock(lines As String(), index As Integer) As String
-  overload: BOOSEapp.Array.GetWhileBlock*
-  nameWithType.vb: Array.GetWhileBlock(String(), Integer)
-  fullName.vb: BOOSEapp.Array.GetWhileBlock(String(), Integer)
-  name.vb: GetWhileBlock(String(), Integer)
 references:
 - uid: BOOSEapp
   commentId: N:BOOSEapp
@@ -1179,6 +1162,13 @@ references:
   name: If
   nameWithType: If
   fullName: BOOSEapp.If
+- uid: BOOSEapp.AdditionalFeatures
+  commentId: T:BOOSEapp.AdditionalFeatures
+  parent: BOOSEapp
+  href: BOOSEapp.AdditionalFeatures.html
+  name: AdditionalFeatures
+  nameWithType: AdditionalFeatures
+  fullName: BOOSEapp.AdditionalFeatures
 - uid: BOOSEapp.Array.#ctor*
   commentId: Overload:BOOSEapp.Array.#ctor
   href: BOOSEapp.Array.html#BOOSEapp_Array__ctor_BOOSEapp_AppCanvas_
@@ -1277,43 +1267,3 @@ references:
   nameWithType.vb: Boolean
   fullName.vb: Boolean
   name.vb: Boolean
-- uid: BOOSEapp.Array.GetWhileBlock*
-  commentId: Overload:BOOSEapp.Array.GetWhileBlock
-  href: BOOSEapp.Array.html#BOOSEapp_Array_GetWhileBlock_System_String___System_Int32__
-  name: GetWhileBlock
-  nameWithType: Array.GetWhileBlock
-  fullName: BOOSEapp.Array.GetWhileBlock
-- uid: System.String[]
-  isExternal: true
-  href: https://learn.microsoft.com/dotnet/api/system.string
-  name: string[]
-  nameWithType: string[]
-  fullName: string[]
-  nameWithType.vb: String()
-  fullName.vb: String()
-  name.vb: String()
-  spec.csharp:
-  - uid: System.String
-    name: string
-    isExternal: true
-    href: https://learn.microsoft.com/dotnet/api/system.string
-  - name: '['
-  - name: ']'
-  spec.vb:
-  - uid: System.String
-    name: String
-    isExternal: true
-    href: https://learn.microsoft.com/dotnet/api/system.string
-  - name: (
-  - name: )
-- uid: System.Int32
-  commentId: T:System.Int32
-  parent: System
-  isExternal: true
-  href: https://learn.microsoft.com/dotnet/api/system.int32
-  name: int
-  nameWithType: int
-  fullName: int
-  nameWithType.vb: Integer
-  fullName.vb: Integer
-  name.vb: Integer

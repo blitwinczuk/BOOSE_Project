@@ -4,6 +4,7 @@ items:
   commentId: N:BOOSEapp
   id: BOOSEapp
   children:
+  - BOOSEapp.AdditionalFeatures
   - BOOSEapp.AppCanvas
   - BOOSEapp.AppCommandFactory
   - BOOSEapp.ApplicationConfiguration
@@ -14,6 +15,7 @@ items:
   - BOOSEapp.IInterpreter
   - BOOSEapp.If
   - BOOSEapp.Int
+  - BOOSEapp.LogInDebug
   - BOOSEapp.Maths
   - BOOSEapp.Method
   - BOOSEapp.MoveTo
@@ -31,6 +33,13 @@ items:
   assemblies:
   - BOOSEapp
 references:
+- uid: BOOSEapp.AdditionalFeatures
+  commentId: T:BOOSEapp.AdditionalFeatures
+  parent: BOOSEapp
+  href: BOOSEapp.AdditionalFeatures.html
+  name: AdditionalFeatures
+  nameWithType: AdditionalFeatures
+  fullName: BOOSEapp.AdditionalFeatures
 - uid: BOOSEapp.AppCanvas
   commentId: T:BOOSEapp.AppCanvas
   parent: BOOSEapp
@@ -89,6 +98,13 @@ references:
   name: Int
   nameWithType: Int
   fullName: BOOSEapp.Int
+- uid: BOOSEapp.LogInDebug
+  commentId: T:BOOSEapp.LogInDebug
+  parent: BOOSEapp
+  href: BOOSEapp.LogInDebug.html
+  name: LogInDebug
+  nameWithType: LogInDebug
+  fullName: BOOSEapp.LogInDebug
 - uid: BOOSEapp.Maths
   commentId: T:BOOSEapp.Maths
   parent: BOOSEapp

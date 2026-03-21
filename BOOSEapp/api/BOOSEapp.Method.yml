@@ -9,6 +9,7 @@ items:
   - BOOSEapp.Method.ExecuteBlock(System.String)
   - BOOSEapp.Method.ExecuteLine(System.String)
   - BOOSEapp.Method.Run(System.String)
+  - BOOSEapp.Method.addFeatures
   - BOOSEapp.Method.canvas
   - BOOSEapp.Method.intVars
   - BOOSEapp.Method.maths
@@ -189,6 +190,33 @@ items:
     return:
       type: BOOSEapp.Maths
     content.vb: Private maths As Maths
+- uid: BOOSEapp.Method.addFeatures
+  commentId: F:BOOSEapp.Method.addFeatures
+  id: addFeatures
+  parent: BOOSEapp.Method
+  langs:
+  - csharp
+  - vb
+  name: addFeatures
+  nameWithType: Method.addFeatures
+  fullName: BOOSEapp.Method.addFeatures
+  type: Field
+  source:
+    remote:
+      path: BOOSEapp/Method.cs
+      branch: main
+      repo: https://github.com/ASE2025repos/ase-boose-assignment-blitwinczuk.git
+    id: addFeatures
+    path: Method.cs
+    startLine: 24
+  assemblies:
+  - BOOSEapp
+  namespace: BOOSEapp
+  syntax:
+    content: private AdditionalFeatures addFeatures
+    return:
+      type: BOOSEapp.AdditionalFeatures
+    content.vb: Private addFeatures As AdditionalFeatures
 - uid: BOOSEapp.Method.#ctor(BOOSEapp.AppCanvas)
   commentId: M:BOOSEapp.Method.#ctor(BOOSEapp.AppCanvas)
   id: '#ctor(BOOSEapp.AppCanvas)'
@@ -207,7 +235,7 @@ items:
       repo: https://github.com/ASE2025repos/ase-boose-assignment-blitwinczuk.git
     id: .ctor
     path: Method.cs
-    startLine: 28
+    startLine: 29
   assemblies:
   - BOOSEapp
   namespace: BOOSEapp
@@ -241,7 +269,7 @@ items:
       repo: https://github.com/ASE2025repos/ase-boose-assignment-blitwinczuk.git
     id: Run
     path: Method.cs
-    startLine: 37
+    startLine: 39
   assemblies:
   - BOOSEapp
   namespace: BOOSEapp
@@ -277,7 +305,7 @@ items:
       repo: https://github.com/ASE2025repos/ase-boose-assignment-blitwinczuk.git
     id: ExecuteBlock
     path: Method.cs
-    startLine: 184
+    startLine: 194
   assemblies:
   - BOOSEapp
   namespace: BOOSEapp
@@ -311,7 +339,7 @@ items:
       repo: https://github.com/ASE2025repos/ase-boose-assignment-blitwinczuk.git
     id: ExecuteLine
     path: Method.cs
-    startLine: 202
+    startLine: 212
   assemblies:
   - BOOSEapp
   namespace: BOOSEapp
@@ -808,6 +836,13 @@ references:
   name: Maths
   nameWithType: Maths
   fullName: BOOSEapp.Maths
+- uid: BOOSEapp.AdditionalFeatures
+  commentId: T:BOOSEapp.AdditionalFeatures
+  parent: BOOSEapp
+  href: BOOSEapp.AdditionalFeatures.html
+  name: AdditionalFeatures
+  nameWithType: AdditionalFeatures
+  fullName: BOOSEapp.AdditionalFeatures
 - uid: BOOSEapp.Method.#ctor*
   commentId: Overload:BOOSEapp.Method.#ctor
   href: BOOSEapp.Method.html#BOOSEapp_Method__ctor_BOOSEapp_AppCanvas_

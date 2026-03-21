@@ -7,6 +7,65 @@ references:
   commentId: N:BOOSEapp
   fullName: BOOSEapp
   nameWithType: BOOSEapp
+- uid: BOOSEapp.AdditionalFeatures
+  name: AdditionalFeatures
+  href: api/BOOSEapp.AdditionalFeatures.html
+  commentId: T:BOOSEapp.AdditionalFeatures
+  fullName: BOOSEapp.AdditionalFeatures
+  nameWithType: AdditionalFeatures
+- uid: BOOSEapp.AdditionalFeatures.#ctor(BOOSEapp.AppCanvas,System.Collections.Generic.Dictionary{System.String,System.Int32})
+  name: AdditionalFeatures(AppCanvas, Dictionary<string, int>)
+  href: api/BOOSEapp.AdditionalFeatures.html#BOOSEapp_AdditionalFeatures__ctor_BOOSEapp_AppCanvas_System_Collections_Generic_Dictionary_System_String_System_Int32__
+  commentId: M:BOOSEapp.AdditionalFeatures.#ctor(BOOSEapp.AppCanvas,System.Collections.Generic.Dictionary{System.String,System.Int32})
+  name.vb: New(AppCanvas, Dictionary(Of String, Integer))
+  fullName: BOOSEapp.AdditionalFeatures.AdditionalFeatures(BOOSEapp.AppCanvas, System.Collections.Generic.Dictionary<string, int>)
+  fullName.vb: BOOSEapp.AdditionalFeatures.New(BOOSEapp.AppCanvas, System.Collections.Generic.Dictionary(Of String, Integer))
+  nameWithType: AdditionalFeatures.AdditionalFeatures(AppCanvas, Dictionary<string, int>)
+  nameWithType.vb: AdditionalFeatures.New(AppCanvas, Dictionary(Of String, Integer))
+- uid: BOOSEapp.AdditionalFeatures.#ctor*
+  name: AdditionalFeatures
+  href: api/BOOSEapp.AdditionalFeatures.html#BOOSEapp_AdditionalFeatures__ctor_
+  commentId: Overload:BOOSEapp.AdditionalFeatures.#ctor
+  isSpec: "True"
+  name.vb: New
+  fullName: BOOSEapp.AdditionalFeatures.AdditionalFeatures
+  fullName.vb: BOOSEapp.AdditionalFeatures.New
+  nameWithType: AdditionalFeatures.AdditionalFeatures
+  nameWithType.vb: AdditionalFeatures.New
+- uid: BOOSEapp.AdditionalFeatures.TryExecute(System.String)
+  name: TryExecute(string)
+  href: api/BOOSEapp.AdditionalFeatures.html#BOOSEapp_AdditionalFeatures_TryExecute_System_String_
+  commentId: M:BOOSEapp.AdditionalFeatures.TryExecute(System.String)
+  name.vb: TryExecute(String)
+  fullName: BOOSEapp.AdditionalFeatures.TryExecute(string)
+  fullName.vb: BOOSEapp.AdditionalFeatures.TryExecute(String)
+  nameWithType: AdditionalFeatures.TryExecute(string)
+  nameWithType.vb: AdditionalFeatures.TryExecute(String)
+- uid: BOOSEapp.AdditionalFeatures.TryExecute*
+  name: TryExecute
+  href: api/BOOSEapp.AdditionalFeatures.html#BOOSEapp_AdditionalFeatures_TryExecute_
+  commentId: Overload:BOOSEapp.AdditionalFeatures.TryExecute
+  isSpec: "True"
+  fullName: BOOSEapp.AdditionalFeatures.TryExecute
+  nameWithType: AdditionalFeatures.TryExecute
+- uid: BOOSEapp.AdditionalFeatures.canvas
+  name: canvas
+  href: api/BOOSEapp.AdditionalFeatures.html#BOOSEapp_AdditionalFeatures_canvas
+  commentId: F:BOOSEapp.AdditionalFeatures.canvas
+  fullName: BOOSEapp.AdditionalFeatures.canvas
+  nameWithType: AdditionalFeatures.canvas
+- uid: BOOSEapp.AdditionalFeatures.intVars
+  name: intVars
+  href: api/BOOSEapp.AdditionalFeatures.html#BOOSEapp_AdditionalFeatures_intVars
+  commentId: F:BOOSEapp.AdditionalFeatures.intVars
+  fullName: BOOSEapp.AdditionalFeatures.intVars
+  nameWithType: AdditionalFeatures.intVars
+- uid: BOOSEapp.AdditionalFeatures.rnd
+  name: rnd
+  href: api/BOOSEapp.AdditionalFeatures.html#BOOSEapp_AdditionalFeatures_rnd
+  commentId: F:BOOSEapp.AdditionalFeatures.rnd
+  fullName: BOOSEapp.AdditionalFeatures.rnd
+  nameWithType: AdditionalFeatures.rnd
 - uid: BOOSEapp.AppCanvas
   name: AppCanvas
   href: api/BOOSEapp.AppCanvas.html
@@ -423,22 +482,6 @@ references:
   isSpec: "True"
   fullName: BOOSEapp.Array.FindRealArrayName
   nameWithType: Array.FindRealArrayName
-- uid: BOOSEapp.Array.GetWhileBlock(System.String[],System.Int32@)
-  name: GetWhileBlock(string[], ref int)
-  href: api/BOOSEapp.Array.html#BOOSEapp_Array_GetWhileBlock_System_String___System_Int32__
-  commentId: M:BOOSEapp.Array.GetWhileBlock(System.String[],System.Int32@)
-  name.vb: GetWhileBlock(String(), Integer)
-  fullName: BOOSEapp.Array.GetWhileBlock(string[], ref int)
-  fullName.vb: BOOSEapp.Array.GetWhileBlock(String(), Integer)
-  nameWithType: Array.GetWhileBlock(string[], ref int)
-  nameWithType.vb: Array.GetWhileBlock(String(), Integer)
-- uid: BOOSEapp.Array.GetWhileBlock*
-  name: GetWhileBlock
-  href: api/BOOSEapp.Array.html#BOOSEapp_Array_GetWhileBlock_
-  commentId: Overload:BOOSEapp.Array.GetWhileBlock
-  isSpec: "True"
-  fullName: BOOSEapp.Array.GetWhileBlock
-  nameWithType: Array.GetWhileBlock
 - uid: BOOSEapp.Array.GetWriteValue(System.String)
   name: GetWriteValue(string)
   href: api/BOOSEapp.Array.html#BOOSEapp_Array_GetWriteValue_System_String_
@@ -471,6 +514,12 @@ references:
   isSpec: "True"
   fullName: BOOSEapp.Array.Run
   nameWithType: Array.Run
+- uid: BOOSEapp.Array.addFeatures
+  name: addFeatures
+  href: api/BOOSEapp.Array.html#BOOSEapp_Array_addFeatures
+  commentId: F:BOOSEapp.Array.addFeatures
+  fullName: BOOSEapp.Array.addFeatures
+  nameWithType: Array.addFeatures
 - uid: BOOSEapp.Array.boolVars
   name: boolVars
   href: api/BOOSEapp.Array.html#BOOSEapp_Array_boolVars
@@ -1009,6 +1058,66 @@ references:
   commentId: F:BOOSEapp.Int.vars
   fullName: BOOSEapp.Int.vars
   nameWithType: Int.vars
+- uid: BOOSEapp.LogInDebug
+  name: LogInDebug
+  href: api/BOOSEapp.LogInDebug.html
+  commentId: T:BOOSEapp.LogInDebug
+  fullName: BOOSEapp.LogInDebug
+  nameWithType: LogInDebug
+- uid: BOOSEapp.LogInDebug.#ctor
+  name: LogInDebug()
+  href: api/BOOSEapp.LogInDebug.html#BOOSEapp_LogInDebug__ctor
+  commentId: M:BOOSEapp.LogInDebug.#ctor
+  name.vb: New()
+  fullName: BOOSEapp.LogInDebug.LogInDebug()
+  fullName.vb: BOOSEapp.LogInDebug.New()
+  nameWithType: LogInDebug.LogInDebug()
+  nameWithType.vb: LogInDebug.New()
+- uid: BOOSEapp.LogInDebug.#ctor*
+  name: LogInDebug
+  href: api/BOOSEapp.LogInDebug.html#BOOSEapp_LogInDebug__ctor_
+  commentId: Overload:BOOSEapp.LogInDebug.#ctor
+  isSpec: "True"
+  name.vb: New
+  fullName: BOOSEapp.LogInDebug.LogInDebug
+  fullName.vb: BOOSEapp.LogInDebug.New
+  nameWithType: LogInDebug.LogInDebug
+  nameWithType.vb: LogInDebug.New
+- uid: BOOSEapp.LogInDebug.Instance
+  name: Instance
+  href: api/BOOSEapp.LogInDebug.html#BOOSEapp_LogInDebug_Instance
+  commentId: P:BOOSEapp.LogInDebug.Instance
+  fullName: BOOSEapp.LogInDebug.Instance
+  nameWithType: LogInDebug.Instance
+- uid: BOOSEapp.LogInDebug.Instance*
+  name: Instance
+  href: api/BOOSEapp.LogInDebug.html#BOOSEapp_LogInDebug_Instance_
+  commentId: Overload:BOOSEapp.LogInDebug.Instance
+  isSpec: "True"
+  fullName: BOOSEapp.LogInDebug.Instance
+  nameWithType: LogInDebug.Instance
+- uid: BOOSEapp.LogInDebug.Log(System.String)
+  name: Log(string)
+  href: api/BOOSEapp.LogInDebug.html#BOOSEapp_LogInDebug_Log_System_String_
+  commentId: M:BOOSEapp.LogInDebug.Log(System.String)
+  name.vb: Log(String)
+  fullName: BOOSEapp.LogInDebug.Log(string)
+  fullName.vb: BOOSEapp.LogInDebug.Log(String)
+  nameWithType: LogInDebug.Log(string)
+  nameWithType.vb: LogInDebug.Log(String)
+- uid: BOOSEapp.LogInDebug.Log*
+  name: Log
+  href: api/BOOSEapp.LogInDebug.html#BOOSEapp_LogInDebug_Log_
+  commentId: Overload:BOOSEapp.LogInDebug.Log
+  isSpec: "True"
+  fullName: BOOSEapp.LogInDebug.Log
+  nameWithType: LogInDebug.Log
+- uid: BOOSEapp.LogInDebug.instance
+  name: instance
+  href: api/BOOSEapp.LogInDebug.html#BOOSEapp_LogInDebug_instance
+  commentId: F:BOOSEapp.LogInDebug.instance
+  fullName: BOOSEapp.LogInDebug.instance
+  nameWithType: LogInDebug.instance
 - uid: BOOSEapp.Maths
   name: Maths
   href: api/BOOSEapp.Maths.html
@@ -1183,6 +1292,12 @@ references:
   isSpec: "True"
   fullName: BOOSEapp.Method.Run
   nameWithType: Method.Run
+- uid: BOOSEapp.Method.addFeatures
+  name: addFeatures
+  href: api/BOOSEapp.Method.html#BOOSEapp_Method_addFeatures
+  commentId: F:BOOSEapp.Method.addFeatures
+  fullName: BOOSEapp.Method.addFeatures
+  nameWithType: Method.addFeatures
 - uid: BOOSEapp.Method.canvas
   name: canvas
   href: api/BOOSEapp.Method.html#BOOSEapp_Method_canvas
@@ -1474,6 +1589,25 @@ references:
   commentId: N:BOOSEappTests
   fullName: BOOSEappTests
   nameWithType: BOOSEappTests
+- uid: BOOSEappTests.AdditionalFeaturesTests
+  name: AdditionalFeaturesTests
+  href: api/BOOSEappTests.AdditionalFeaturesTests.html
+  commentId: T:BOOSEappTests.AdditionalFeaturesTests
+  fullName: BOOSEappTests.AdditionalFeaturesTests
+  nameWithType: AdditionalFeaturesTests
+- uid: BOOSEappTests.AdditionalFeaturesTests.AdditionalFeatures_RandomColourFill_ProgramRunsSuccessfully
+  name: AdditionalFeatures_RandomColourFill_ProgramRunsSuccessfully()
+  href: api/BOOSEappTests.AdditionalFeaturesTests.html#BOOSEappTests_AdditionalFeaturesTests_AdditionalFeatures_RandomColourFill_ProgramRunsSuccessfully
+  commentId: M:BOOSEappTests.AdditionalFeaturesTests.AdditionalFeatures_RandomColourFill_ProgramRunsSuccessfully
+  fullName: BOOSEappTests.AdditionalFeaturesTests.AdditionalFeatures_RandomColourFill_ProgramRunsSuccessfully()
+  nameWithType: AdditionalFeaturesTests.AdditionalFeatures_RandomColourFill_ProgramRunsSuccessfully()
+- uid: BOOSEappTests.AdditionalFeaturesTests.AdditionalFeatures_RandomColourFill_ProgramRunsSuccessfully*
+  name: AdditionalFeatures_RandomColourFill_ProgramRunsSuccessfully
+  href: api/BOOSEappTests.AdditionalFeaturesTests.html#BOOSEappTests_AdditionalFeaturesTests_AdditionalFeatures_RandomColourFill_ProgramRunsSuccessfully_
+  commentId: Overload:BOOSEappTests.AdditionalFeaturesTests.AdditionalFeatures_RandomColourFill_ProgramRunsSuccessfully
+  isSpec: "True"
+  fullName: BOOSEappTests.AdditionalFeaturesTests.AdditionalFeatures_RandomColourFill_ProgramRunsSuccessfully
+  nameWithType: AdditionalFeaturesTests.AdditionalFeatures_RandomColourFill_ProgramRunsSuccessfully
 - uid: BOOSEappTests.CanvasCommandTests
   name: CanvasCommandTests
   href: api/BOOSEappTests.CanvasCommandTests.html
@@ -1556,3 +1690,98 @@ references:
   commentId: F:BOOSEappTests.CanvasCommandTests._program
   fullName: BOOSEappTests.CanvasCommandTests._program
   nameWithType: CanvasCommandTests._program
+- uid: BOOSEappTests.ControlFlowTests
+  name: ControlFlowTests
+  href: api/BOOSEappTests.ControlFlowTests.html
+  commentId: T:BOOSEappTests.ControlFlowTests
+  fullName: BOOSEappTests.ControlFlowTests
+  nameWithType: ControlFlowTests
+- uid: BOOSEappTests.ControlFlowTests.ControlFlow_IfElseWhileFor_ProgramRunsSuccessfully
+  name: ControlFlow_IfElseWhileFor_ProgramRunsSuccessfully()
+  href: api/BOOSEappTests.ControlFlowTests.html#BOOSEappTests_ControlFlowTests_ControlFlow_IfElseWhileFor_ProgramRunsSuccessfully
+  commentId: M:BOOSEappTests.ControlFlowTests.ControlFlow_IfElseWhileFor_ProgramRunsSuccessfully
+  fullName: BOOSEappTests.ControlFlowTests.ControlFlow_IfElseWhileFor_ProgramRunsSuccessfully()
+  nameWithType: ControlFlowTests.ControlFlow_IfElseWhileFor_ProgramRunsSuccessfully()
+- uid: BOOSEappTests.ControlFlowTests.ControlFlow_IfElseWhileFor_ProgramRunsSuccessfully*
+  name: ControlFlow_IfElseWhileFor_ProgramRunsSuccessfully
+  href: api/BOOSEappTests.ControlFlowTests.html#BOOSEappTests_ControlFlowTests_ControlFlow_IfElseWhileFor_ProgramRunsSuccessfully_
+  commentId: Overload:BOOSEappTests.ControlFlowTests.ControlFlow_IfElseWhileFor_ProgramRunsSuccessfully
+  isSpec: "True"
+  fullName: BOOSEappTests.ControlFlowTests.ControlFlow_IfElseWhileFor_ProgramRunsSuccessfully
+  nameWithType: ControlFlowTests.ControlFlow_IfElseWhileFor_ProgramRunsSuccessfully
+- uid: BOOSEappTests.MethodNotFoundTests
+  name: MethodNotFoundTests
+  href: api/BOOSEappTests.MethodNotFoundTests.html
+  commentId: T:BOOSEappTests.MethodNotFoundTests
+  fullName: BOOSEappTests.MethodNotFoundTests
+  nameWithType: MethodNotFoundTests
+- uid: BOOSEappTests.MethodNotFoundTests.Methods_MethodNotFound_ThrowsException
+  name: Methods_MethodNotFound_ThrowsException()
+  href: api/BOOSEappTests.MethodNotFoundTests.html#BOOSEappTests_MethodNotFoundTests_Methods_MethodNotFound_ThrowsException
+  commentId: M:BOOSEappTests.MethodNotFoundTests.Methods_MethodNotFound_ThrowsException
+  fullName: BOOSEappTests.MethodNotFoundTests.Methods_MethodNotFound_ThrowsException()
+  nameWithType: MethodNotFoundTests.Methods_MethodNotFound_ThrowsException()
+- uid: BOOSEappTests.MethodNotFoundTests.Methods_MethodNotFound_ThrowsException*
+  name: Methods_MethodNotFound_ThrowsException
+  href: api/BOOSEappTests.MethodNotFoundTests.html#BOOSEappTests_MethodNotFoundTests_Methods_MethodNotFound_ThrowsException_
+  commentId: Overload:BOOSEappTests.MethodNotFoundTests.Methods_MethodNotFound_ThrowsException
+  isSpec: "True"
+  fullName: BOOSEappTests.MethodNotFoundTests.Methods_MethodNotFound_ThrowsException
+  nameWithType: MethodNotFoundTests.Methods_MethodNotFound_ThrowsException
+- uid: BOOSEappTests.MethodsTests
+  name: MethodsTests
+  href: api/BOOSEappTests.MethodsTests.html
+  commentId: T:BOOSEappTests.MethodsTests
+  fullName: BOOSEappTests.MethodsTests
+  nameWithType: MethodsTests
+- uid: BOOSEappTests.MethodsTests.Methods_CallAndExecution_ProgramRunsSuccessfully
+  name: Methods_CallAndExecution_ProgramRunsSuccessfully()
+  href: api/BOOSEappTests.MethodsTests.html#BOOSEappTests_MethodsTests_Methods_CallAndExecution_ProgramRunsSuccessfully
+  commentId: M:BOOSEappTests.MethodsTests.Methods_CallAndExecution_ProgramRunsSuccessfully
+  fullName: BOOSEappTests.MethodsTests.Methods_CallAndExecution_ProgramRunsSuccessfully()
+  nameWithType: MethodsTests.Methods_CallAndExecution_ProgramRunsSuccessfully()
+- uid: BOOSEappTests.MethodsTests.Methods_CallAndExecution_ProgramRunsSuccessfully*
+  name: Methods_CallAndExecution_ProgramRunsSuccessfully
+  href: api/BOOSEappTests.MethodsTests.html#BOOSEappTests_MethodsTests_Methods_CallAndExecution_ProgramRunsSuccessfully_
+  commentId: Overload:BOOSEappTests.MethodsTests.Methods_CallAndExecution_ProgramRunsSuccessfully
+  isSpec: "True"
+  fullName: BOOSEappTests.MethodsTests.Methods_CallAndExecution_ProgramRunsSuccessfully
+  nameWithType: MethodsTests.Methods_CallAndExecution_ProgramRunsSuccessfully
+- uid: BOOSEappTests.VariablesTests
+  name: VariablesTests
+  href: api/BOOSEappTests.VariablesTests.html
+  commentId: T:BOOSEappTests.VariablesTests
+  fullName: BOOSEappTests.VariablesTests
+  nameWithType: VariablesTests
+- uid: BOOSEappTests.VariablesTests.Variables_IntRealArray_ProgramRunsSuccessfully
+  name: Variables_IntRealArray_ProgramRunsSuccessfully()
+  href: api/BOOSEappTests.VariablesTests.html#BOOSEappTests_VariablesTests_Variables_IntRealArray_ProgramRunsSuccessfully
+  commentId: M:BOOSEappTests.VariablesTests.Variables_IntRealArray_ProgramRunsSuccessfully
+  fullName: BOOSEappTests.VariablesTests.Variables_IntRealArray_ProgramRunsSuccessfully()
+  nameWithType: VariablesTests.Variables_IntRealArray_ProgramRunsSuccessfully()
+- uid: BOOSEappTests.VariablesTests.Variables_IntRealArray_ProgramRunsSuccessfully*
+  name: Variables_IntRealArray_ProgramRunsSuccessfully
+  href: api/BOOSEappTests.VariablesTests.html#BOOSEappTests_VariablesTests_Variables_IntRealArray_ProgramRunsSuccessfully_
+  commentId: Overload:BOOSEappTests.VariablesTests.Variables_IntRealArray_ProgramRunsSuccessfully
+  isSpec: "True"
+  fullName: BOOSEappTests.VariablesTests.Variables_IntRealArray_ProgramRunsSuccessfully
+  nameWithType: VariablesTests.Variables_IntRealArray_ProgramRunsSuccessfully
+- uid: BOOSEappTests.WrongParameterTests
+  name: WrongParameterTests
+  href: api/BOOSEappTests.WrongParameterTests.html
+  commentId: T:BOOSEappTests.WrongParameterTests
+  fullName: BOOSEappTests.WrongParameterTests
+  nameWithType: WrongParameterTests
+- uid: BOOSEappTests.WrongParameterTests.Methods_WrongParameterCount_ThrowsException
+  name: Methods_WrongParameterCount_ThrowsException()
+  href: api/BOOSEappTests.WrongParameterTests.html#BOOSEappTests_WrongParameterTests_Methods_WrongParameterCount_ThrowsException
+  commentId: M:BOOSEappTests.WrongParameterTests.Methods_WrongParameterCount_ThrowsException
+  fullName: BOOSEappTests.WrongParameterTests.Methods_WrongParameterCount_ThrowsException()
+  nameWithType: WrongParameterTests.Methods_WrongParameterCount_ThrowsException()
+- uid: BOOSEappTests.WrongParameterTests.Methods_WrongParameterCount_ThrowsException*
+  name: Methods_WrongParameterCount_ThrowsException
+  href: api/BOOSEappTests.WrongParameterTests.html#BOOSEappTests_WrongParameterTests_Methods_WrongParameterCount_ThrowsException_
+  commentId: Overload:BOOSEappTests.WrongParameterTests.Methods_WrongParameterCount_ThrowsException
+  isSpec: "True"
+  fullName: BOOSEappTests.WrongParameterTests.Methods_WrongParameterCount_ThrowsException
+  nameWithType: WrongParameterTests.Methods_WrongParameterCount_ThrowsException

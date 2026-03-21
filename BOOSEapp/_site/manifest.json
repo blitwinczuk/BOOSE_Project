@@ -12,6 +12,20 @@
     },
     {
       "type": "ManagedReference",
+      "source_relative_path": "api/BOOSEapp.AdditionalFeatures.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/BOOSEapp.AdditionalFeatures.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "BOOSEapp.AdditionalFeatures",
+      "Summary": "<p sourcefile=\"api/BOOSEapp.AdditionalFeatures.yml\" sourcestartlinenumber=\"1\">Provides additional BOOSE features such as random values,\nuser input, and named colours.</p>\n"
+    },
+    {
+      "type": "ManagedReference",
       "source_relative_path": "api/BOOSEapp.AppCanvas.yml",
       "output": {
         ".html": {
@@ -152,6 +166,20 @@
     },
     {
       "type": "ManagedReference",
+      "source_relative_path": "api/BOOSEapp.LogInDebug.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/BOOSEapp.LogInDebug.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "BOOSEapp.LogInDebug",
+      "Summary": "<p sourcefile=\"api/BOOSEapp.LogInDebug.yml\" sourcestartlinenumber=\"1\">Singleton logger used to write debug information.</p>\n"
+    },
+    {
+      "type": "ManagedReference",
       "source_relative_path": "api/BOOSEapp.Maths.yml",
       "output": {
         ".html": {
@@ -264,6 +292,20 @@
     },
     {
       "type": "ManagedReference",
+      "source_relative_path": "api/BOOSEappTests.AdditionalFeaturesTests.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/BOOSEappTests.AdditionalFeaturesTests.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "BOOSEappTests.AdditionalFeaturesTests",
+      "Summary": "<p sourcefile=\"api/BOOSEappTests.AdditionalFeaturesTests.yml\" sourcestartlinenumber=\"1\">Unit tests for custom BOOSE additional features.\nCovers random values, named colours, and filled shapes.</p>\n"
+    },
+    {
+      "type": "ManagedReference",
       "source_relative_path": "api/BOOSEappTests.CanvasCommandTests.yml",
       "output": {
         ".html": {
@@ -275,6 +317,76 @@
       "IsMRef": true,
       "Title": "BOOSEappTests.CanvasCommandTests",
       "Summary": "<p sourcefile=\"api/BOOSEappTests.CanvasCommandTests.yml\" sourcestartlinenumber=\"1\">Unit tests for BOOSE canvas commands and interpreter execution.</p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/BOOSEappTests.ControlFlowTests.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/BOOSEappTests.ControlFlowTests.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "BOOSEappTests.ControlFlowTests",
+      "Summary": "<p sourcefile=\"api/BOOSEappTests.ControlFlowTests.yml\" sourcestartlinenumber=\"1\">Unit tests for BOOSE control flow features.\nCovers if, else, while, and for support.</p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/BOOSEappTests.MethodNotFoundTests.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/BOOSEappTests.MethodNotFoundTests.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "BOOSEappTests.MethodNotFoundTests",
+      "Summary": "<p sourcefile=\"api/BOOSEappTests.MethodNotFoundTests.yml\" sourcestartlinenumber=\"1\">Unit tests for invalid method calls.</p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/BOOSEappTests.MethodsTests.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/BOOSEappTests.MethodsTests.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "BOOSEappTests.MethodsTests",
+      "Summary": "<p sourcefile=\"api/BOOSEappTests.MethodsTests.yml\" sourcestartlinenumber=\"1\">Unit tests for BOOSE method features.\nCovers method definition, parameter passing, and method calls.</p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/BOOSEappTests.VariablesTests.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/BOOSEappTests.VariablesTests.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "BOOSEappTests.VariablesTests",
+      "Summary": "<p sourcefile=\"api/BOOSEappTests.VariablesTests.yml\" sourcestartlinenumber=\"1\">Unit tests for BOOSE variable features.\nCovers int, real, and array support.</p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/BOOSEappTests.WrongParameterTests.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/BOOSEappTests.WrongParameterTests.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "BOOSEappTests.WrongParameterTests",
+      "Summary": "<p sourcefile=\"api/BOOSEappTests.WrongParameterTests.yml\" sourcestartlinenumber=\"1\">Unit tests for invalid method parameter usage.</p>\n"
     },
     {
       "type": "ManagedReference",

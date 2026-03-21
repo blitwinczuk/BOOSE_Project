@@ -978,7 +978,7 @@ items:
       repo: https://github.com/ASE2025repos/ase-boose-assignment-blitwinczuk.git
     id: Form1_Load
     path: Form1.cs
-    startLine: 37
+    startLine: 38
   assemblies:
   - BOOSEapp
   namespace: BOOSEapp
@@ -1012,7 +1012,7 @@ items:
       repo: https://github.com/ASE2025repos/ase-boose-assignment-blitwinczuk.git
     id: UserInput
     path: Form1.cs
-    startLine: 47
+    startLine: 48
   assemblies:
   - BOOSEapp
   namespace: BOOSEapp
@@ -1064,7 +1064,7 @@ items:
       repo: https://github.com/ASE2025repos/ase-boose-assignment-blitwinczuk.git
     id: button1_Click
     path: Form1.cs
-    startLine: 55
+    startLine: 56
   assemblies:
   - BOOSEapp
   namespace: BOOSEapp
@@ -1098,7 +1098,7 @@ items:
       repo: https://github.com/ASE2025repos/ase-boose-assignment-blitwinczuk.git
     id: pictureBox1_Paint
     path: Form1.cs
-    startLine: 73
+    startLine: 90
   assemblies:
   - BOOSEapp
   namespace: BOOSEapp
@@ -1132,7 +1132,7 @@ items:
       repo: https://github.com/ASE2025repos/ase-boose-assignment-blitwinczuk.git
     id: pictureBox1_Click
     path: Form1.cs
-    startLine: 82
+    startLine: 99
   assemblies:
   - BOOSEapp
   namespace: BOOSEapp
@@ -1166,7 +1166,7 @@ items:
       repo: https://github.com/ASE2025repos/ase-boose-assignment-blitwinczuk.git
     id: textBox1_TextChanged
     path: Form1.cs
-    startLine: 86
+    startLine: 103
   assemblies:
   - BOOSEapp
   namespace: BOOSEapp
@@ -1200,7 +1200,7 @@ items:
       repo: https://github.com/ASE2025repos/ase-boose-assignment-blitwinczuk.git
     id: textBox2_TextChanged
     path: Form1.cs
-    startLine: 90
+    startLine: 107
   assemblies:
   - BOOSEapp
   namespace: BOOSEapp
@@ -1234,7 +1234,7 @@ items:
       repo: https://github.com/ASE2025repos/ase-boose-assignment-blitwinczuk.git
     id: panel1_Paint
     path: Form1.cs
-    startLine: 94
+    startLine: 111
   assemblies:
   - BOOSEapp
   namespace: BOOSEapp
@@ -1268,7 +1268,7 @@ items:
       repo: https://github.com/ASE2025repos/ase-boose-assignment-blitwinczuk.git
     id: button2_Click
     path: Form1.cs
-    startLine: 98
+    startLine: 115
   assemblies:
   - BOOSEapp
   namespace: BOOSEapp
@@ -1302,19 +1302,21 @@ items:
       repo: https://github.com/ASE2025repos/ase-boose-assignment-blitwinczuk.git
     id: GetInterpreter
     path: Form1.cs
-    startLine: 108
+    startLine: 127
   assemblies:
   - BOOSEapp
   namespace: BOOSEapp
-  summary: Selects the appropriate interpreter based on the program content.
+  summary: Selects the appropriate interpreter strategy based on the program content.
   example: []
   syntax:
     content: private IInterpreter GetInterpreter(string input)
     parameters:
     - id: input
       type: System.String
+      description: Program entered by the user.
     return:
       type: BOOSEapp.IInterpreter
+      description: An interpreter implementing the selected strategy.
     content.vb: Private Function GetInterpreter(input As String) As IInterpreter
   overload: BOOSEapp.Form1.GetInterpreter*
   nameWithType.vb: Form1.GetInterpreter(String)

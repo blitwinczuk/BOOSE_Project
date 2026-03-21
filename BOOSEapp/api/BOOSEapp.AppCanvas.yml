@@ -692,19 +692,24 @@ items:
       repo: https://github.com/ASE2025repos/ase-boose-assignment-blitwinczuk.git
     id: Tri
     path: AppCanvas.cs
-    startLine: 197
+    startLine: 200
   assemblies:
   - BOOSEapp
   namespace: BOOSEapp
-  summary: Draws a triangle .
+  summary: >-
+    Draws a triangle using the current cursor position.
+
+    The triangle can be drawn as an outline or filled shape.
   example: []
   syntax:
     content: public void Tri(int width, int height)
     parameters:
     - id: width
       type: System.Int32
+      description: Width of the triangle.
     - id: height
       type: System.Int32
+      description: Height of the triangle.
     content.vb: Public Sub Tri(width As Integer, height As Integer)
   overload: BOOSEapp.AppCanvas.Tri*
   implements:
@@ -730,7 +735,7 @@ items:
       repo: https://github.com/ASE2025repos/ase-boose-assignment-blitwinczuk.git
     id: WriteText
     path: AppCanvas.cs
-    startLine: 217
+    startLine: 220
   assemblies:
   - BOOSEapp
   namespace: BOOSEapp
