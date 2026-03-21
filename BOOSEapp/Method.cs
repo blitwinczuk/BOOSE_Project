@@ -241,15 +241,31 @@ namespace BOOSEapp
             }
             else if (lower.StartsWith("circle "))
             {
-                int r = maths.EvaluateInt(line.Substring(7));
-                canvas.Circle(r, false);
+                string[] parts = line.Substring(7)
+                    .Trim()
+                    .ToLower()
+                    .Split(' ', StringSplitOptions.RemoveEmptyEntries);
+
+                bool fill = parts.Contains("fill");
+
+                int r = maths.EvaluateInt(parts[0]);
+
+                canvas.Circle(r, fill);
             }
             else if (lower.StartsWith("rect "))
             {
-                string[] parts = line.Substring(5).Split(',');
-                int w = maths.EvaluateInt(parts[0]);
-                int h = maths.EvaluateInt(parts[1]);
-                canvas.Rect(w, h, false);
+                string args = line.Substring(5).Trim();
+
+                bool fill = args.ToLower().Contains("fill");
+
+                args = args.Replace("fill", "").Trim();
+
+                string[] p = args.Split(',');
+
+                int w = maths.EvaluateInt(p[0]);
+                int h = maths.EvaluateInt(p[1]);
+
+                canvas.Rect(w, h, fill);
             }
             else if (lower.StartsWith("pen "))
             {

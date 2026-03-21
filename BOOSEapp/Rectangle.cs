@@ -33,14 +33,14 @@ namespace BOOSEapp
         /// Executes the rectangle command and draws the rectangle.
         /// </summary>
         /// <exception cref="CanvasException">
-        /// Thrown when width or height parameters are invalid.
+        /// Thrown when parameters are invalid.
         /// </exception>
         public override void Execute()
         {
             base.Execute();
 
             if (IsDouble)
-                throw new CanvasException("Rectangle command requires two integer parameters.");
+                throw new CanvasException("Rectangle requires integer parameters.");
 
             width = Paramsint[0];
             height = Paramsint[1];

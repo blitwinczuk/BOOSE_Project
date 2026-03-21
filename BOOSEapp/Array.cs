@@ -409,21 +409,33 @@ namespace BOOSEapp
                 // circle
                 else if (lower.StartsWith("circle "))
                 {
-                    string value = line.Substring(7).Trim();
-                    int r = maths.EvaluateInt(value);
+                    string[] parts = line.Substring(7)
+                        .Trim()
+                        .ToLower()
+                        .Split(' ', StringSplitOptions.RemoveEmptyEntries);
 
-                    canvas.Circle(r, false);
+                    bool fill = parts.Contains("fill");
+
+                    int r = maths.EvaluateInt(parts[0]);
+
+                    canvas.Circle(r, fill);
                 }
 
-                // rect - AI suggestion
+                // rect
                 else if (lower.StartsWith("rect "))
                 {
-                    string[] p = line.Substring(5).Split(',');
+                    string args = line.Substring(5).Trim();
+
+                    bool fill = args.ToLower().Contains("fill");
+
+                    args = args.Replace("fill", "").Trim();
+
+                    string[] p = args.Split(',');
 
                     int w = maths.EvaluateInt(p[0]);
                     int h = maths.EvaluateInt(p[1]);
 
-                    canvas.Rect(w * 2, h * 2, false);
+                    canvas.Rect(w * 2, h * 2, fill);
                 }
 
                 // pen
@@ -586,44 +598,6 @@ namespace BOOSEapp
                 return boolVars[expr];
 
             throw new Exception("Unknown boolean expression: " + expr);
-        }
-
-        /// <summary>
-        /// Gets the block of code inside a while loop.
-        /// Supports nested while loops.
-        /// </summary>
-        /// <param name="lines">Program lines.</param>
-        /// <param name="index">Current line index.</param>
-        /// <returns>Block text inside while.</returns>
-        private string GetWhileBlock(string[] lines, ref int index)
-        {
-            int depth = 0;
-            string block = "";
-
-            index++;
-
-            while (index < lines.Length)
-            {
-                string current = lines[index].Trim();
-                string lower = current.ToLower();
-
-                if (lower.StartsWith("while "))
-                {
-                    depth++;
-                }
-                else if (lower.StartsWith("end while"))
-                {
-                    if (depth == 0)
-                        break;
-
-                    depth--;
-                }
-
-                block += lines[index] + "\n";
-                index++;
-            }
-
-            return block;
         }
     }
 }

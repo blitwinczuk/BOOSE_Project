@@ -193,8 +193,11 @@ namespace BOOSEapp
         }
 
         /// <summary>
-        /// Draws a triangle .
+        /// Draws a triangle using the current cursor position.
+        /// The triangle can be drawn as an outline or filled shape.
         /// </summary>
+        /// <param name="width">Width of the triangle.</param>
+        /// <param name="height">Height of the triangle.</param>
         public void Tri(int width, int height)
         {
             if (width <= 0 || height <= 0)
@@ -202,9 +205,9 @@ namespace BOOSEapp
 
             Point[] points = new Point[]
             {
-        new Point(Xpos, Ypos + height),           // left bottom
-        new Point(Xpos + width / 2, Ypos),        // top middle
-        new Point(Xpos + width, Ypos + height)    // right bottom
+        new Point(Xpos, Ypos + height),
+        new Point(Xpos + width / 2, Ypos),
+        new Point(Xpos + width, Ypos + height)
             };
 
             g.DrawPolygon(Pen, points);
