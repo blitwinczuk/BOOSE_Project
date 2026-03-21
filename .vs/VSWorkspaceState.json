@@ -1,8 +1,8 @@
 {
   "ExpandedNodes": [
     "",
-    "\\BOOSEapp"
+    "\\BOOSEappTests"
   ],
-  "SelectedNode": "\\BOOSEapp\\BOOSEapp.sln",
+  "SelectedNode": "\\BOOSEappTests\\BOOSEappTests.csproj",
   "PreviewInSolutionExplorer": false
 }
