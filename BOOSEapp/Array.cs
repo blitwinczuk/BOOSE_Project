@@ -419,14 +419,15 @@ namespace BOOSEapp
                 // circle
                 else if (lower.StartsWith("circle "))
                 {
-                    string[] parts = line.Substring(7)
-                        .Trim()
-                        .ToLower()
-                        .Split(' ', StringSplitOptions.RemoveEmptyEntries);
+                    string args = line.Substring(7).Trim().ToLower();
 
-                    bool fill = parts.Contains("fill");
+                    bool fill = args.Contains("fill");
 
-                    int r = maths.EvaluateInt(parts[0]);
+                    args = args.Replace("fill", "")
+                               .Replace(",", "")
+                               .Trim();
+
+                    int r = maths.EvaluateInt(args);
 
                     canvas.Circle(r, fill);
                 }
@@ -445,7 +446,7 @@ namespace BOOSEapp
                     int w = maths.EvaluateInt(p[0]);
                     int h = maths.EvaluateInt(p[1]);
 
-                    canvas.Rect(w * 2, h * 2, fill);
+                    canvas.Rect(w * 2 , h * 2 , fill);
                 }
 
                 // pen
